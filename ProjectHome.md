@@ -1,0 +1,3 @@
+The Semantic Annotations API (sapience) comprises libraries giving application developers a simple and fast way to extend their applications with semantic functionality. Existing applications with complex and data models usually lack ways to describe the meaning of the data, which unnecessarily impairs the exchange of data across different applications.
+
+[Go to the source code and documentation.](http://my-trac.assembla.com/sapience)
