@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<injectorConfig 
+	xmlns="http://www.example.org/InjectorConfig" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	>
+	<configuration id="ogc-wfs">
+		<mimetypes>
+				<mimetype>application/xml</mimetype>
+		</mimetypes>
+		<namespaces>
+			<namespace prefix="xlink" ns="http://www.w3.org/1999/xlink"/>
+		</namespaces>
+		
+		<handler id="ogc-wfs-110-getCapabilities">
+			<inject class="sapience.injectors.impl.DefaultInjector" />
+			<extract class="sapience.injectors.wps.v040.getCapabilities.ExtractorImpl" />
+			<patterns>
+				<pattern>.*http://www.opengeospatial.net/wps.*</pattern>
+				<pattern>.*version="0.4.0".*</pattern>
+				<pattern>.*Capabilities.*</pattern>
+			</patterns>
+		</handler>
+		
+		<handler id="ogc-wps-040-describeProcess">
+			<inject class="sapience.injectors.impl.DefaultInjector" />
+			<extract class="sapience.injectors.wps.v040.describeProcess.v040.ExtractorImpl" />
+			<patterns>
+				<pattern>.*http://www.opengeospatial.net/wps.*</pattern>
+				<pattern>.*ProcessDescriptions.*</pattern>
+			</patterns>
+		</handler>
+		
+	</configuration>
+	
+	
+
+
+</injectorConfig>

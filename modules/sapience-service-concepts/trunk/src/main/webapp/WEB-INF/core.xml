@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<base>http://localhost:8080/core/rdf/</base>
+	<tasks>
+		<task>
+			<name>commit</name>
+			<class>sapience.core.tasks.builtins.Commit</class>
+			<properties>
+				<property mandatory="false">url</property>
+				<property mandatory="false">body</property>
+			</properties>
+		</task>
+		<task>
+			<name>describe</name>
+			<class>sapience.core.tasks.builtins.Describe</class>
+			<properties>
+				<property mandatory="true">title</property>
+				<property mandatory="false">subject</property>
+			</properties>
+		</task>
+	</tasks>
+</conf>

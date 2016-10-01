@@ -1,0 +1,1 @@
+http://gis-obama.uni-muenster.de:8180/UBA_SOS/sos?request=getCapabilities&service=SOS

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Semantic Proxy: Manual Upload</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="frame">
+<div id="menu">
+<li><a href="help.html">Introduction</a></li> 
+<li><a href="examples.html">Examples</a></li> 
+<li><a class="active"  href="upload.html">Upload</a></li> 
+<li><a  href="api.html">API</a></li> 
+<li><a href="feature.html">Bugs/Features</a></li>  
+</div>
+
+<div id="content">
+You can manually upload annotated documents into the proxy. It will parse your file and extract (according to some predefined patterns) all
+valid references. A service id will be returned in (in the case you've forgot, you can still <a href="/api/list/services">list all registered Web services</a>. 
+
+<br/><br/>
+<form method="POST" enctype="multipart/form-data" action="/api/put">
+<fieldset class="box"><legend>Upload form</legend>
+
+
+<p  class="caption">
+	<input type="text" name="service_request" class="input"/>  <br />
+	<span> The URL used to
+retrieve the original metadata. It has to be the original URL (including all parameters). 
+This could be for example the URL requesting a WSDL file, or the
+getCapabilities-File of an OGC WFS.</span>
+
+</p>
+<p  class="caption">
+<input type="file" name="uploaded_file" class="input" /><br />
+The path to the manually annotated file. Please make sure that the document is valid (all namespaces are declared, and the annotated document complies to the underlying standard).
+</p>
+
+<p align="center">
+
+<input type="submit" value="Register" /> <input type="reset"
+	value="Cancel" />
+
+</p>
+	</fieldset>
+</form>
+</div>
+
+
+<div id="footer" align="center">
+	Contact <a href="mailto:pajoma@uni-muenster.de">us</a> or visit the <a href="http://my-trac.assembla.com/sapience/">project</a> page for more information.<br>
+	 &copy; 2010 (ifgi) <a href="http://ifgi.uni-muenster.de/"> Institute for Geoinformatics</a>
+</div>
+
+</div>
+</body>
+<body></body>
+</html>

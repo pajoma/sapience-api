@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xs:schema
+	xmlns:Dortmund="http://gdi-arc1/ArcGIS01/services/Dortmund/MapServer/WFSServer"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml"
+	targetNamespace="http://gdi-arc1/ArcGIS01/services/Dortmund/MapServer/WFSServer"
+	elementFormDefault="qualified">
+	<xs:import namespace="http://www.opengis.net/gml"
+		schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" />
+	<xs:element name="QSDO_GRID_02_GBO" type="Dortmund:QSDO_GRID_02_GBOType"
+		substitutionGroup="gml:_Feature" />
+		
+	<xs:complexType xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+		sawsdl:modelReference="http://core/concepts/WFS#QSDO_GRID_02_GBOType"
+		name="QSDO_GRID_02_GBOType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="GBO" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="22" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ELE" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="UUID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VAR" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+						sawsdl:modelReference="http://core/concepts/WFS#Stiftnum" name="STIFTNUM"
+						minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QSDO_GRID_05" type="Dortmund:QSDO_GRID_05Type"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name="QSDO_GRID_05Type">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="AOBJID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="GEBH_REL" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="22" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OBJART" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="4" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+						sawsdl:modelReference="http://core/concepts/WFS#Belag" name="BELAG"
+						minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="4" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="DTV" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="MD" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="PROZENTLKW" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VLKWD" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VPKWD" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="MN" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="PROZENTL_1" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VLKWN" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VPKWN" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ME" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="PROZENTL_2" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VLKWE" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VPKWE" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OBJART_1" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="MITTE_RAN" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="MITTE_EMIS" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="BRU" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="TUN" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OID_1" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="AKT" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="UUID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="STIFTNUM" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QSDO_GRID_02_GEL" type="Dortmund:QSDO_GRID_02_GELType"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name="QSDO_GRID_02_GELType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="GEL" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ELE" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="8" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="VAR" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="STIFTNUM" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QSDO_GRID_04_BRK" type="Dortmund:QSDO_GRID_04_BRKType"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name="QSDO_GRID_04_BRKType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="BRUECKE" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Z_REL" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="22" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OBJID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="GMLID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="STIFTNUM" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QSDO_GRID_01" type="Dortmund:QSDO_GRID_01Type"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name="QSDO_GRID_01Type">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="AOBJID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="GEBH_REL" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="22" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="GATTUNG" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="4" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OBJART" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OID_1" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="64" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="AKT" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="6" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="UUID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="STIFTNUM" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="QSDO_GRID_01_WGB" type="Dortmund:QSDO_GRID_01_WGBType"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name="QSDO_GRID_01_WGBType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="OBJECTID" type="xs:int" />
+					<xs:element name="GEBAEU" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="20" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="REFL_" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="10" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Z_REL" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="22" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="OBJID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="GMLID" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="16" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="STIFTNUM" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="SHAPE" minOccurs="0"
+						type="gml:MultiCurvePropertyType" />
+					<xs:element name="SHAPE.LEN" type="xs:double" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

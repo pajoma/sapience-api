@@ -1,0 +1,2 @@
+http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?service=WPS&request=GetCapabilities&version=0.4.0
+http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?service=WPS&request=DescribeProcess&version=0.4.0&identifier=Gaja3d_createGrid

@@ -1,0 +1,2692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sos:Capabilities 
+  version="1.0.0" 
+  xsi:schemaLocation="http://www.opengis.net/sos/1.0 http://schemas.opengis.net/sos/1.0.0/sosAll.xsd" 
+  xmlns:sos="http://www.opengis.net/sos/1.0" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:gml="http://www.opengis.net/gml" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:ogc="http://www.opengis.net/ogc" 
+  xmlns:ows="http://www.opengis.net/ows/1.1" 
+  xmlns:om="http://www.opengis.net/om/1.0" 
+  xmlns:swe="http://www.opengis.net/swe/1.0">
+  <ows:ServiceIdentification>
+    <ows:Title>IFGI UBA SOS</ows:Title>
+    <ows:Abstract>SOS for UBA air quality and meteorological measurements IFGI, Muenster, Germany</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>PM10</ows:Keyword>
+      <ows:Keyword>NO2</ows:Keyword>
+      <ows:Keyword>NO</ows:Keyword>
+      <ows:Keyword>CO</ows:Keyword>
+      <ows:Keyword>SO2</ows:Keyword>
+      <ows:Keyword>windspeed</ows:Keyword>
+      <ows:Keyword>winddirection</ows:Keyword>
+      <ows:Keyword>temperature</ows:Keyword>
+    </ows:Keywords>
+    <ows:ServiceType codeSpace="http://opengeospatial.net">OGC:SOS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    <ows:Fees>NONE</ows:Fees>
+    <ows:AccessConstraints>NONE</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:om="http://www.opengis.net/om/1.0" xmlns:swe="http://www.opengis.net/swe/1.0">
+    <ows:ProviderName>Institute for Geoinformatics, University of Muenster</ows:ProviderName>
+    <ows:ProviderSite xlink:href="http://ifgi.uni-muenster.de"/>
+   
+    <ows:ServiceContact>
+      <ows:IndividualName>Lydia Gerharz</ows:IndividualName>
+      <ows:PositionName>Research Associate</ows:PositionName>
+      <ows:ContactInfo>
+        <ows:Phone>
+          <ows:Voice>+49-251-83-30056</ows:Voice>
+        </ows:Phone>
+        <ows:Address>
+          <ows:DeliveryPoint/>
+          <ows:City>Muenster</ows:City>
+          <ows:AdministrativeArea>NRW</ows:AdministrativeArea>
+          <ows:PostalCode/>
+          <ows:Country>Germany</ows:Country>
+          <ows:ElectronicMailAddress/>
+        </ows:Address>
+      </ows:ContactInfo>
+      <ows:Role/>
+    </ows:ServiceContact>
+  </ows:ServiceProvider>
+  <ows:OperationsMetadata xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:om="http://www.opengis.net/om/1.0" xmlns:swe="http://www.opengis.net/swe/1.0">
+    <ows:Operation name="GetCapabilities">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:href="http://localhost:8180/UBA_SOS/sos?"/>
+          <ows:Post xlink:href="http://localhost:8180/UBA_SOS/sos"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="service">
+        <ows:AllowedValues>
+          <ows:Value>SOS</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="updateSequence">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="AcceptVersions">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="Sections">
+        <ows:AllowedValues>
+          <ows:Value>ServiceIdentification</ows:Value>
+          <ows:Value>ServiceProvider</ows:Value>
+          <ows:Value>OperationsMetadata</ows:Value>
+          <ows:Value>Contents</ows:Value>
+          <ows:Value>All</ows:Value>
+          <ows:Value>Filter_Capabilities</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="AcceptFormats">
+        <ows:AllowedValues>
+          <ows:Value>text/xml</ows:Value>
+          <ows:Value>application/zip</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetObservation">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://localhost:8180/UBA_SOS/sos"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="version">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="service">
+        <ows:AllowedValues>
+          <ows:Value>SOS</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="srsName">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="offering">
+        <ows:AllowedValues>
+          <ows:Value>AIR_QUALITY</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="eventTime">
+        <ows:AllowedValues>
+          <ows:Range>
+            <ows:MinimumValue>2008-07-01T00:30:00+02</ows:MinimumValue>
+            <ows:MaximumValue>2010-02-24T09:00:00+01</ows:MaximumValue>
+          </ows:Range>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBB081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB055</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB083</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB048</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBE027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBE051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE069</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW111</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW098</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW103</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW112</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW110</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW087</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW107</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW122</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY120</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY111</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY047</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEBY026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY116</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY093</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY115</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY110</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY088</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY114</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY109</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY113</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY119</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY118</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY121</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY085</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH047</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH070</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEHH073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENI070</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENI053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENI038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENI054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI048</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI071</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-traffic-DEHH075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW133</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW071</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-traffic-DENW066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW189</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW101</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW114</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW095</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW078</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW100</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW180</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW102</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW134</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW096</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW116</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW207</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW112</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW199</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW181</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW186</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW179</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW136</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW211</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW212</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW221</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW220</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW222</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW223</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW224</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW247</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW256</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW257</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW258</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW260</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW284</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP036</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DESH011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW226</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW225</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESH023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DESH035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESL001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESL019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESL020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN083</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESH033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST069</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST057</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST102</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEST029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST098</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST100</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST092</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST078</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST095</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST090</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEST068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST097</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST091</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST104</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH036</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN091</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN092</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST103</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH086</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH088</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW135</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH093</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW187</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW188</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW227</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW283</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH084</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="observedProperty">
+        <ows:AllowedValues>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:no</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:no2</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:so2</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:pm10</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:pm2.5</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:o3</ows:Value>
+          <ows:Value>urn:ogc:def:phenomenon:OGC:1.0.30:co</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="featureOfInterest">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="result">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="responseFormat">
+        <ows:AllowedValues>
+          <ows:Value>text/xml;subtype="OM"</ows:Value>
+          <ows:Value>application/zip</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="resultModel">
+        <ows:AllowedValues>
+          <ows:Value>Observation</ows:Value>
+          <ows:Value>CategoryObservation</ows:Value>
+          <ows:Value>Measurement</ows:Value>
+        </ows:AllowedValues>
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="responseMode">
+        <ows:AllowedValues>
+          <ows:Value>resultTemplate</ows:Value>
+          <ows:Value>inline</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetObservationById">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://localhost:8180/UBA_SOS/sos"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="version">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="service">
+        <ows:AllowedValues>
+          <ows:Value>SOS</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="srsName">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="ObservationId">
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="responseFormat">
+        <ows:AllowedValues>
+          <ows:Value>text/xml;subtype="OM"</ows:Value>
+          <ows:Value>application/zip</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="resultModel">
+        <ows:AllowedValues>
+          <ows:Value>Observation</ows:Value>
+          <ows:Value>CategoryObservation</ows:Value>
+          <ows:Value>Measurement</ows:Value>
+        </ows:AllowedValues>
+        <ows:AnyValue/>
+      </ows:Parameter>
+      <ows:Parameter name="responseMode">
+        <ows:AllowedValues>
+          <ows:Value>inline</ows:Value>
+          <ows:Value>resultTemplate</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="DescribeSensor">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://localhost:8180/UBA_SOS/sos"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="version">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="service">
+        <ows:AllowedValues>
+          <ows:Value>SOS</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="outputFormat">
+        <ows:AllowedValues>
+          <ows:Value>text/xml;subtype="sensorML/1.0.1"</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="procedure">
+        <ows:AllowedValues>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBB081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB055</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB083</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB048</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBE027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBE051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE069</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW111</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW098</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW103</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW112</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW110</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW087</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW107</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW122</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY120</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY111</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY047</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEBY026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY056</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY116</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY093</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY115</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY110</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY088</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY114</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY109</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY113</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY119</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY118</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY121</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY085</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE032</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE037</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH047</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH070</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEHH073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENI070</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENI053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENI038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI073</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENI054</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI031</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI048</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENI059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI071</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-traffic-DEHH075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW133</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW067</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW065</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW071</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW058</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-traffic-DENW066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW189</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW101</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW114</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW095</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW062</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW078</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW100</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW180</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW102</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW134</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW096</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW116</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW207</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW112</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW199</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW181</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW186</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW179</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW136</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW211</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW212</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW221</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW220</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW222</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW223</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW224</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DENW038</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DENW064</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW247</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW256</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW257</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW258</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW260</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW284</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP007</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP021</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DERP042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DERP028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH016</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP036</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP046</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH008</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DESH011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESH014</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW226</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW225</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN059</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN045</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESH023</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL010</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH034</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DESH035</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESL001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN084</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESL019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL012</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL003</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL006</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESL020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESL017</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN049</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN052</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN024</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN051</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN019</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN053</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN083</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN079</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN080</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DESN076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN082</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESH033</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH022</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST069</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST015</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST057</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST002</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST102</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST077</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEST029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST098</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST100</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST063</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST074</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST092</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST078</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST044</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH025</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST066</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DEST050</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST075</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST095</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST090</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEST068</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST076</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH027</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST097</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST099</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST091</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH018</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEST104</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH039</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH009</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH013</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH011</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH026</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH020</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH036</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN091</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH040</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH041</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH042</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH043</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DESN092</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST103</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH086</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH088</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH089</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB004</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB030</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW135</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH072</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB001</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH093</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-background-DETH060</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB029</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW187</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH094</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB028</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW188</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH081</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW227</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB005</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:rural-background-DETH061</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW283</ows:Value>
+          <ows:Value>urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH084</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetFeatureOfInterest">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Post xlink:href="http://localhost:8180/UBA_SOS/sos"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="service">
+        <ows:AllowedValues>
+          <ows:Value>SOS</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="version">
+        <ows:AllowedValues>
+          <ows:Value>1.0.0</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="featureOfInterestId">
+        <ows:AllowedValues>
+          <ows:Value>DEBB082</ows:Value>
+          <ows:Value>DEBB073</ows:Value>
+          <ows:Value>DEBB042</ows:Value>
+          <ows:Value>DEBB007</ows:Value>
+          <ows:Value>DEBB065</ows:Value>
+          <ows:Value>DEBB054</ows:Value>
+          <ows:Value>DEBE061</ows:Value>
+          <ows:Value>DEBB044</ows:Value>
+          <ows:Value>DEBB021</ows:Value>
+          <ows:Value>DEBE064</ows:Value>
+          <ows:Value>DEBB055</ows:Value>
+          <ows:Value>DEBB026</ows:Value>
+          <ows:Value>DEBB083</ows:Value>
+          <ows:Value>DEBB045</ows:Value>
+          <ows:Value>DEBB060</ows:Value>
+          <ows:Value>DEBB075</ows:Value>
+          <ows:Value>DEBB064</ows:Value>
+          <ows:Value>DEBE027</ows:Value>
+          <ows:Value>DEBB048</ows:Value>
+          <ows:Value>DEBB066</ows:Value>
+          <ows:Value>DEBB063</ows:Value>
+          <ows:Value>DEBB049</ows:Value>
+          <ows:Value>DEBB032</ows:Value>
+          <ows:Value>DEBB029</ows:Value>
+          <ows:Value>DEBE051</ows:Value>
+          <ows:Value>DEBB050</ows:Value>
+          <ows:Value>DEBB053</ows:Value>
+          <ows:Value>DEBB081</ows:Value>
+          <ows:Value>DEBB067</ows:Value>
+          <ows:Value>DEBB084</ows:Value>
+          <ows:Value>DEBE062</ows:Value>
+          <ows:Value>DEBE032</ows:Value>
+          <ows:Value>DEBE010</ows:Value>
+          <ows:Value>DEBB068</ows:Value>
+          <ows:Value>DEBE065</ows:Value>
+          <ows:Value>DEBE018</ows:Value>
+          <ows:Value>DEBE056</ows:Value>
+          <ows:Value>DEBE034</ows:Value>
+          <ows:Value>DEBE063</ows:Value>
+          <ows:Value>DEBE068</ows:Value>
+          <ows:Value>DEBE066</ows:Value>
+          <ows:Value>DEBE069</ows:Value>
+          <ows:Value>DEBE067</ows:Value>
+          <ows:Value>DEBW001</ows:Value>
+          <ows:Value>DEBW005</ows:Value>
+          <ows:Value>DEBW006</ows:Value>
+          <ows:Value>DEBW004</ows:Value>
+          <ows:Value>DEBW007</ows:Value>
+          <ows:Value>DEBW009</ows:Value>
+          <ows:Value>DEBW010</ows:Value>
+          <ows:Value>DEBB059</ows:Value>
+          <ows:Value>DEBW081</ows:Value>
+          <ows:Value>DEBW073</ows:Value>
+          <ows:Value>DEBW046</ows:Value>
+          <ows:Value>DEBW011</ows:Value>
+          <ows:Value>DEBW023</ows:Value>
+          <ows:Value>DEBW038</ows:Value>
+          <ows:Value>DEBW111</ows:Value>
+          <ows:Value>DEBW024</ows:Value>
+          <ows:Value>DEBW013</ows:Value>
+          <ows:Value>DEBW031</ows:Value>
+          <ows:Value>DEBY010</ows:Value>
+          <ows:Value>DEBW098</ows:Value>
+          <ows:Value>DEBW039</ows:Value>
+          <ows:Value>DEBW015</ows:Value>
+          <ows:Value>DEBW026</ows:Value>
+          <ows:Value>DEBW052</ows:Value>
+          <ows:Value>DEBY009</ows:Value>
+          <ows:Value>DEBW076</ows:Value>
+          <ows:Value>DEBW033</ows:Value>
+          <ows:Value>DEBW019</ows:Value>
+          <ows:Value>DEBW027</ows:Value>
+          <ows:Value>DEBW107</ows:Value>
+          <ows:Value>DEBY003</ows:Value>
+          <ows:Value>DEBW040</ows:Value>
+          <ows:Value>DEBW056</ows:Value>
+          <ows:Value>DEBW034</ows:Value>
+          <ows:Value>DEBW022</ows:Value>
+          <ows:Value>DEBW080</ows:Value>
+          <ows:Value>DEBW029</ows:Value>
+          <ows:Value>DEBW084</ows:Value>
+          <ows:Value>DEBW099</ows:Value>
+          <ows:Value>DEBW037</ows:Value>
+          <ows:Value>DEBW030</ows:Value>
+          <ows:Value>DEBW059</ows:Value>
+          <ows:Value>DEBY002</ows:Value>
+          <ows:Value>DEBY001</ows:Value>
+          <ows:Value>DEBW110</ows:Value>
+          <ows:Value>DEBW112</ows:Value>
+          <ows:Value>DEBW087</ows:Value>
+          <ows:Value>DEBW103</ows:Value>
+          <ows:Value>DEBY004</ows:Value>
+          <ows:Value>DEBW122</ows:Value>
+          <ows:Value>DEBY005</ows:Value>
+          <ows:Value>DEBY007</ows:Value>
+          <ows:Value>DEBY006</ows:Value>
+          <ows:Value>DEBY013</ows:Value>
+          <ows:Value>DEBY012</ows:Value>
+          <ows:Value>DEBY014</ows:Value>
+          <ows:Value>DEBY020</ows:Value>
+          <ows:Value>DEBY021</ows:Value>
+          <ows:Value>DEBY026</ows:Value>
+          <ows:Value>DEBY028</ows:Value>
+          <ows:Value>DEBW042</ows:Value>
+          <ows:Value>DEBY052</ows:Value>
+          <ows:Value>DEBY037</ows:Value>
+          <ows:Value>DEBY031</ows:Value>
+          <ows:Value>DEBY072</ows:Value>
+          <ows:Value>DEBY088</ows:Value>
+          <ows:Value>DEBY077</ows:Value>
+          <ows:Value>DEBY063</ows:Value>
+          <ows:Value>DEBY039</ows:Value>
+          <ows:Value>DEBY032</ows:Value>
+          <ows:Value>DEBY053</ows:Value>
+          <ows:Value>DEBY043</ows:Value>
+          <ows:Value>DEBY033</ows:Value>
+          <ows:Value>DEBY110</ows:Value>
+          <ows:Value>DEBY099</ows:Value>
+          <ows:Value>DEBY079</ows:Value>
+          <ows:Value>DEBY054</ows:Value>
+          <ows:Value>DEBY047</ows:Value>
+          <ows:Value>DEBY035</ows:Value>
+          <ows:Value>DEBY067</ows:Value>
+          <ows:Value>DEBY075</ows:Value>
+          <ows:Value>DEBY049</ows:Value>
+          <ows:Value>DEBY056</ows:Value>
+          <ows:Value>DEHB003</ows:Value>
+          <ows:Value>DEBY062</ows:Value>
+          <ows:Value>DEBY113</ows:Value>
+          <ows:Value>DEBY081</ows:Value>
+          <ows:Value>DEBY068</ows:Value>
+          <ows:Value>DEBY089</ows:Value>
+          <ows:Value>DEBY076</ows:Value>
+          <ows:Value>DEBY093</ows:Value>
+          <ows:Value>DEBY116</ows:Value>
+          <ows:Value>DEBY115</ows:Value>
+          <ows:Value>DEBY109</ows:Value>
+          <ows:Value>DEBY111</ows:Value>
+          <ows:Value>DEBY114</ows:Value>
+          <ows:Value>DEBY118</ows:Value>
+          <ows:Value>DEBY119</ows:Value>
+          <ows:Value>DEHB002</ows:Value>
+          <ows:Value>DEBY121</ows:Value>
+          <ows:Value>DEBY120</ows:Value>
+          <ows:Value>DEHB001</ows:Value>
+          <ows:Value>DEHB004</ows:Value>
+          <ows:Value>DEHB005</ows:Value>
+          <ows:Value>DEHB006</ows:Value>
+          <ows:Value>DEHB007</ows:Value>
+          <ows:Value>DEHE001</ows:Value>
+          <ows:Value>DEHE005</ows:Value>
+          <ows:Value>DEBY085</ows:Value>
+          <ows:Value>DEBY030</ows:Value>
+          <ows:Value>DEHE020</ows:Value>
+          <ows:Value>DEHE008</ows:Value>
+          <ows:Value>DEHH026</ows:Value>
+          <ows:Value>DEHE042</ows:Value>
+          <ows:Value>DEHE032</ows:Value>
+          <ows:Value>DEHE009</ows:Value>
+          <ows:Value>DEHE022</ows:Value>
+          <ows:Value>DEHH016</ows:Value>
+          <ows:Value>DEHH070</ows:Value>
+          <ows:Value>DEHE049</ows:Value>
+          <ows:Value>DEHE023</ows:Value>
+          <ows:Value>DEHE011</ows:Value>
+          <ows:Value>DEHE059</ows:Value>
+          <ows:Value>DEHE043</ows:Value>
+          <ows:Value>DEHE037</ows:Value>
+          <ows:Value>DEHE024</ows:Value>
+          <ows:Value>DEHE013</ows:Value>
+          <ows:Value>DEHE062</ows:Value>
+          <ows:Value>DEHE026</ows:Value>
+          <ows:Value>DEHH064</ows:Value>
+          <ows:Value>DEHE051</ows:Value>
+          <ows:Value>DEHE040</ows:Value>
+          <ows:Value>DEHE018</ows:Value>
+          <ows:Value>DEHE044</ows:Value>
+          <ows:Value>DEHE028</ows:Value>
+          <ows:Value>DEHH008</ows:Value>
+          <ows:Value>DEHE041</ows:Value>
+          <ows:Value>DEHE063</ows:Value>
+          <ows:Value>DEHE030</ows:Value>
+          <ows:Value>DEHE052</ows:Value>
+          <ows:Value>DEHE045</ows:Value>
+          <ows:Value>DEHE060</ows:Value>
+          <ows:Value>DEHH021</ows:Value>
+          <ows:Value>DEHH047</ows:Value>
+          <ows:Value>DEHE046</ows:Value>
+          <ows:Value>DEHE058</ows:Value>
+          <ows:Value>DEHH050</ows:Value>
+          <ows:Value>DEHE061</ows:Value>
+          <ows:Value>DEHH075</ows:Value>
+          <ows:Value>DEHE094</ows:Value>
+          <ows:Value>DEHH074</ows:Value>
+          <ows:Value>DEMV006</ows:Value>
+          <ows:Value>DEHH049</ows:Value>
+          <ows:Value>DEHH033</ows:Value>
+          <ows:Value>DEHH072</ows:Value>
+          <ows:Value>DEHH068</ows:Value>
+          <ows:Value>DEHH073</ows:Value>
+          <ows:Value>DEHH076</ows:Value>
+          <ows:Value>DEMV003</ows:Value>
+          <ows:Value>DEMV004</ows:Value>
+          <ows:Value>DEHH015</ows:Value>
+          <ows:Value>DEMV007</ows:Value>
+          <ows:Value>DEHH059</ows:Value>
+          <ows:Value>DENI076</ows:Value>
+          <ows:Value>DENI062</ows:Value>
+          <ows:Value>DEMV012</ows:Value>
+          <ows:Value>DENI068</ows:Value>
+          <ows:Value>DENI041</ows:Value>
+          <ows:Value>DEMV022</ows:Value>
+          <ows:Value>DENI020</ows:Value>
+          <ows:Value>DEMV017</ows:Value>
+          <ows:Value>DENI051</ows:Value>
+          <ows:Value>DENI058</ows:Value>
+          <ows:Value>DEMV023</ows:Value>
+          <ows:Value>DENI028</ows:Value>
+          <ows:Value>DEMV018</ows:Value>
+          <ows:Value>DENW006</ows:Value>
+          <ows:Value>DENI042</ows:Value>
+          <ows:Value>DENI011</ows:Value>
+          <ows:Value>DENW010</ows:Value>
+          <ows:Value>DEMV019</ows:Value>
+          <ows:Value>DENI029</ows:Value>
+          <ows:Value>DEMV020</ows:Value>
+          <ows:Value>DENI052</ows:Value>
+          <ows:Value>DENI016</ows:Value>
+          <ows:Value>DENI063</ows:Value>
+          <ows:Value>DENI059</ows:Value>
+          <ows:Value>DEMV021</ows:Value>
+          <ows:Value>DENI031</ows:Value>
+          <ows:Value>DENI072</ows:Value>
+          <ows:Value>DENI019</ows:Value>
+          <ows:Value>DENI043</ows:Value>
+          <ows:Value>DENI053</ows:Value>
+          <ows:Value>DENW021</ows:Value>
+          <ows:Value>DENI038</ows:Value>
+          <ows:Value>DENI048</ows:Value>
+          <ows:Value>DENW015</ows:Value>
+          <ows:Value>DENI060</ows:Value>
+          <ows:Value>DENI067</ows:Value>
+          <ows:Value>DENI054</ows:Value>
+          <ows:Value>DENI073</ows:Value>
+          <ows:Value>DENW002</ows:Value>
+          <ows:Value>DENI075</ows:Value>
+          <ows:Value>DENI071</ows:Value>
+          <ows:Value>DENW034</ows:Value>
+          <ows:Value>DENW030</ows:Value>
+          <ows:Value>DENW022</ows:Value>
+          <ows:Value>DENW038</ows:Value>
+          <ows:Value>DENW024</ows:Value>
+          <ows:Value>DENW029</ows:Value>
+          <ows:Value>DENW053</ows:Value>
+          <ows:Value>DENW040</ows:Value>
+          <ows:Value>DENW042</ows:Value>
+          <ows:Value>DENW043</ows:Value>
+          <ows:Value>DENI070</ows:Value>
+          <ows:Value>DENW058</ows:Value>
+          <ows:Value>DENW059</ows:Value>
+          <ows:Value>DENW008</ows:Value>
+          <ows:Value>DENW102</ows:Value>
+          <ows:Value>DENW186</ows:Value>
+          <ows:Value>DENW062</ows:Value>
+          <ows:Value>DENW071</ows:Value>
+          <ows:Value>DENW082</ows:Value>
+          <ows:Value>DENW074</ows:Value>
+          <ows:Value>DENW224</ows:Value>
+          <ows:Value>DENW134</ows:Value>
+          <ows:Value>DENW116</ows:Value>
+          <ows:Value>DENW094</ows:Value>
+          <ows:Value>DENW065</ows:Value>
+          <ows:Value>DENW078</ows:Value>
+          <ows:Value>DENW225</ows:Value>
+          <ows:Value>DENW189</ows:Value>
+          <ows:Value>DENW199</ows:Value>
+          <ows:Value>DENW066</ows:Value>
+          <ows:Value>DENW079</ows:Value>
+          <ows:Value>DENW095</ows:Value>
+          <ows:Value>DENW081</ows:Value>
+          <ows:Value>DENW136</ows:Value>
+          <ows:Value>DENW114</ows:Value>
+          <ows:Value>DENW080</ows:Value>
+          <ows:Value>DENW096</ows:Value>
+          <ows:Value>DENW068</ows:Value>
+          <ows:Value>DENW212</ows:Value>
+          <ows:Value>DENW112</ows:Value>
+          <ows:Value>DENW222</ows:Value>
+          <ows:Value>DENW100</ows:Value>
+          <ows:Value>DENW207</ows:Value>
+          <ows:Value>DENW101</ows:Value>
+          <ows:Value>DENW221</ows:Value>
+          <ows:Value>DENW226</ows:Value>
+          <ows:Value>DENW133</ows:Value>
+          <ows:Value>DENW179</ows:Value>
+          <ows:Value>DENW256</ows:Value>
+          <ows:Value>DENW220</ows:Value>
+          <ows:Value>DENW180</ows:Value>
+          <ows:Value>DENW181</ows:Value>
+          <ows:Value>DENW211</ows:Value>
+          <ows:Value>DENW227</ows:Value>
+          <ows:Value>DENW223</ows:Value>
+          <ows:Value>DENW258</ows:Value>
+          <ows:Value>DENW247</ows:Value>
+          <ows:Value>DENW257</ows:Value>
+          <ows:Value>DERP001</ows:Value>
+          <ows:Value>DENW284</ows:Value>
+          <ows:Value>DENW260</ows:Value>
+          <ows:Value>DENW064</ows:Value>
+          <ows:Value>DERP002</ows:Value>
+          <ows:Value>DERP003</ows:Value>
+          <ows:Value>DENW067</ows:Value>
+          <ows:Value>DERP013</ows:Value>
+          <ows:Value>DESH001</ows:Value>
+          <ows:Value>DERP018</ows:Value>
+          <ows:Value>DERP025</ows:Value>
+          <ows:Value>DERP007</ows:Value>
+          <ows:Value>DERP014</ows:Value>
+          <ows:Value>DERP028</ows:Value>
+          <ows:Value>DERP026</ows:Value>
+          <ows:Value>DERP008</ows:Value>
+          <ows:Value>DESH006</ows:Value>
+          <ows:Value>DERP015</ows:Value>
+          <ows:Value>DERP019</ows:Value>
+          <ows:Value>DERP027</ows:Value>
+          <ows:Value>DERP009</ows:Value>
+          <ows:Value>DERP041</ows:Value>
+          <ows:Value>DERP016</ows:Value>
+          <ows:Value>DERP023</ows:Value>
+          <ows:Value>DERP010</ows:Value>
+          <ows:Value>DERP020</ows:Value>
+          <ows:Value>DERP011</ows:Value>
+          <ows:Value>DESH034</ows:Value>
+          <ows:Value>DESH027</ows:Value>
+          <ows:Value>DERP012</ows:Value>
+          <ows:Value>DERP042</ows:Value>
+          <ows:Value>DESH017</ows:Value>
+          <ows:Value>DERP017</ows:Value>
+          <ows:Value>DERP034</ows:Value>
+          <ows:Value>DESH016</ows:Value>
+          <ows:Value>DERP021</ows:Value>
+          <ows:Value>DESH008</ows:Value>
+          <ows:Value>DERP035</ows:Value>
+          <ows:Value>DERP045</ows:Value>
+          <ows:Value>DERP036</ows:Value>
+          <ows:Value>DERP040</ows:Value>
+          <ows:Value>DESH022</ows:Value>
+          <ows:Value>DERP046</ows:Value>
+          <ows:Value>DESH011</ows:Value>
+          <ows:Value>DESH013</ows:Value>
+          <ows:Value>DESH014</ows:Value>
+          <ows:Value>DESH015</ows:Value>
+          <ows:Value>DESH023</ows:Value>
+          <ows:Value>DESH028</ows:Value>
+          <ows:Value>DESH025</ows:Value>
+          <ows:Value>DESH026</ows:Value>
+          <ows:Value>DERP022</ows:Value>
+          <ows:Value>DESH035</ows:Value>
+          <ows:Value>DESL001</ows:Value>
+          <ows:Value>DESL002</ows:Value>
+          <ows:Value>DESL003</ows:Value>
+          <ows:Value>DESL006</ows:Value>
+          <ows:Value>DERP024</ows:Value>
+          <ows:Value>DESH033</ows:Value>
+          <ows:Value>DESN080</ows:Value>
+          <ows:Value>DESL020</ows:Value>
+          <ows:Value>DESN051</ows:Value>
+          <ows:Value>DESL010</ows:Value>
+          <ows:Value>DESN081</ows:Value>
+          <ows:Value>DESN001</ows:Value>
+          <ows:Value>DESL011</ows:Value>
+          <ows:Value>DESN061</ows:Value>
+          <ows:Value>DESN024</ows:Value>
+          <ows:Value>DESL012</ows:Value>
+          <ows:Value>DESN059</ows:Value>
+          <ows:Value>DESN011</ows:Value>
+          <ows:Value>DESL013</ows:Value>
+          <ows:Value>DESN077</ows:Value>
+          <ows:Value>DESN045</ows:Value>
+          <ows:Value>DESN012</ows:Value>
+          <ows:Value>DESN006</ows:Value>
+          <ows:Value>DESN082</ows:Value>
+          <ows:Value>DESN074</ows:Value>
+          <ows:Value>DESL018</ows:Value>
+          <ows:Value>DESN060</ows:Value>
+          <ows:Value>DESN017</ows:Value>
+          <ows:Value>DESL019</ows:Value>
+          <ows:Value>DESN049</ows:Value>
+          <ows:Value>DEST029</ows:Value>
+          <ows:Value>DEST015</ows:Value>
+          <ows:Value>DEST002</ows:Value>
+          <ows:Value>DESN019</ows:Value>
+          <ows:Value>DESN079</ows:Value>
+          <ows:Value>DESN025</ows:Value>
+          <ows:Value>DESN075</ows:Value>
+          <ows:Value>DESN052</ows:Value>
+          <ows:Value>DESN020</ows:Value>
+          <ows:Value>DESN053</ows:Value>
+          <ows:Value>DESN050</ows:Value>
+          <ows:Value>DESN091</ows:Value>
+          <ows:Value>DESN083</ows:Value>
+          <ows:Value>DEST050</ows:Value>
+          <ows:Value>DESN076</ows:Value>
+          <ows:Value>DESN084</ows:Value>
+          <ows:Value>DESN092</ows:Value>
+          <ows:Value>DESN004</ows:Value>
+          <ows:Value>DEST028</ows:Value>
+          <ows:Value>DEST011</ows:Value>
+          <ows:Value>DEST030</ows:Value>
+          <ows:Value>DEST063</ows:Value>
+          <ows:Value>DEST039</ows:Value>
+          <ows:Value>DEST044</ows:Value>
+          <ows:Value>DEST057</ows:Value>
+          <ows:Value>DEST066</ows:Value>
+          <ows:Value>DEST068</ows:Value>
+          <ows:Value>DEST069</ows:Value>
+          <ows:Value>DEST072</ows:Value>
+          <ows:Value>DEST074</ows:Value>
+          <ows:Value>DEST075</ows:Value>
+          <ows:Value>DETH013</ows:Value>
+          <ows:Value>DEST104</ows:Value>
+          <ows:Value>DEST076</ows:Value>
+          <ows:Value>DETH009</ows:Value>
+          <ows:Value>DEST091</ows:Value>
+          <ows:Value>DETH061</ows:Value>
+          <ows:Value>DETH027</ows:Value>
+          <ows:Value>DETH025</ows:Value>
+          <ows:Value>DEST077</ows:Value>
+          <ows:Value>DEST092</ows:Value>
+          <ows:Value>DEST078</ows:Value>
+          <ows:Value>DETH018</ows:Value>
+          <ows:Value>DEST095</ows:Value>
+          <ows:Value>DEUB028</ows:Value>
+          <ows:Value>DETH005</ows:Value>
+          <ows:Value>DEST097</ows:Value>
+          <ows:Value>DEST081</ows:Value>
+          <ows:Value>DETH089</ows:Value>
+          <ows:Value>DETH042</ows:Value>
+          <ows:Value>DETH036</ows:Value>
+          <ows:Value>DEST102</ows:Value>
+          <ows:Value>DETH086</ows:Value>
+          <ows:Value>DEST098</ows:Value>
+          <ows:Value>DETH039</ows:Value>
+          <ows:Value>DETH020</ows:Value>
+          <ows:Value>DEST099</ows:Value>
+          <ows:Value>DEST090</ows:Value>
+          <ows:Value>DETH072</ows:Value>
+          <ows:Value>DETH011</ows:Value>
+          <ows:Value>DETH088</ows:Value>
+          <ows:Value>DETH043</ows:Value>
+          <ows:Value>DETH040</ows:Value>
+          <ows:Value>DETH026</ows:Value>
+          <ows:Value>DETH093</ows:Value>
+          <ows:Value>DETH060</ows:Value>
+          <ows:Value>DETH041</ows:Value>
+          <ows:Value>DETH081</ows:Value>
+          <ows:Value>DETH094</ows:Value>
+          <ows:Value>DETH084</ows:Value>
+          <ows:Value>DEUB005</ows:Value>
+          <ows:Value>DENW135</ows:Value>
+          <ows:Value>DEUB001</ows:Value>
+          <ows:Value>DEUB029</ows:Value>
+          <ows:Value>DEUB004</ows:Value>
+          <ows:Value>DEUB030</ows:Value>
+          <ows:Value>DENW187</ows:Value>
+          <ows:Value>DENW188</ows:Value>
+          <ows:Value>DENW283</ows:Value>
+          <ows:Value>DESL017</ows:Value>
+          <ows:Value>DEST100</ows:Value>
+          <ows:Value>DEST103</ows:Value>
+          <ows:Value>DEST089</ows:Value>
+        </ows:AllowedValues>
+      </ows:Parameter>
+      <ows:Parameter name="location">
+        <ows:AnyValue/>
+      </ows:Parameter>
+    </ows:Operation>
+  </ows:OperationsMetadata>
+  <sos:Filter_Capabilities xmlns:ogc="http://www.opengis.net/ogc" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:om="http://www.opengis.net/om/1.0" xmlns:swe="http://www.opengis.net/swe/1.0">
+    <ogc:Spatial_Capabilities>
+      <ogc:GeometryOperands>
+        <ogc:GeometryOperand>gml:Envelope</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:Polygon</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:Point</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:LineString</ogc:GeometryOperand>
+      </ogc:GeometryOperands>
+      <ogc:SpatialOperators>
+        <ogc:SpatialOperator name="BBOX"/>
+        <ogc:SpatialOperator name="Contains"/>
+        <ogc:SpatialOperator name="Intersects"/>
+        <ogc:SpatialOperator name="Overlaps"/>
+      </ogc:SpatialOperators>
+    </ogc:Spatial_Capabilities>
+    <ogc:Temporal_Capabilities>
+      <ogc:TemporalOperands>
+        <ogc:TemporalOperand>gml:TimeInstant</ogc:TemporalOperand>
+        <ogc:TemporalOperand>gml:TimePeriod</ogc:TemporalOperand>
+      </ogc:TemporalOperands>
+      <ogc:TemporalOperators>
+        <ogc:TemporalOperator name="TM_During"/>
+        <ogc:TemporalOperator name="TM_Equals"/>
+        <ogc:TemporalOperator name="TM_After"/>
+        <ogc:TemporalOperator name="TM_Before"/>
+      </ogc:TemporalOperators>
+    </ogc:Temporal_Capabilities>
+    <ogc:Scalar_Capabilities>
+      <ogc:ComparisonOperators>
+        <ogc:ComparisonOperator>Between</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>EqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>NotEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>LessThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>LessThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>Like</ogc:ComparisonOperator>
+      </ogc:ComparisonOperators>
+    </ogc:Scalar_Capabilities>
+    <ogc:Id_Capabilities>
+      <ogc:FID/>
+      <ogc:EID/>
+    </ogc:Id_Capabilities>
+  </sos:Filter_Capabilities>
+  <sos:Contents>
+    <sos:ObservationOfferingList>
+      <sos:ObservationOffering gml:id="AIR_QUALITY">
+        <gml:name>Gaseous and particulate air pollution parameters</gml:name>
+        <gml:boundedBy>
+          <gml:Envelope srsName="urn:ogc:def:crs:EPSG:4326">
+            <gml:lowerCorner>6.093923 47.476392</gml:lowerCorner>
+            <gml:upperCorner>14.973958 54.924967</gml:upperCorner>
+          </gml:Envelope>
+        </gml:boundedBy>
+        <sos:time>
+          <gml:TimePeriod xsi:type="gml:TimePeriodType">
+            <gml:beginPosition>2008-07-01T00:30:00+02:00</gml:beginPosition>
+            <gml:endPosition>2010-02-24T09:00:00+01:00</gml:endPosition>
+          </gml:TimePeriod>
+        </sos:time>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB053"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB065"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB066"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBB075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE032"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE056"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBE062"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW031"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW087"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBW103"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY047"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY049"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY072"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEBY109"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE023"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE024"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE043"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE046"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE051"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE052"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEHE060"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV012"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEMV017"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI031"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI051"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI058"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI060"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENI063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENW064"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENW065"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENW068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DENW081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP014"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP016"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP017"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DERP028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESH001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESH008"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESH013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESH014"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESH017"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESL001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESL019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN049"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN051"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN052"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN053"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN074"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN079"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DESN080"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEST039"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEST069"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEST089"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEST098"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEST104"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DETH026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DETH027"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DETH040"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DETH042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DETH061"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-background-DEUB030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBB081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEBE027"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEHH073"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENI070"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW074"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DENW257"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DESH011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-industrial-DEST068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-traffic-DEHH075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:rural-traffic-DENW066"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB048"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB050"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB055"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB067"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB082"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBB083"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBE051"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW023"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW024"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW034"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW037"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW039"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW046"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW056"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW107"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW110"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW111"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBW112"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY062"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY077"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY079"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY089"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY093"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY099"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEBY113"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH047"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH049"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEHH050"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEMV018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI016"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI041"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI043"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI052"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENI062"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW040"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW062"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW078"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW079"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW080"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW096"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DENW247"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESH016"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESL013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN045"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DESN082"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-background-DEST072"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB032"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBB084"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBW073"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEBY088"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENI053"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW058"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW116"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW180"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DENW227"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DESH035"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST090"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-industrial-DEST097"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBW040"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY012"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY118"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEBY121"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI071"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DENI072"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:suburban-traffic-DEST029"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBB064"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE034"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE066"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBE068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW027"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW052"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBW084"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY003"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY009"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY031"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY032"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY039"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY052"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEBY067"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB003"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHB005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE008"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE009"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE032"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE044"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE045"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHE058"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH008"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH015"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH033"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH074"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEHH076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEMV021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENI038"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENI054"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW008"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW024"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW038"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW053"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW067"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW071"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW094"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW095"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW114"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DENW179"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP009"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP025"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP034"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP040"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DERP042"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESH023"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESH033"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL003"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL012"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL017"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESL018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN004"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN012"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN017"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN019"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN024"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN050"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DESN092"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST030"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST044"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST050"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST066"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST074"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST077"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DEST078"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH009"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH013"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH025"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH036"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH041"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH060"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH086"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-background-DETH093"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEBY026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH016"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DEHH072"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW021"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW034"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW102"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW181"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-industrial-DENW226"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB044"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB045"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB049"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB054"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB060"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBB073"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE061"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE064"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE065"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE067"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBE069"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW009"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW033"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW038"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW080"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW098"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW099"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBW122"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY001"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY014"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY033"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY035"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY037"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY043"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY053"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY054"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY056"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY085"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY110"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY111"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY114"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY115"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY116"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY119"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEBY120"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHB007"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE005"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE037"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE040"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE041"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE049"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE059"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE061"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE062"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE063"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHE094"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH064"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEHH070"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV003"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEMV023"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI048"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI067"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI068"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI073"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENI076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW043"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW082"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW100"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW101"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW112"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW133"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW134"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW135"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW136"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW186"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW187"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW188"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW189"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW199"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW207"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW211"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW212"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW220"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW221"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW222"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW223"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW224"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW225"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW256"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW258"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW260"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW283"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DENW284"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP002"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP003"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP008"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP010"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP012"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP018"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP023"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP024"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP027"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP035"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP036"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP041"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP045"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DERP046"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH022"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH025"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH026"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH027"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH028"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESH034"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESL020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN006"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN020"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN025"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN060"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN061"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN077"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN083"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN084"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DESN091"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST057"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST075"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST076"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST091"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST092"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST095"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST099"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST100"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST102"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DEST103"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH011"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH039"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH043"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH072"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH081"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH084"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH088"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH089"/>
+        <sos:procedure xlink:href="urn:ogc:object:feature:Sensor:UBA:urban-traffic-DETH094"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:no" />
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:no"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:no2"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:so2"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:pm10"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:pm2.5"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:o3"/>
+        <sos:observedProperty xlink:href="urn:ogc:def:phenomenon:OGC:1.0.30:co"/>
+        <sos:featureOfInterest xlink:href="DEBB007"/>
+        <sos:featureOfInterest xlink:href="DEBB021"/>
+        <sos:featureOfInterest xlink:href="DEBB026"/>
+        <sos:featureOfInterest xlink:href="DEBB029"/>
+        <sos:featureOfInterest xlink:href="DEBB032"/>
+        <sos:featureOfInterest xlink:href="DEBB042"/>
+        <sos:featureOfInterest xlink:href="DEBB044"/>
+        <sos:featureOfInterest xlink:href="DEBB045"/>
+        <sos:featureOfInterest xlink:href="DEBB048"/>
+        <sos:featureOfInterest xlink:href="DEBB049"/>
+        <sos:featureOfInterest xlink:href="DEBB050"/>
+        <sos:featureOfInterest xlink:href="DEBB053"/>
+        <sos:featureOfInterest xlink:href="DEBB054"/>
+        <sos:featureOfInterest xlink:href="DEBB055"/>
+        <sos:featureOfInterest xlink:href="DEBB059"/>
+        <sos:featureOfInterest xlink:href="DEBB060"/>
+        <sos:featureOfInterest xlink:href="DEBB063"/>
+        <sos:featureOfInterest xlink:href="DEBB064"/>
+        <sos:featureOfInterest xlink:href="DEBB065"/>
+        <sos:featureOfInterest xlink:href="DEBB066"/>
+        <sos:featureOfInterest xlink:href="DEBB067"/>
+        <sos:featureOfInterest xlink:href="DEBB068"/>
+        <sos:featureOfInterest xlink:href="DEBB073"/>
+        <sos:featureOfInterest xlink:href="DEBB075"/>
+        <sos:featureOfInterest xlink:href="DEBB081"/>
+        <sos:featureOfInterest xlink:href="DEBB082"/>
+        <sos:featureOfInterest xlink:href="DEBB083"/>
+        <sos:featureOfInterest xlink:href="DEBB084"/>
+        <sos:featureOfInterest xlink:href="DEBE010"/>
+        <sos:featureOfInterest xlink:href="DEBE018"/>
+        <sos:featureOfInterest xlink:href="DEBE027"/>
+        <sos:featureOfInterest xlink:href="DEBE032"/>
+        <sos:featureOfInterest xlink:href="DEBE034"/>
+        <sos:featureOfInterest xlink:href="DEBE051"/>
+        <sos:featureOfInterest xlink:href="DEBE056"/>
+        <sos:featureOfInterest xlink:href="DEBE061"/>
+        <sos:featureOfInterest xlink:href="DEBE062"/>
+        <sos:featureOfInterest xlink:href="DEBE063"/>
+        <sos:featureOfInterest xlink:href="DEBE064"/>
+        <sos:featureOfInterest xlink:href="DEBE065"/>
+        <sos:featureOfInterest xlink:href="DEBE066"/>
+        <sos:featureOfInterest xlink:href="DEBE067"/>
+        <sos:featureOfInterest xlink:href="DEBE068"/>
+        <sos:featureOfInterest xlink:href="DEBE069"/>
+        <sos:featureOfInterest xlink:href="DEBW001"/>
+        <sos:featureOfInterest xlink:href="DEBW004"/>
+        <sos:featureOfInterest xlink:href="DEBW005"/>
+        <sos:featureOfInterest xlink:href="DEBW006"/>
+        <sos:featureOfInterest xlink:href="DEBW007"/>
+        <sos:featureOfInterest xlink:href="DEBW009"/>
+        <sos:featureOfInterest xlink:href="DEBW010"/>
+        <sos:featureOfInterest xlink:href="DEBW011"/>
+        <sos:featureOfInterest xlink:href="DEBW013"/>
+        <sos:featureOfInterest xlink:href="DEBW015"/>
+        <sos:featureOfInterest xlink:href="DEBW019"/>
+        <sos:featureOfInterest xlink:href="DEBW022"/>
+        <sos:featureOfInterest xlink:href="DEBW023"/>
+        <sos:featureOfInterest xlink:href="DEBW024"/>
+        <sos:featureOfInterest xlink:href="DEBW026"/>
+        <sos:featureOfInterest xlink:href="DEBW027"/>
+        <sos:featureOfInterest xlink:href="DEBW029"/>
+        <sos:featureOfInterest xlink:href="DEBW030"/>
+        <sos:featureOfInterest xlink:href="DEBW031"/>
+        <sos:featureOfInterest xlink:href="DEBW033"/>
+        <sos:featureOfInterest xlink:href="DEBW034"/>
+        <sos:featureOfInterest xlink:href="DEBW037"/>
+        <sos:featureOfInterest xlink:href="DEBW038"/>
+        <sos:featureOfInterest xlink:href="DEBW039"/>
+        <sos:featureOfInterest xlink:href="DEBW040"/>
+        <sos:featureOfInterest xlink:href="DEBW042"/>
+        <sos:featureOfInterest xlink:href="DEBW046"/>
+        <sos:featureOfInterest xlink:href="DEBW052"/>
+        <sos:featureOfInterest xlink:href="DEBW056"/>
+        <sos:featureOfInterest xlink:href="DEBW059"/>
+        <sos:featureOfInterest xlink:href="DEBW073"/>
+        <sos:featureOfInterest xlink:href="DEBW076"/>
+        <sos:featureOfInterest xlink:href="DEBW080"/>
+        <sos:featureOfInterest xlink:href="DEBW081"/>
+        <sos:featureOfInterest xlink:href="DEBW084"/>
+        <sos:featureOfInterest xlink:href="DEBW087"/>
+        <sos:featureOfInterest xlink:href="DEBW098"/>
+        <sos:featureOfInterest xlink:href="DEBW099"/>
+        <sos:featureOfInterest xlink:href="DEBW103"/>
+        <sos:featureOfInterest xlink:href="DEBW107"/>
+        <sos:featureOfInterest xlink:href="DEBW110"/>
+        <sos:featureOfInterest xlink:href="DEBW111"/>
+        <sos:featureOfInterest xlink:href="DEBW112"/>
+        <sos:featureOfInterest xlink:href="DEBW122"/>
+        <sos:featureOfInterest xlink:href="DEBY001"/>
+        <sos:featureOfInterest xlink:href="DEBY002"/>
+        <sos:featureOfInterest xlink:href="DEBY003"/>
+        <sos:featureOfInterest xlink:href="DEBY004"/>
+        <sos:featureOfInterest xlink:href="DEBY005"/>
+        <sos:featureOfInterest xlink:href="DEBY006"/>
+        <sos:featureOfInterest xlink:href="DEBY007"/>
+        <sos:featureOfInterest xlink:href="DEBY009"/>
+        <sos:featureOfInterest xlink:href="DEBY010"/>
+        <sos:featureOfInterest xlink:href="DEBY012"/>
+        <sos:featureOfInterest xlink:href="DEBY013"/>
+        <sos:featureOfInterest xlink:href="DEBY014"/>
+        <sos:featureOfInterest xlink:href="DEBY020"/>
+        <sos:featureOfInterest xlink:href="DEBY021"/>
+        <sos:featureOfInterest xlink:href="DEBY026"/>
+        <sos:featureOfInterest xlink:href="DEBY028"/>
+        <sos:featureOfInterest xlink:href="DEBY030"/>
+        <sos:featureOfInterest xlink:href="DEBY031"/>
+        <sos:featureOfInterest xlink:href="DEBY032"/>
+        <sos:featureOfInterest xlink:href="DEBY033"/>
+        <sos:featureOfInterest xlink:href="DEBY035"/>
+        <sos:featureOfInterest xlink:href="DEBY037"/>
+        <sos:featureOfInterest xlink:href="DEBY039"/>
+        <sos:featureOfInterest xlink:href="DEBY043"/>
+        <sos:featureOfInterest xlink:href="DEBY047"/>
+        <sos:featureOfInterest xlink:href="DEBY049"/>
+        <sos:featureOfInterest xlink:href="DEBY052"/>
+        <sos:featureOfInterest xlink:href="DEBY053"/>
+        <sos:featureOfInterest xlink:href="DEBY054"/>
+        <sos:featureOfInterest xlink:href="DEBY056"/>
+        <sos:featureOfInterest xlink:href="DEBY062"/>
+        <sos:featureOfInterest xlink:href="DEBY063"/>
+        <sos:featureOfInterest xlink:href="DEBY067"/>
+        <sos:featureOfInterest xlink:href="DEBY068"/>
+        <sos:featureOfInterest xlink:href="DEBY072"/>
+        <sos:featureOfInterest xlink:href="DEBY075"/>
+        <sos:featureOfInterest xlink:href="DEBY076"/>
+        <sos:featureOfInterest xlink:href="DEBY077"/>
+        <sos:featureOfInterest xlink:href="DEBY079"/>
+        <sos:featureOfInterest xlink:href="DEBY081"/>
+        <sos:featureOfInterest xlink:href="DEBY085"/>
+        <sos:featureOfInterest xlink:href="DEBY088"/>
+        <sos:featureOfInterest xlink:href="DEBY089"/>
+        <sos:featureOfInterest xlink:href="DEBY093"/>
+        <sos:featureOfInterest xlink:href="DEBY099"/>
+        <sos:featureOfInterest xlink:href="DEBY109"/>
+        <sos:featureOfInterest xlink:href="DEBY110"/>
+        <sos:featureOfInterest xlink:href="DEBY111"/>
+        <sos:featureOfInterest xlink:href="DEBY113"/>
+        <sos:featureOfInterest xlink:href="DEBY114"/>
+        <sos:featureOfInterest xlink:href="DEBY115"/>
+        <sos:featureOfInterest xlink:href="DEBY116"/>
+        <sos:featureOfInterest xlink:href="DEBY118"/>
+        <sos:featureOfInterest xlink:href="DEBY119"/>
+        <sos:featureOfInterest xlink:href="DEBY120"/>
+        <sos:featureOfInterest xlink:href="DEBY121"/>
+        <sos:featureOfInterest xlink:href="DEHB001"/>
+        <sos:featureOfInterest xlink:href="DEHB002"/>
+        <sos:featureOfInterest xlink:href="DEHB003"/>
+        <sos:featureOfInterest xlink:href="DEHB004"/>
+        <sos:featureOfInterest xlink:href="DEHB005"/>
+        <sos:featureOfInterest xlink:href="DEHB006"/>
+        <sos:featureOfInterest xlink:href="DEHB007"/>
+        <sos:featureOfInterest xlink:href="DEHE001"/>
+        <sos:featureOfInterest xlink:href="DEHE005"/>
+        <sos:featureOfInterest xlink:href="DEHE008"/>
+        <sos:featureOfInterest xlink:href="DEHE009"/>
+        <sos:featureOfInterest xlink:href="DEHE011"/>
+        <sos:featureOfInterest xlink:href="DEHE013"/>
+        <sos:featureOfInterest xlink:href="DEHE018"/>
+        <sos:featureOfInterest xlink:href="DEHE020"/>
+        <sos:featureOfInterest xlink:href="DEHE022"/>
+        <sos:featureOfInterest xlink:href="DEHE023"/>
+        <sos:featureOfInterest xlink:href="DEHE024"/>
+        <sos:featureOfInterest xlink:href="DEHE026"/>
+        <sos:featureOfInterest xlink:href="DEHE028"/>
+        <sos:featureOfInterest xlink:href="DEHE030"/>
+        <sos:featureOfInterest xlink:href="DEHE032"/>
+        <sos:featureOfInterest xlink:href="DEHE037"/>
+        <sos:featureOfInterest xlink:href="DEHE040"/>
+        <sos:featureOfInterest xlink:href="DEHE041"/>
+        <sos:featureOfInterest xlink:href="DEHE042"/>
+        <sos:featureOfInterest xlink:href="DEHE043"/>
+        <sos:featureOfInterest xlink:href="DEHE044"/>
+        <sos:featureOfInterest xlink:href="DEHE045"/>
+        <sos:featureOfInterest xlink:href="DEHE046"/>
+        <sos:featureOfInterest xlink:href="DEHE049"/>
+        <sos:featureOfInterest xlink:href="DEHE051"/>
+        <sos:featureOfInterest xlink:href="DEHE052"/>
+        <sos:featureOfInterest xlink:href="DEHE058"/>
+        <sos:featureOfInterest xlink:href="DEHE059"/>
+        <sos:featureOfInterest xlink:href="DEHE060"/>
+        <sos:featureOfInterest xlink:href="DEHE061"/>
+        <sos:featureOfInterest xlink:href="DEHE062"/>
+        <sos:featureOfInterest xlink:href="DEHE063"/>
+        <sos:featureOfInterest xlink:href="DEHE094"/>
+        <sos:featureOfInterest xlink:href="DEHH008"/>
+        <sos:featureOfInterest xlink:href="DEHH015"/>
+        <sos:featureOfInterest xlink:href="DEHH016"/>
+        <sos:featureOfInterest xlink:href="DEHH021"/>
+        <sos:featureOfInterest xlink:href="DEHH026"/>
+        <sos:featureOfInterest xlink:href="DEHH033"/>
+        <sos:featureOfInterest xlink:href="DEHH047"/>
+        <sos:featureOfInterest xlink:href="DEHH049"/>
+        <sos:featureOfInterest xlink:href="DEHH050"/>
+        <sos:featureOfInterest xlink:href="DEHH059"/>
+        <sos:featureOfInterest xlink:href="DEHH064"/>
+        <sos:featureOfInterest xlink:href="DEHH068"/>
+        <sos:featureOfInterest xlink:href="DEHH070"/>
+        <sos:featureOfInterest xlink:href="DEHH072"/>
+        <sos:featureOfInterest xlink:href="DEHH073"/>
+        <sos:featureOfInterest xlink:href="DEHH074"/>
+        <sos:featureOfInterest xlink:href="DEHH075"/>
+        <sos:featureOfInterest xlink:href="DEHH076"/>
+        <sos:featureOfInterest xlink:href="DEMV003"/>
+        <sos:featureOfInterest xlink:href="DEMV004"/>
+        <sos:featureOfInterest xlink:href="DEMV006"/>
+        <sos:featureOfInterest xlink:href="DEMV007"/>
+        <sos:featureOfInterest xlink:href="DEMV012"/>
+        <sos:featureOfInterest xlink:href="DEMV017"/>
+        <sos:featureOfInterest xlink:href="DEMV018"/>
+        <sos:featureOfInterest xlink:href="DEMV019"/>
+        <sos:featureOfInterest xlink:href="DEMV020"/>
+        <sos:featureOfInterest xlink:href="DEMV021"/>
+        <sos:featureOfInterest xlink:href="DEMV022"/>
+        <sos:featureOfInterest xlink:href="DEMV023"/>
+        <sos:featureOfInterest xlink:href="DENI011"/>
+        <sos:featureOfInterest xlink:href="DENI016"/>
+        <sos:featureOfInterest xlink:href="DENI019"/>
+        <sos:featureOfInterest xlink:href="DENI020"/>
+        <sos:featureOfInterest xlink:href="DENI028"/>
+        <sos:featureOfInterest xlink:href="DENI029"/>
+        <sos:featureOfInterest xlink:href="DENI031"/>
+        <sos:featureOfInterest xlink:href="DENI038"/>
+        <sos:featureOfInterest xlink:href="DENI041"/>
+        <sos:featureOfInterest xlink:href="DENI042"/>
+        <sos:featureOfInterest xlink:href="DENI043"/>
+        <sos:featureOfInterest xlink:href="DENI048"/>
+        <sos:featureOfInterest xlink:href="DENI051"/>
+        <sos:featureOfInterest xlink:href="DENI052"/>
+        <sos:featureOfInterest xlink:href="DENI053"/>
+        <sos:featureOfInterest xlink:href="DENI054"/>
+        <sos:featureOfInterest xlink:href="DENI058"/>
+        <sos:featureOfInterest xlink:href="DENI059"/>
+        <sos:featureOfInterest xlink:href="DENI060"/>
+        <sos:featureOfInterest xlink:href="DENI062"/>
+        <sos:featureOfInterest xlink:href="DENI063"/>
+        <sos:featureOfInterest xlink:href="DENI067"/>
+        <sos:featureOfInterest xlink:href="DENI068"/>
+        <sos:featureOfInterest xlink:href="DENI070"/>
+        <sos:featureOfInterest xlink:href="DENI071"/>
+        <sos:featureOfInterest xlink:href="DENI072"/>
+        <sos:featureOfInterest xlink:href="DENI073"/>
+        <sos:featureOfInterest xlink:href="DENI075"/>
+        <sos:featureOfInterest xlink:href="DENI076"/>
+        <sos:featureOfInterest xlink:href="DENW002"/>
+        <sos:featureOfInterest xlink:href="DENW006"/>
+        <sos:featureOfInterest xlink:href="DENW008"/>
+        <sos:featureOfInterest xlink:href="DENW010"/>
+        <sos:featureOfInterest xlink:href="DENW015"/>
+        <sos:featureOfInterest xlink:href="DENW021"/>
+        <sos:featureOfInterest xlink:href="DENW022"/>
+        <sos:featureOfInterest xlink:href="DENW024"/>
+        <sos:featureOfInterest xlink:href="DENW029"/>
+        <sos:featureOfInterest xlink:href="DENW030"/>
+        <sos:featureOfInterest xlink:href="DENW034"/>
+        <sos:featureOfInterest xlink:href="DENW038"/>
+        <sos:featureOfInterest xlink:href="DENW040"/>
+        <sos:featureOfInterest xlink:href="DENW042"/>
+        <sos:featureOfInterest xlink:href="DENW043"/>
+        <sos:featureOfInterest xlink:href="DENW053"/>
+        <sos:featureOfInterest xlink:href="DENW058"/>
+        <sos:featureOfInterest xlink:href="DENW059"/>
+        <sos:featureOfInterest xlink:href="DENW062"/>
+        <sos:featureOfInterest xlink:href="DENW064"/>
+        <sos:featureOfInterest xlink:href="DENW065"/>
+        <sos:featureOfInterest xlink:href="DENW066"/>
+        <sos:featureOfInterest xlink:href="DENW067"/>
+        <sos:featureOfInterest xlink:href="DENW068"/>
+        <sos:featureOfInterest xlink:href="DENW071"/>
+        <sos:featureOfInterest xlink:href="DENW074"/>
+        <sos:featureOfInterest xlink:href="DENW078"/>
+        <sos:featureOfInterest xlink:href="DENW079"/>
+        <sos:featureOfInterest xlink:href="DENW080"/>
+        <sos:featureOfInterest xlink:href="DENW081"/>
+        <sos:featureOfInterest xlink:href="DENW082"/>
+        <sos:featureOfInterest xlink:href="DENW094"/>
+        <sos:featureOfInterest xlink:href="DENW095"/>
+        <sos:featureOfInterest xlink:href="DENW096"/>
+        <sos:featureOfInterest xlink:href="DENW100"/>
+        <sos:featureOfInterest xlink:href="DENW101"/>
+        <sos:featureOfInterest xlink:href="DENW102"/>
+        <sos:featureOfInterest xlink:href="DENW112"/>
+        <sos:featureOfInterest xlink:href="DENW114"/>
+        <sos:featureOfInterest xlink:href="DENW116"/>
+        <sos:featureOfInterest xlink:href="DENW133"/>
+        <sos:featureOfInterest xlink:href="DENW134"/>
+        <sos:featureOfInterest xlink:href="DENW135"/>
+        <sos:featureOfInterest xlink:href="DENW136"/>
+        <sos:featureOfInterest xlink:href="DENW179"/>
+        <sos:featureOfInterest xlink:href="DENW180"/>
+        <sos:featureOfInterest xlink:href="DENW181"/>
+        <sos:featureOfInterest xlink:href="DENW186"/>
+        <sos:featureOfInterest xlink:href="DENW187"/>
+        <sos:featureOfInterest xlink:href="DENW188"/>
+        <sos:featureOfInterest xlink:href="DENW189"/>
+        <sos:featureOfInterest xlink:href="DENW199"/>
+        <sos:featureOfInterest xlink:href="DENW207"/>
+        <sos:featureOfInterest xlink:href="DENW211"/>
+        <sos:featureOfInterest xlink:href="DENW212"/>
+        <sos:featureOfInterest xlink:href="DENW220"/>
+        <sos:featureOfInterest xlink:href="DENW221"/>
+        <sos:featureOfInterest xlink:href="DENW222"/>
+        <sos:featureOfInterest xlink:href="DENW223"/>
+        <sos:featureOfInterest xlink:href="DENW224"/>
+        <sos:featureOfInterest xlink:href="DENW225"/>
+        <sos:featureOfInterest xlink:href="DENW226"/>
+        <sos:featureOfInterest xlink:href="DENW227"/>
+        <sos:featureOfInterest xlink:href="DENW247"/>
+        <sos:featureOfInterest xlink:href="DENW256"/>
+        <sos:featureOfInterest xlink:href="DENW257"/>
+        <sos:featureOfInterest xlink:href="DENW258"/>
+        <sos:featureOfInterest xlink:href="DENW260"/>
+        <sos:featureOfInterest xlink:href="DENW283"/>
+        <sos:featureOfInterest xlink:href="DENW284"/>
+        <sos:featureOfInterest xlink:href="DERP001"/>
+        <sos:featureOfInterest xlink:href="DERP002"/>
+        <sos:featureOfInterest xlink:href="DERP003"/>
+        <sos:featureOfInterest xlink:href="DERP007"/>
+        <sos:featureOfInterest xlink:href="DERP008"/>
+        <sos:featureOfInterest xlink:href="DERP009"/>
+        <sos:featureOfInterest xlink:href="DERP010"/>
+        <sos:featureOfInterest xlink:href="DERP011"/>
+        <sos:featureOfInterest xlink:href="DERP012"/>
+        <sos:featureOfInterest xlink:href="DERP013"/>
+        <sos:featureOfInterest xlink:href="DERP014"/>
+        <sos:featureOfInterest xlink:href="DERP015"/>
+        <sos:featureOfInterest xlink:href="DERP016"/>
+        <sos:featureOfInterest xlink:href="DERP017"/>
+        <sos:featureOfInterest xlink:href="DERP018"/>
+        <sos:featureOfInterest xlink:href="DERP019"/>
+        <sos:featureOfInterest xlink:href="DERP020"/>
+        <sos:featureOfInterest xlink:href="DERP021"/>
+        <sos:featureOfInterest xlink:href="DERP022"/>
+        <sos:featureOfInterest xlink:href="DERP023"/>
+        <sos:featureOfInterest xlink:href="DERP024"/>
+        <sos:featureOfInterest xlink:href="DERP025"/>
+        <sos:featureOfInterest xlink:href="DERP026"/>
+        <sos:featureOfInterest xlink:href="DERP027"/>
+        <sos:featureOfInterest xlink:href="DERP028"/>
+        <sos:featureOfInterest xlink:href="DERP034"/>
+        <sos:featureOfInterest xlink:href="DERP035"/>
+        <sos:featureOfInterest xlink:href="DERP036"/>
+        <sos:featureOfInterest xlink:href="DERP040"/>
+        <sos:featureOfInterest xlink:href="DERP041"/>
+        <sos:featureOfInterest xlink:href="DERP042"/>
+        <sos:featureOfInterest xlink:href="DERP045"/>
+        <sos:featureOfInterest xlink:href="DERP046"/>
+        <sos:featureOfInterest xlink:href="DESH001"/>
+        <sos:featureOfInterest xlink:href="DESH006"/>
+        <sos:featureOfInterest xlink:href="DESH008"/>
+        <sos:featureOfInterest xlink:href="DESH011"/>
+        <sos:featureOfInterest xlink:href="DESH013"/>
+        <sos:featureOfInterest xlink:href="DESH014"/>
+        <sos:featureOfInterest xlink:href="DESH015"/>
+        <sos:featureOfInterest xlink:href="DESH016"/>
+        <sos:featureOfInterest xlink:href="DESH017"/>
+        <sos:featureOfInterest xlink:href="DESH022"/>
+        <sos:featureOfInterest xlink:href="DESH023"/>
+        <sos:featureOfInterest xlink:href="DESH025"/>
+        <sos:featureOfInterest xlink:href="DESH026"/>
+        <sos:featureOfInterest xlink:href="DESH027"/>
+        <sos:featureOfInterest xlink:href="DESH028"/>
+        <sos:featureOfInterest xlink:href="DESH033"/>
+        <sos:featureOfInterest xlink:href="DESH034"/>
+        <sos:featureOfInterest xlink:href="DESH035"/>
+        <sos:featureOfInterest xlink:href="DESL001"/>
+        <sos:featureOfInterest xlink:href="DESL002"/>
+        <sos:featureOfInterest xlink:href="DESL003"/>
+        <sos:featureOfInterest xlink:href="DESL006"/>
+        <sos:featureOfInterest xlink:href="DESL010"/>
+        <sos:featureOfInterest xlink:href="DESL011"/>
+        <sos:featureOfInterest xlink:href="DESL012"/>
+        <sos:featureOfInterest xlink:href="DESL013"/>
+        <sos:featureOfInterest xlink:href="DESL017"/>
+        <sos:featureOfInterest xlink:href="DESL018"/>
+        <sos:featureOfInterest xlink:href="DESL019"/>
+        <sos:featureOfInterest xlink:href="DESL020"/>
+        <sos:featureOfInterest xlink:href="DESN001"/>
+        <sos:featureOfInterest xlink:href="DESN004"/>
+        <sos:featureOfInterest xlink:href="DESN006"/>
+        <sos:featureOfInterest xlink:href="DESN011"/>
+        <sos:featureOfInterest xlink:href="DESN012"/>
+        <sos:featureOfInterest xlink:href="DESN017"/>
+        <sos:featureOfInterest xlink:href="DESN019"/>
+        <sos:featureOfInterest xlink:href="DESN020"/>
+        <sos:featureOfInterest xlink:href="DESN024"/>
+        <sos:featureOfInterest xlink:href="DESN025"/>
+        <sos:featureOfInterest xlink:href="DESN045"/>
+        <sos:featureOfInterest xlink:href="DESN049"/>
+        <sos:featureOfInterest xlink:href="DESN050"/>
+        <sos:featureOfInterest xlink:href="DESN051"/>
+        <sos:featureOfInterest xlink:href="DESN052"/>
+        <sos:featureOfInterest xlink:href="DESN053"/>
+        <sos:featureOfInterest xlink:href="DESN059"/>
+        <sos:featureOfInterest xlink:href="DESN060"/>
+        <sos:featureOfInterest xlink:href="DESN061"/>
+        <sos:featureOfInterest xlink:href="DESN074"/>
+        <sos:featureOfInterest xlink:href="DESN075"/>
+        <sos:featureOfInterest xlink:href="DESN076"/>
+        <sos:featureOfInterest xlink:href="DESN077"/>
+        <sos:featureOfInterest xlink:href="DESN079"/>
+        <sos:featureOfInterest xlink:href="DESN080"/>
+        <sos:featureOfInterest xlink:href="DESN081"/>
+        <sos:featureOfInterest xlink:href="DESN082"/>
+        <sos:featureOfInterest xlink:href="DESN083"/>
+        <sos:featureOfInterest xlink:href="DESN084"/>
+        <sos:featureOfInterest xlink:href="DESN091"/>
+        <sos:featureOfInterest xlink:href="DESN092"/>
+        <sos:featureOfInterest xlink:href="DEST002"/>
+        <sos:featureOfInterest xlink:href="DEST011"/>
+        <sos:featureOfInterest xlink:href="DEST015"/>
+        <sos:featureOfInterest xlink:href="DEST028"/>
+        <sos:featureOfInterest xlink:href="DEST029"/>
+        <sos:featureOfInterest xlink:href="DEST030"/>
+        <sos:featureOfInterest xlink:href="DEST039"/>
+        <sos:featureOfInterest xlink:href="DEST044"/>
+        <sos:featureOfInterest xlink:href="DEST050"/>
+        <sos:featureOfInterest xlink:href="DEST057"/>
+        <sos:featureOfInterest xlink:href="DEST063"/>
+        <sos:featureOfInterest xlink:href="DEST066"/>
+        <sos:featureOfInterest xlink:href="DEST068"/>
+        <sos:featureOfInterest xlink:href="DEST069"/>
+        <sos:featureOfInterest xlink:href="DEST072"/>
+        <sos:featureOfInterest xlink:href="DEST074"/>
+        <sos:featureOfInterest xlink:href="DEST075"/>
+        <sos:featureOfInterest xlink:href="DEST076"/>
+        <sos:featureOfInterest xlink:href="DEST077"/>
+        <sos:featureOfInterest xlink:href="DEST078"/>
+        <sos:featureOfInterest xlink:href="DEST081"/>
+        <sos:featureOfInterest xlink:href="DEST089"/>
+        <sos:featureOfInterest xlink:href="DEST090"/>
+        <sos:featureOfInterest xlink:href="DEST091"/>
+        <sos:featureOfInterest xlink:href="DEST092"/>
+        <sos:featureOfInterest xlink:href="DEST095"/>
+        <sos:featureOfInterest xlink:href="DEST097"/>
+        <sos:featureOfInterest xlink:href="DEST098"/>
+        <sos:featureOfInterest xlink:href="DEST099"/>
+        <sos:featureOfInterest xlink:href="DEST100"/>
+        <sos:featureOfInterest xlink:href="DEST102"/>
+        <sos:featureOfInterest xlink:href="DEST103"/>
+        <sos:featureOfInterest xlink:href="DEST104"/>
+        <sos:featureOfInterest xlink:href="DETH005"/>
+        <sos:featureOfInterest xlink:href="DETH009"/>
+        <sos:featureOfInterest xlink:href="DETH011"/>
+        <sos:featureOfInterest xlink:href="DETH013"/>
+        <sos:featureOfInterest xlink:href="DETH018"/>
+        <sos:featureOfInterest xlink:href="DETH020"/>
+        <sos:featureOfInterest xlink:href="DETH025"/>
+        <sos:featureOfInterest xlink:href="DETH026"/>
+        <sos:featureOfInterest xlink:href="DETH027"/>
+        <sos:featureOfInterest xlink:href="DETH036"/>
+        <sos:featureOfInterest xlink:href="DETH039"/>
+        <sos:featureOfInterest xlink:href="DETH040"/>
+        <sos:featureOfInterest xlink:href="DETH041"/>
+        <sos:featureOfInterest xlink:href="DETH042"/>
+        <sos:featureOfInterest xlink:href="DETH043"/>
+        <sos:featureOfInterest xlink:href="DETH060"/>
+        <sos:featureOfInterest xlink:href="DETH061"/>
+        <sos:featureOfInterest xlink:href="DETH072"/>
+        <sos:featureOfInterest xlink:href="DETH081"/>
+        <sos:featureOfInterest xlink:href="DETH084"/>
+        <sos:featureOfInterest xlink:href="DETH086"/>
+        <sos:featureOfInterest xlink:href="DETH088"/>
+        <sos:featureOfInterest xlink:href="DETH089"/>
+        <sos:featureOfInterest xlink:href="DETH093"/>
+        <sos:featureOfInterest xlink:href="DETH094"/>
+        <sos:featureOfInterest xlink:href="DEUB001"/>
+        <sos:featureOfInterest xlink:href="DEUB004"/>
+        <sos:featureOfInterest xlink:href="DEUB005"/>
+        <sos:featureOfInterest xlink:href="DEUB028"/>
+        <sos:featureOfInterest xlink:href="DEUB029"/>
+        <sos:featureOfInterest xlink:href="DEUB030"/>
+        <sos:responseFormat>text/xml;subtype="om/1.0.0"</sos:responseFormat>
+        <sos:responseFormat>application/zip</sos:responseFormat>
+        <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:Measurement</sos:resultModel>
+        <sos:resultModel xmlns:ns="http://www.opengis.net/om/1.0">ns:Observation</sos:resultModel>
+        <sos:responseMode>inline</sos:responseMode>
+        <sos:responseMode>resultTemplate</sos:responseMode>
+      </sos:ObservationOffering>
+    </sos:ObservationOfferingList>
+  </sos:Contents>
+</sos:Capabilities>

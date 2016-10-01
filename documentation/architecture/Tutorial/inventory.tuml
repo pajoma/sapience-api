@@ -1,0 +1,28 @@
+package inventory;
+
+import dataType;
+
+ abstract class AbstractProduct
+ 		operation setID(id: Integer);
+ end;
+
+ class Product specializes AbstractProduct
+ 	attribute description : String;
+   	attribute id : Integer;
+   	
+   operation setColor(color: String);
+ end;
+
+ class Color
+    attribute color : String; 
+ end;
+ 
+
+association hasColor
+  navigable role color : Color[1];
+  navigable role product : Product[1];
+end; 
+
+
+end.
+

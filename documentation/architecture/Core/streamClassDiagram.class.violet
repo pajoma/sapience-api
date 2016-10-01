@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_0" class="java.beans.XMLDecoder">
+ <object class="com.horstmann.violet.ClassDiagramGraph">
+  <void method="addNode">
+   <object class="com.horstmann.violet.PackageNode">
+    <void method="addChild">
+     <object id="ClassNode0" class="com.horstmann.violet.ClassNode">
+      <void property="methods">
+       <void property="text">
+        <string>RdfStreamTargetWriter(connection:DatabaseConnection, uri:String, format:String)</string>
+       </void>
+      </void>
+      <void property="name">
+       <void property="text">
+        <string>RdfStreamTargetWriter</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="name">
+     <string>sapient.service.concepts.stream</string>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>80.0</double>
+     <double>60.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode0"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>86.0</double>
+     <double>85.0</double>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

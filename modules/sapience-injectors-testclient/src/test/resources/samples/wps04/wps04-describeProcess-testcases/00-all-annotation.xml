@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:ProcessDescriptions xmlns:ns2="http://www.w3.org/1999/xlink" xmlns:ns1="http://www.opengeospatial.net/ows" xmlns:ns3="http://www.opengeospatial.net/wps">
+    <ns3:ProcessDescription statusSupported="true" storeSupported="true" processVersion="0.4.0">
+        <ns1:Identifier codeSpace="">Gaja3d_createGrid</ns1:Identifier>
+        <ns1:Title>Gaja3d_createGrid</ns1:Title>
+        <ns1:Metadata ns2:href="http://www.concepts.com/Process/url" ns2:arcrole="http://domainReference"/>
+        <ns3:DataInputs>
+            <ns3:Input>
+                <ns1:Identifier codeSpace="">Boundary</ns1:Identifier>
+                <ns1:Title>Boundary</ns1:Title>
+                <ns1:Abstract>The boundary for each tile.</ns1:Abstract>
+                <ns1:Metadata ns2:href="http://example.com/boundary" ns2:arcrole="http://annot/domainReference" />
+                <ns3:ComplexData>
+                    <ns3:SupportedComplexData>
+                        <ns3:Format></ns3:Format>
+                        <ns3:Encoding></ns3:Encoding>
+                        <ns3:Schema></ns3:Schema>
+                    </ns3:SupportedComplexData>
+                </ns3:ComplexData>
+                <ns3:MinimumOccurs>1</ns3:MinimumOccurs>
+            </ns3:Input>
+            <ns3:Input>
+                <ns1:Identifier codeSpace="">DemPoints</ns1:Identifier>
+                <ns1:Title>DemPoints</ns1:Title>
+                <ns1:Abstract>The elevation points to create grids from.</ns1:Abstract>
+                <ns1:Metadata ns2:href="http://example.com/Terrain" ns2:arcrole="http://annot/domainReference" />
+                <ns3:ComplexData>
+                    <ns3:SupportedComplexData>
+                        <ns3:Format></ns3:Format>
+                        <ns3:Encoding></ns3:Encoding>
+                        <ns3:Schema></ns3:Schema>
+                    </ns3:SupportedComplexData>
+                </ns3:ComplexData>
+                <ns3:MinimumOccurs>1</ns3:MinimumOccurs>
+            </ns3:Input>
+            <ns3:Input>
+                <ns1:Identifier codeSpace="">gridx</ns1:Identifier>
+                <ns1:Title>gridx</ns1:Title>
+                <ns1:Abstract>Grid resolution in x-direction.</ns1:Abstract>
+                <ns3:LiteralData>
+                    <ns1:DataType>double</ns1:DataType>
+                    <ns1:AnyValue/>
+                </ns3:LiteralData>
+                <ns3:MinimumOccurs>1</ns3:MinimumOccurs>
+            </ns3:Input>
+            <ns3:Input>
+                <ns1:Identifier codeSpace="">gridy</ns1:Identifier>
+                <ns1:Title>gridy</ns1:Title>
+                <ns1:Abstract>Grid resolution in y-direction.</ns1:Abstract>
+                <ns3:LiteralData>
+                    <ns1:DataType>double</ns1:DataType>
+                    <ns1:AnyValue/>
+                </ns3:LiteralData>
+                <ns3:MinimumOccurs>1</ns3:MinimumOccurs>
+            </ns3:Input>
+        </ns3:DataInputs>
+        <ns3:ProcessOutputs>
+            <ns3:Output>
+                <ns1:Identifier codeSpace="">DemGrid</ns1:Identifier>
+                <ns1:Title>DemGrid</ns1:Title>
+                <ns1:Abstract>The created grids.</ns1:Abstract>
+                <ns3:ComplexOutput>
+                    <ns3:SupportedComplexData>
+                        <ns3:Format></ns3:Format>
+                        <ns3:Encoding></ns3:Encoding>
+                        <ns3:Schema></ns3:Schema>
+                    </ns3:SupportedComplexData>
+                </ns3:ComplexOutput>
+            </ns3:Output>
+            <ns3:Output>
+                <ns1:Identifier codeSpace="">stdout</ns1:Identifier>
+                <ns1:Title>stdout</ns1:Title>
+                <ns1:Metadata ns2:href="http://www.concepts.com/ProcessOutput/url" ns2:arcrole="http://domainReference"/>
+                <ns1:Abstract>Standard out</ns1:Abstract>
+                <ns3:ComplexOutput>
+                    <ns3:SupportedComplexData>
+                        <ns3:Format></ns3:Format>
+                        <ns3:Encoding></ns3:Encoding>
+                        <ns3:Schema></ns3:Schema>
+                    </ns3:SupportedComplexData>
+                </ns3:ComplexOutput>
+            </ns3:Output>
+            <ns3:Output>
+                <ns1:Identifier codeSpace="">stderr</ns1:Identifier>
+                <ns1:Title>stderr</ns1:Title>
+                <ns1:Metadata ns2:href="http://www.concepts.com/ProcessOutput2/url" ns2:arcrole="http://domainReference"/>
+                <ns1:Abstract>Standard err</ns1:Abstract>
+                <ns3:ComplexOutput>
+                    <ns3:SupportedComplexData>
+                        <ns3:Format></ns3:Format>
+                        <ns3:Encoding></ns3:Encoding>
+                        <ns3:Schema></ns3:Schema>
+                    </ns3:SupportedComplexData>
+                </ns3:ComplexOutput>
+            </ns3:Output>
+        </ns3:ProcessOutputs>
+    </ns3:ProcessDescription>
+</ns3:ProcessDescriptions>

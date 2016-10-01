@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:Capabilities xmlns:wps="http://www.opengeospatial.net/wps"
+	xmlns:ows="http://www.opengeospatial.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.4.0"
+	xsi:schemaLocation="http://www.opengeospatial.net/wps ..\wpsGetCapabilities.xsd">
+	<ows:ServiceIdentification>
+		<ows:ServiceType>WPS</ows:ServiceType>
+		<ows:ServiceTypeVersion>0.2.0</ows:ServiceTypeVersion>
+		<ows:Title>deegree WPS Server</ows:Title>
+		<ows:Abstract>deegree WPS Server developed by University of Bonn
+			(Department of Geography), Wupperverband (Stabsbereich GIS) and
+			extended by University of Bonn (Department of Geography-Researchgroup
+			Cartography)</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>WPS</ows:Keyword>
+			<ows:Keyword>geospatial</ows:Keyword>
+			<ows:Keyword>geoprocessing</ows:Keyword>
+		</ows:Keywords>
+		<ows:Fees>NONE</ows:Fees>
+		<ows:AccessConstraints>NONE</ows:AccessConstraints>
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>University of Bonn, Department of Geography,Working
+			Group Cartography</ows:ProviderName>
+		<ows:ProviderSite xlink:href="http://www.geographie.uni-bonn.de/karto/"
+			xlink:type="simple" />
+		<ows:ServiceContact>
+			<ows:IndividualName>Alexander Zipf, Wolfgang J. Eder
+			</ows:IndividualName>
+			<ows:ContactInfo>
+				<ows:Phone>
+					<ows:Voice>+49(0)228-73-2693</ows:Voice>
+					<ows:Facsimile>+49(0)228-73-5607</ows:Facsimile>
+				</ows:Phone>
+				<ows:Address>
+					<ows:DeliveryPoint>Meckenheimer Allee 172</ows:DeliveryPoint>
+					<ows:City>Bonn</ows:City>
+					<ows:PostalCode>53115</ows:PostalCode>
+					<ows:Country>Germany</ows:Country>
+					<ows:ElectronicMailAddress>zipf@geographie.uni-bonn.de
+					</ows:ElectronicMailAddress>
+					<ows:ElectronicMailAddress>eder@geographie.uni-bonn.de
+					</ows:ElectronicMailAddress>
+				</ows:Address>
+			</ows:ContactInfo>
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="DescribeProcess">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://okgis.geoinform.fh-mainz.de/deegree/services?"
+						xlink:type="simple" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:href="http://okgis.geoinform.fh-mainz.de/deegree/services?"
+						xlink:type="simple" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+		<ows:Operation name="Execute">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Post xlink:href="http://okgis.geoinform.fh-mainz.de/deegree/services"
+						xlink:type="simple" />
+				</ows:HTTP>
+			</ows:DCP>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<wps:ProcessOfferings>
+		<wps:Process processVersion="1">
+			<ows:Identifier>ToxicGasScenario3D</ows:Identifier>
+			<ows:Title>ToxicGasScenario3D</ows:Title>
+			<ows:Abstract>From the domain of disaster management.
+				On the basis of a gas leakage location an sphere is calculated where
+				the gas will be within the next hour.
+				For the calculation wind speed and wind direction are queried from a
+				wheather server. Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="ToxicGasScenario3D" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Distance</ows:Identifier>
+			<ows:Title>Distance</ows:Title>
+			<ows:Abstract>Finds the closest points on two GML geometries and
+				returns them as well as the euclidean distance between them.
+				In case of two points the distance of the points is calculated. In
+				case of higher dimensional input geometries
+				the distance of the closest points (not necessarily vertices) is
+				calculated. If one geometry contains the other,
+				the distance is 0.
+				If one or both of the input geometries are feature collections, thus
+				contain multiple features, only the two closest features
+				are considered. Author: Christian Graul</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="geometry" />
+			<ows:Metadata xlink:title="distance" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>SolarRadiation</ows:Identifier>
+			<ows:Title>Solar Radiation</ows:Title>
+			<ows:Abstract>The provided SolarRadiation process estimates the
+				annual direct solar radiation, using the method described in McCune
+				and Keon (2002).
+				The radiation is estimated from slope, aspect and the latitude, where
+				the latitude is derived from each pixel.
+				Be aware of the following limitations: the equations do not give
+				account to cloud cover, regional differences in the atmospheric
+				coefficient,
+				and shading by adjacent topography. Autor: Christian Graul
+			</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="grid" />
+			<ows:Metadata xlink:title="coverage" />
+			<ows:Metadata xlink:title="GML" />
+			<ows:Metadata xlink:title="geometry" />
+			<ows:Metadata xlink:title="statistics" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Aggregation</ows:Identifier>
+			<ows:Title>Aggregation</ows:Title>
+			<ows:Abstract>Aggregation of GML data. Available aggregate functions:
+				count, sum, max and min. Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="aggregation" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>ToxicGasOsnabrueck</ows:Identifier>
+			<ows:Title>ToxicGasOsnabrueck</ows:Title>
+			<ows:Abstract>From the domain of disaster management.
+				On the basis of a gas leakage location an area is calculated where the
+				gas will be within the next hour.
+				For the calculation wind speed and wind direction are queried from a
+				wheather server.
+				Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="ToxicGasScenario" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Intersection</ows:Identifier>
+			<ows:Title>Intersection</ows:Title>
+			<ows:Abstract>Intersection of 2 GML datasets. Autor: Beate Stollberg
+			</ows:Abstract>
+			<ows:Metadata xlink:title="intersection" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>GML2WMS</ows:Identifier>
+			<ows:Title>GML2WMS</ows:Title>
+			<ows:Abstract>Creation of a jpg-Image of GML data. The process is
+				sending the GML data as an InlineFeature to a Web Map Service (WMS).
+				The WMS is creating a map (jpg-file) from the data. Autor: Beate
+				Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="WMS" />
+			<ows:Metadata xlink:title="jpg" />
+			<ows:Metadata xlink:title="GML" />
+			<ows:Metadata xlink:title="Map" />
+			<ows:Metadata xlink:title="InlineFeature" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>AttributeJoin</ows:Identifier>
+			<ows:Title>AttributeJoin</ows:Title>
+			<ows:Abstract>The process joins two GML data sets with the same
+				geometry to a new GML data set. Autor: Christian Graul
+			</ows:Abstract>
+			<ows:Metadata xlink:title="attributes" />
+			<ows:Metadata xlink:title="join" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>ChainBufferPointInPoly</ows:Identifier>
+			<ows:Title>ChainBufferPointInPoly</ows:Title>
+			<ows:Abstract>Chain of the 2 processes buffer and PointInPolygonJoin.
+				1. Step: Creation of a buffer around a GML geometry.
+				2. Step: Join of GML data containing points with the buffer result
+				from the first step based on the spatial predicate "contains".
+				Result: All points within the buffer of the buffered Input Geometry.
+				Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="buffer" />
+			<ows:Metadata xlink:title="PointInPolygon" />
+			<ows:Metadata xlink:title="join" />
+			<ows:Metadata xlink:title="contains" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>PointInPolygonJoin</ows:Identifier>
+			<ows:Title>PointInPolygonJoin</ows:Title>
+			<ows:Abstract>Join of GML data containing points with GML data
+				containing polygons
+				based on the spatial predicate "contains". All attributes of the points
+				are kept (including the geometry) and the user can choose which
+				attributes of the polygons shall be kept. Furthermore, the user can
+				choose between four different join types: NATURAL, LEFT, RIGHT,
+				FULL.
+				The missing attribute values in cases of left, right or full join are
+				filled with null.
+				Restriction: At the moment only the join type NATURAL is supported! Autor: Beate
+				Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="PointInPolygon" />
+			<ows:Metadata xlink:title="join" />
+			<ows:Metadata xlink:title="contains" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Slope</ows:Identifier>
+			<ows:Title>Slope</ows:Title>
+			<ows:Abstract>A slope estimation based on a digital elevation model
+				is processed.
+				The process is an implementation of Horn's (1981) algorithm, which is
+				also
+				used by GRASS and ESRI ArcGIS. Autor: Christian Graul</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="grid" />
+			<ows:Metadata xlink:title="coverage" />
+			<ows:Metadata xlink:title="terrain" />
+			<ows:Metadata xlink:title="slope" />
+			<ows:Metadata xlink:title="relief" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Buffer</ows:Identifier>
+			<ows:Title>Buffer</ows:Title>
+			<ows:Abstract>Create a buffer around a GML geometry. Accepts a GML
+				geometry and provides a GML geometry output for the buffered
+				feature. Authors: Christian Kiehle, Christian Heier, Beate Stollberg
+			</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="geometry" />
+			<ows:Metadata xlink:title="buffer" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>GeometryMetrics</ows:Identifier>
+			<ows:Title>Geometry Metrics</ows:Title>
+			<ows:Abstract>Calculates basic metrics of Features depending on the
+				FeatureType.
+				If the Input Geometry contains LineStrings, the length of the lines is
+				calculated.
+				If it contains Polygons, the area and perimeter is calculated. Author:
+				Christian Graul</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="GML" />
+			<ows:Metadata xlink:title="geometry" />
+			<ows:Metadata xlink:title="area" />
+			<ows:Metadata xlink:title="perimeter" />
+			<ows:Metadata xlink:title="length" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>SupplyAreasOsnabrueck</ows:Identifier>
+			<ows:Title>SupplyAreasOsnabrueck</ows:Title>
+			<ows:Abstract>From the domain of housing market.
+				Calculation of areas which are accessible within the defined time from the
+				defined points.
+				Autor: Beate Stollberg</ows:Abstract>
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>RouteProfile</ows:Identifier>
+			<ows:Title>RouteProfile</ows:Title>
+			<ows:Abstract>Create a 2D-RouteProfile out of WGS84 routing points.
+				Accepts 2D-coordinates lon/lat
+				and provides an URL to the PNG output image of the 2D-RouteProfile.
+				Autor: Wolfgang J. Eder</ows:Abstract>
+			<ows:Metadata xlink:title="RouteProfile" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>Aspect</ows:Identifier>
+			<ows:Title>Aspect</ows:Title>
+			<ows:Abstract>An aspect estimation based on a digital elevation model
+				is processed.
+				The process is an implementation of Horn's (1981) algorithm, which is
+				also
+				used by GRASS and ESRI ArcGIS. Autor: Christian Graul</ows:Abstract>
+			<ows:Metadata xlink:title="spatial" />
+			<ows:Metadata xlink:title="grid" />
+			<ows:Metadata xlink:title="coverage" />
+			<ows:Metadata xlink:title="terrain" />
+			<ows:Metadata xlink:title="aspect" />
+			<ows:Metadata xlink:title="relief" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>PointInPolygonJoinAggregation</ows:Identifier>
+			<ows:Title>PointInPolygonJoinAggregation</ows:Title>
+			<ows:Abstract>Join of GML data containing points with GML data
+				containing polygons based on the spatial predicate "contains"
+				followed by the aggregation of attribute values of the points.
+				Available aggregate functions: count, sum, max and min.
+				It is possible to keep attributes of the polygon data. All polygons
+				(including the geometry) are added to the result data,
+				independent from containing points or not. Autor: Beate Stollberg
+			</ows:Abstract>
+			<ows:Metadata xlink:title="PointInPolygon" />
+			<ows:Metadata xlink:title="join" />
+			<ows:Metadata xlink:title="aggregation" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>BombThreatScenario3D</ows:Identifier>
+			<ows:Title>BombThreatScenario3D</ows:Title>
+			<ows:Abstract>From the domain of disaster management.
+				On the basis of the location of a found bomb and 2 radii around this
+				bomb an sphere is calculated where all people should be evacuated
+				before the bomb is disarmed.
+				The spheres express the radii in the 3rd dimension for visualization
+				purposes. Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="BombThreatScenario" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>PolygonIntersectsPolygonJoinAggregation
+			</ows:Identifier>
+			<ows:Title>PolygonIntersectsPolygonJoinAggregation</ows:Title>
+			<ows:Abstract>Join of 2 GML datasets containing polygons based on the
+				spatial predicate "intersects" followed by the aggregation of
+				attribute values of the first polygon dataset.
+				Available aggregate functions: count, sum, max and min. In case of the
+				aggregate function "sum" this value is calculated on a pro-rata
+				basis.
+				This means the ratio of the original polygon area and the intersection
+				polygon area is calculated and the value to sum is multiplied by
+				this ratio.
+				It is possible to keep attributes of the second polygon dataset.
+				All polygons of the second dataset (including the geometry) are added
+				to the result data, independent from intersecting polygons
+				of the first dataset or not. Autor: Beate Stollberg</ows:Abstract>
+			<ows:Metadata xlink:title="PolygonIntersectsPolygon" />
+			<ows:Metadata xlink:title="join" />
+			<ows:Metadata xlink:title="aggregation" />
+			<ows:Metadata xlink:title="GML" />
+		</wps:Process>
+		<wps:Process processVersion="1">
+			<ows:Identifier>BombThreatOsnabrueck</ows:Identifier>
+			<ows:Title>BombThreatOsnabrueck</ows:Title>
+			<ows:Abstract>From the domain of disaster management.
+				On the basis of the location of a found bomb and the explosive force
+				of this bomb an area is calculated where all people should be
+				evacuated before the bomb is disarmed. Autor: Beate Stollberg
+			</ows:Abstract>
+			<ows:Metadata xlink:title="BombThreatScenario" />
+		</wps:Process>
+	</wps:ProcessOfferings>
+</wps:Capabilities>

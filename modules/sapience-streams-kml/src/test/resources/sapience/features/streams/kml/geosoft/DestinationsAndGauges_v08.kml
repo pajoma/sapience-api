@@ -1,0 +1,1942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010 Institute for Geoinformatics (ifgi)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied. See the License for the specific language governing
+    permissions and limitations under the License.
+
+-->
+
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>DestinationsAndGauges_v07.kml</name>
+	<open>1</open>
+	<Style id="sn_ylw-pushpin">
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.2</scale>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Destinations and Gauges</name>
+		<open>1</open>
+		<description>A map showing potential destinations (harbors) and locations names of gauges (marked with a P behind its name). Each gauge may be a destination.</description>
+		<Placemark>
+			<name>Minden</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.922667033065519,52.28782810337908,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stolzenau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.07946794618165,52.51941398927892,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rotenburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.727259495697684,50.99680507479521,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Porta</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.919182717298408,52.24309473968553,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Karlshafen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.452038565082439,51.64468776029587,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Friedrichsthal</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Hohensaaten-Friedrichsthaler Wasserstraße</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.35834504608644,53.15501609616398,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Oranienburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Oder-Havel-Kanal</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.25632464698329,52.74051886754282,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kienitz</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ODER</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.44949155009546,52.67828679961718,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wittenberge</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.74621777714698,52.98753139024112,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linz</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.29029454042593,48.31126679235538,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenow OP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.31514377487681,52.59995708087829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Leerort</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Leda</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.435338416891712,53.21395108315766,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Decin</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.22385367184493,50.78748940430151,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Plochingen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NECKAR</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.415799055812286,48.7083935847281,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hamburg St. Pauli</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.04219032184568,53.52551216670939,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Saarbrücken</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>SAAR</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.993813838152738,49.23134719470642,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rheinweiler</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.529946998643786,47.71849013644861,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hann. Münden</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.647831203292098,51.42154242031413,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wien</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.41879065425164,48.21791303870728,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bremen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.772901809275668,53.08512054767319,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rögatz</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.76389325214669,52.30346210811339,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Straubing</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.55644238764688,48.89981842128267,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hundsmühlen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>KÜSTENKANAL HUNTE</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.171260345231946,53.10886690358612,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Torgau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.04267926108905,51.54581717326542,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Guntershausen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.470929414968376,51.23592304394946,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ketzin</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.84091898050148,52.4715921397086,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenhow UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.31514377487681,52.59995708087829,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Garz UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.20603872178655,52.7600516291338,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Magdeburg-Strombrücke</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.65129879987469,52.1263150427076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Schweinfurt Neuer Hafen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.22024270316335,50.02832203149265,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dessau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.31465322732503,51.88148424702705,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Artlenburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.50107280411614,53.37088318547916,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Vlotho</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.875052930209383,52.16576157593672,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gundelsheim</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NECKAR</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.153851926046139,49.28106549548685,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Potsdam</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.07173497942204,52.39659645850333,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Meissen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.49896403793558,51.14011277161867,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Koblenz UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.605541048771427,50.35694805380562,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hameln</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.354543645325187,52.09687484224792,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Berlin-Spandau Schleuse UP</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.20053906760106,52.53102054924005,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dörverden</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.220346217333573,52.84619857578438,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt Osthafen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.710381475346299,50.10716955151924,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Höxter</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.385743690955371,51.77338801199365,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bonn</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.11032243658183,50.73800000380433,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kassel</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.522593189770873,51.31992783350965,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Heldra</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Werra</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.19494409600203,51.12638031347807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hitzacker</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.03653467965531,53.16211569174285,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Eschwege</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Werra</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.05296740209484,51.18927835591297,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bingen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.920312267387155,49.9726424764666,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Große Weserbruecke</name>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.787831095308285,53.08072756193118,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Grabow OP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Müritz</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.56067972838396,53.27946558150867,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cochem</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>MOSEL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.16886947235545,50.14737130935439,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Schwerin Werderbrücke</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Stör Wasserstraße</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.41878018208949,53.62555495786613,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Köln</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.971201153145945,50.91980167009547,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hohensaaten-Finow</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Oder-Havel-Kanal</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.14483860400663,52.87060847968831,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Letzter Heller</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Werra</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.679786136153075,51.41502492215064,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Allendorf</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Werra</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.968256294092424,51.27356429342221,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Banzkow</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Stör Wasserstraße</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.51941246301418,53.52447578375185,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hüttendorf</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.96963349449968,49.54153352197206,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emden Neue Seeschleuse</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Ems</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.212785208269075,53.35074585442741,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Genthin</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ELBE-HAVEL KANAL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.17288297736715,52.41090311059368,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wertheim</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.51494824872322,49.76248983484162,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wittenberg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.64280812320944,51.8582186852105,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Blankenese UF</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.964486068159651,53.54342083834639,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bad Oeynhausen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.828609995586643,52.22097590486093,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BERLIN-CHARLOTTENBURG UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Spree</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.31576918384789,52.52011617626181,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bodenwerder</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.516866864577151,51.97516079783949,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Deggendorf</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.95989136841123,48.82474771297773,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Straßburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.799588354659186,48.58029368397593,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kiel-Holtenau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NOK</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.15706871192494,54.33039511104908,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Würzburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.91615181072749,49.80335979673074,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rendsburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NOK</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.697811699206314,54.29693246814477,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cuxhaven</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.713558938697222,53.86639992465192,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Treffurt</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Werra</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.23864694739518,51.13450340325738,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emmerich</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.242888286705237,51.83004304364787,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wahmbeck</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.517987390893106,51.62622185399827,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Passau Donau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.45551334918652,48.57627385764183,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lübeck-Bauhof</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ELBE-LUEBBECK-KANAL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.68878519558912,53.87701399667707,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Albertsheim</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.33250778584633,52.65518059240379,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nijmegen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>5.870408926902946,51.85061013464229,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Eisenhüttenstadt</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ODER-SPREE-KANAL</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.66234924346436,52.13205841944469,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NOK Breiholz</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NOK</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.546371802057225,54.19597830876359,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Farge</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.525158390041616,53.19255757320654,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Brandenburg OP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.55450152869966,52.41012502898328,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Völklingen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>SAAR</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.860878082320133,49.24568464374773,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bonaforth</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.628377718025122,51.40343469327871,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NIEDERFINOW SHW UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Oder-Havel-Kanal</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.94469078559018,52.84870521478576,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bamberg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>10.8644888798604,49.91108706344692,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Heidelberg UW</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NECKAR</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.666582135747065,49.41170998906078,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hanau Brücke DFH</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.911384056826286,50.1235928591945,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Weserwehr OW</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.871312989151406,53.05732499853705,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Havelberg Stadt</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.06901037890131,52.8279493737021,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Speyer</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.454110785738852,49.32043155371326,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emden</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Ems</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.20558342938099,53.36216416299866,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Oldenburg-Drielake</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>KÜSTENKANAL HUNTE</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.226485520791664,53.1400262047582,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt (Oder)</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ODER</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.55474702086377,52.34935075597049,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN-MAIN-DONAU</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.663227688163472,50.09820910521325,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Berlin-Köpenick</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Spree</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.5770888075585,52.43792555386778,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Szczecin</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Westoder</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.57296015060985,53.43259221657799,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Tangermünde</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>11.97098535696488,52.53081817073543,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenow UP</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Havel</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.31454079280377,52.61241834900599,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Genthin</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ELBE-HAVEL KANAL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>12.17288297736715,52.41090311059368,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mecklar</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Fulda</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.763341521330487,50.9194099700878,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Basel</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.589129840432642,47.55979413210302,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dresden</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>13.68108074200244,51.06299505367821,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Trzebiez</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Westoder</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.51718317222177,53.6612429556811,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stuttgart</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>NECKAR</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.210767443260666,48.80110962765318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hameln Wehrbergen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.304822024730745,52.1242898259776,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Weserwehr UW</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.858500774727915,53.0594011324752,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Trier</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>MOSEL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.628377119868749,49.75986483648088,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gartz</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Westoder</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.4054217897993,53.21006051457449,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Maxau</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.304508987533666,49.02990001642719,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>St.Arnual</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>SAAR</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>7.019699693582773,49.22011514147393,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nienburg</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Weser</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>9.200187966778861,52.63206522541969,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Karlsruhe</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.302788029098966,49.02014917792204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Diez Hafen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>LAHN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.004519145014495,50.3719003131129,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Helgoland Südhafen</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Elbe</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.713558938697222,53.86639992465192,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stützkow</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>Hohensaaten-Friedrichsthaler Wasserstraße</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.1795183965788,52.99327454007884,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Elsfleth Ohrt</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>KÜSTENKANAL HUNTE</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>8.468245997474032,53.24064774439288,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Düsseldorf</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.763415731196489,51.22449221438049,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fürstenwalde</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>ODER-SPREE-KANAL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>14.06946699027567,52.3536527776079,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ruhrort</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>RHEIN</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.722036646632281,51.45754943050736,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Perl</name>
+			<ExtendedData>
+				<Data name="river">
+					<value>MOSEL</value>
+				</Data>
+				<Data name="type">
+					<value>Gauge</value>
+				</Data>
+				<Data name="type">
+					<value>Destination</value>
+				</Data>
+			</ExtendedData>
+			<Point>
+				<coordinates>6.368883144187032,49.47254713816213,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

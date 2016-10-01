@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema
+	targetNamespace="http://gdi-arc1/ArcGIS01/services/Dortmund/MapServer/WFSServer"
+	elementFormDefault="qualified"
+	xmlns:Dortmund="http://gdi-arc1/ArcGIS01/services/Dortmund/MapServer/WFSServer"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml">
+	<xs:import namespace="http://www.opengis.net/gml"
+		schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd" />
+	<xs:element name="QSDO_GRID_02_GBO" type="Dortmund:QSDO_GRID_02_GBOType"
+		substitutionGroup="gml:_Feature" />
+	<xs:complexType name='QSDO_GRID_02_GBOType'>
+		<xs:complexContent>
+			<xs:extension base='gml:AbstractFeatureType'>
+				<xs:sequence>
+					<xs:element name='OBJECTID' type='xs:int' />
+					<xs:element name='GBO' minOccurs='0'>
+						<xs:simpleType>
+							<xs:restriction base='xs:string'>
+								<xs:maxLength value='22' />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name='ELE' minOccurs='0'>
+						<xs:simpleType>
+							<xs:restriction base='xs:string'>
+								<xs:maxLength value='8' />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name='UUID' minOccurs='0'>
+						<xs:simpleType>
+							<xs:restriction base='xs:string'>
+								<xs:maxLength value='64' />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name='VAR' minOccurs='0'>
+						<xs:simpleType>
+							<xs:restriction base='xs:string'>
+								<xs:maxLength value='20' />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name='STIFTNUM' minOccurs='0'>
+						<xs:simpleType>
+							<xs:restriction base='xs:string'>
+								<xs:maxLength value='5' />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name='SHAPE' minOccurs='0'
+						type='gml:MultiCurvePropertyType' />
+					<xs:element name='SHAPE.LEN' type='xs:double' />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,3242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010 Institute for Geoinformatics (ifgi)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied. See the License for the specific language governing
+    permissions and limitations under the License.
+
+-->
+
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>DestinationsAndGauges_v07.kml</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin18</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin38</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin27</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin30</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin1">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin39</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin28</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin2">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin9</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin9</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin17</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin1">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin2">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin4">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin15</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin5">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin26</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin42</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin42</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin23</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin5">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin8">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin29</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin8">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin28</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin4</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin6">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin7">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin8">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin9">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin32</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin9">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin6</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin35</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin60">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin10">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin12">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin12">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin36</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin16</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin13">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin24</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin25</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin11">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin50">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin15">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin14">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin8</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin29</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin12">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin15">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin16</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin31</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin54">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin50</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin60</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin16">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin39</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin17">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin13">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin18">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin19">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin17">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin33</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin20">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin21">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin37</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin18</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin19">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin19</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin43</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin14">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin21">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin43</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin13</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin22">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin23">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin15">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin24">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin25">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin26">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin16">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin17">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin22">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin27">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin23">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin34</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin28">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin24">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin23</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin33</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin18">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin29">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin25">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin17</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin19">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin20">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin21">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin26">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin35</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin19</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin27">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin12</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin36</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin30">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin22">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin23">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin31">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin24">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin25">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin26">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin32">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin27">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin28">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin37</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin28">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin29">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin33">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin34">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin29">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin30">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin35">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin36">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin31">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin34</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin31">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin38</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin15</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin32">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin21</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin21</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin32">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin33">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin33">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin31</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin41</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin34">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin34">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin37">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin35">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin14</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin35">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin36">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin22</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin26</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin36">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin38">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin37">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin13</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin12</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin38">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin7</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin39">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin27</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin39">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin37">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin38">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin22</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin40">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin41">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin25</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin24</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin39">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin40">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin41">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin41">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin42">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin42">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin41</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin32</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin43">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin5</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin8</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin42">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin43">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin43">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>Destinations and Gauges</name>
+		<open>1</open>
+		<description>A map showing potential destinations (harbors) and locations names of gauges (marked with a P behind its name). Each gauge may be a destination.</description>
+		<Placemark>
+			<name>Genthin (PH)</name>
+			<LookAt>
+				<longitude>12.17209908445941</longitude>
+				<latitude>52.41118215429502</latitude>
+				<altitude>0</altitude>
+				<range>3042.194209388186</range>
+				<tilt>0</tilt>
+				<heading>-0.1552112012472171</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin38</styleUrl>
+			<Point>
+				<coordinates>12.17267586040962,52.41063655353334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Banzkow (P)</name>
+			<LookAt>
+				<longitude>11.5198611591939</longitude>
+				<latitude>53.52408574455632</latitude>
+				<altitude>0</altitude>
+				<range>551.6480508522767</range>
+				<tilt>0</tilt>
+				<heading>-0.0007280574572667838</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin20</styleUrl>
+			<Point>
+				<coordinates>11.51938637080261,53.52442901455009,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Garz UP (P)</name>
+			<LookAt>
+				<longitude>12.21147530275638</longitude>
+				<latitude>52.7506294549563</latitude>
+				<altitude>0</altitude>
+				<range>3663.778648806828</range>
+				<tilt>0</tilt>
+				<heading>0.2030593385769015</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin39</styleUrl>
+			<Point>
+				<coordinates>12.20581087079649,52.75970510752678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenow OP (HP)</name>
+			<LookAt>
+				<longitude>12.31911250787924</longitude>
+				<latitude>52.59965837849492</latitude>
+				<altitude>0</altitude>
+				<range>3577.706006061159</range>
+				<tilt>0</tilt>
+				<heading>-0.03894760506036732</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin26</styleUrl>
+			<Point>
+				<coordinates>12.31490811653,52.59947533158309,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenow UP (PH) </name>
+			<LookAt>
+				<longitude>12.31941189725178</longitude>
+				<latitude>52.60660705448697</latitude>
+				<altitude>0</altitude>
+				<range>2698.368881299862</range>
+				<tilt>0</tilt>
+				<heading>-0.038722149344797</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin11</styleUrl>
+			<Point>
+				<coordinates>12.314507936287,52.61244047542696,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Albertsheim (P)</name>
+			<LookAt>
+				<longitude>12.33802825997688</longitude>
+				<latitude>52.65397343124091</latitude>
+				<altitude>0</altitude>
+				<range>1003.768732294743</range>
+				<tilt>0</tilt>
+				<heading>1.264816340684252e-06</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>12.33252658737881,52.65514439376348,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Potsdam (PH)</name>
+			<LookAt>
+				<longitude>13.06521939169927</longitude>
+				<latitude>52.39680115546771</latitude>
+				<altitude>0</altitude>
+				<range>3471.254926954219</range>
+				<tilt>0</tilt>
+				<heading>0.1773092098834101</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin24</styleUrl>
+			<Point>
+				<coordinates>13.07158895952111,52.39629292307932,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ketzin (P)</name>
+			<LookAt>
+				<longitude>12.84542782190131</longitude>
+				<latitude>52.47509742859616</latitude>
+				<altitude>0</altitude>
+				<range>3409.031761928618</range>
+				<tilt>0</tilt>
+				<heading>0.003110594413606284</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin4</styleUrl>
+			<Point>
+				<coordinates>12.84069812417919,52.47139793639515,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BERLIN-SPANDAU SCHLEUSE UP (P)</name>
+			<LookAt>
+				<longitude>13.20063150177117</longitude>
+				<latitude>52.53048227944576</latitude>
+				<altitude>0</altitude>
+				<range>2540.962542936034</range>
+				<tilt>0</tilt>
+				<heading>0.2366602332896234</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin13</styleUrl>
+			<Point>
+				<coordinates>13.20042208402032,52.53082237004629,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BERLIN-KÖPENICK (PH)</name>
+			<LookAt>
+				<longitude>13.57430854671594</longitude>
+				<latitude>52.44142556166207</latitude>
+				<altitude>0</altitude>
+				<range>2903.902939891129</range>
+				<tilt>0</tilt>
+				<heading>0.2805476418401287</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin14</styleUrl>
+			<Point>
+				<coordinates>13.5770642079894,52.43768655820574,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>BERLIN-CHARLOTTENBURG UP (PH)</name>
+			<LookAt>
+				<longitude>13.31207123190429</longitude>
+				<latitude>52.51998678941941</latitude>
+				<altitude>0</altitude>
+				<range>2414.317071383256</range>
+				<tilt>0</tilt>
+				<heading>0.07253908482215178</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin43</styleUrl>
+			<Point>
+				<coordinates>13.31570996344196,52.51997280389334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Torgau (P)</name>
+			<LookAt>
+				<longitude>13.04269206428228</longitude>
+				<latitude>51.54575706481696</latitude>
+				<altitude>0</altitude>
+				<range>2560.519505245019</range>
+				<tilt>0</tilt>
+				<heading>0.005456898301821015</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin31</styleUrl>
+			<Point>
+				<coordinates>13.04263513982331,51.54560372775735,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lübeck-Bauhof (PH)</name>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.68883219971143,53.87668488730348,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emden (H)</name>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.204743969069238,53.36191371756293,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emden Neue Seeschleuse (P)</name>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.213768914479825,53.35077146276607,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bad Oeynhausen (H)</name>
+			<LookAt>
+				<longitude>8.845729318765398</longitude>
+				<latitude>52.21283172307618</latitude>
+				<altitude>0</altitude>
+				<range>5376.080906777531</range>
+				<tilt>0</tilt>
+				<heading>-0.904006444504643</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.828317499665419,52.2206193766229,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Minden (H)</name>
+			<LookAt>
+				<longitude>8.928066158266542</longitude>
+				<latitude>52.27349726543614</latitude>
+				<altitude>0</altitude>
+				<range>9652.668413925187</range>
+				<tilt>0</tilt>
+				<heading>-0.8389084352288113</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.922092297639281,52.28729651710943,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Porta (P)</name>
+			<LookAt>
+				<longitude>8.924273700207211</longitude>
+				<latitude>52.23389428403868</latitude>
+				<altitude>0</altitude>
+				<range>9579.193502498199</range>
+				<tilt>0</tilt>
+				<heading>-0.8419151391954788</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.918725942787567,52.24246396385853,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Vlotho (H)</name>
+			<LookAt>
+				<longitude>8.889520367501154</longitude>
+				<latitude>52.17494900956099</latitude>
+				<altitude>0</altitude>
+				<range>10226.24312022356</range>
+				<tilt>0</tilt>
+				<heading>-0.8693800247607012</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.874453039959391,52.16460977321835,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stolzenau (P)</name>
+			<LookAt>
+				<longitude>9.118879748036758</longitude>
+				<latitude>52.49865312917088</latitude>
+				<altitude>0</altitude>
+				<range>23800.60790659751</range>
+				<tilt>0</tilt>
+				<heading>-0.6877292069378824</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.079059423955755,52.51615370855916,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nienburg (P)</name>
+			<LookAt>
+				<longitude>9.188371757676888</longitude>
+				<latitude>52.6423819094273</latitude>
+				<altitude>0</altitude>
+				<range>23808.3069557116</range>
+				<tilt>0</tilt>
+				<heading>-0.6325975532115377</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.199415982397852,52.62858844690436,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wahmbeck (P)</name>
+			<LookAt>
+				<longitude>9.5235304810078</longitude>
+				<latitude>51.63509498205241</latitude>
+				<altitude>0</altitude>
+				<range>4612.583508119476</range>
+				<tilt>0</tilt>
+				<heading>-0.3692433969390651</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.517768661384094,51.62548808770914,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Karlshafen (P)</name>
+			<LookAt>
+				<longitude>9.458288580633017</longitude>
+				<latitude>51.65164050737938</latitude>
+				<altitude>0</altitude>
+				<range>4553.4600452883</range>
+				<tilt>0</tilt>
+				<heading>-0.4204044139305187</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.451892703511534,51.64447844260991,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Höxter (P)</name>
+			<LookAt>
+				<longitude>9.400374232483427</longitude>
+				<latitude>51.77508646233089</latitude>
+				<altitude>0</altitude>
+				<range>4625.935587591849</range>
+				<tilt>0</tilt>
+				<heading>-0.4658195520406851</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.385526117551478,51.77303847358096,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Heldra (P)</name>
+			<LookAt>
+				<longitude>10.22868201857401</longitude>
+				<latitude>51.13294744604882</latitude>
+				<altitude>0</altitude>
+				<range>7538.523052832868</range>
+				<tilt>0</tilt>
+				<heading>0.1817872032012762</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.19492396731634,51.12605855118156,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Letzter Heller (P)</name>
+			<LookAt>
+				<longitude>9.680308360416165</longitude>
+				<latitude>51.41941004508248</latitude>
+				<altitude>0</altitude>
+				<range>3748.382472704406</range>
+				<tilt>0</tilt>
+				<heading>-0.2460738455267667</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.679557704394128,51.41471661602008,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hann. Münden (PH)</name>
+			<LookAt>
+				<longitude>9.650034305779336</longitude>
+				<latitude>51.42087265771455</latitude>
+				<altitude>0</altitude>
+				<range>733.795173954426</range>
+				<tilt>2.787036982060178</tilt>
+				<heading>-0.9290017272611188</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.647832158605983,51.42145267293288,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Basel (H)</name>
+			<LookAt>
+				<longitude>7.588671590920546</longitude>
+				<latitude>47.56005196712155</latitude>
+				<altitude>0</altitude>
+				<range>2029.040482597442</range>
+				<tilt>0</tilt>
+				<heading>-4.090264882842414e-10</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.588671590920546,47.56005196712154,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rheinweiler (H)</name>
+			<LookAt>
+				<longitude>7.524296333604067</longitude>
+				<latitude>47.7176468476549</latitude>
+				<altitude>0</altitude>
+				<range>4506.998309390778</range>
+				<tilt>0</tilt>
+				<heading>-0.009032514757951067</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.530039228106813,47.71837985664351,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Perl (HP)</name>
+			<LookAt>
+				<longitude>6.368804557552632</longitude>
+				<latitude>49.47250584888617</latitude>
+				<altitude>0</altitude>
+				<range>369.6077364215004</range>
+				<tilt>0</tilt>
+				<heading>-0.009356057762985688</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin35</styleUrl>
+			<Point>
+				<coordinates>6.368804557552632,49.47250584888617,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Saarbrücken (H)</name>
+			<LookAt>
+				<longitude>6.993712669323744</longitude>
+				<latitude>49.23432100058673</latitude>
+				<altitude>0</altitude>
+				<range>2263.181004018458</range>
+				<tilt>0</tilt>
+				<heading>-0.0005132718582418893</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.993968033946752,49.23122567695329,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Völklingen (H)</name>
+			<LookAt>
+				<longitude>6.860877112857722</longitude>
+				<latitude>49.24564854924076</latitude>
+				<altitude>0</altitude>
+				<range>521.1364522640529</range>
+				<tilt>0</tilt>
+				<heading>-0.0002883824678617172</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.860877112857722,49.24564854924076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Diez Hafen (HP)</name>
+			<LookAt>
+				<longitude>8.004524803868382</longitude>
+				<latitude>50.37187821145547</latitude>
+				<altitude>0</altitude>
+				<range>146.119220237834</range>
+				<tilt>0</tilt>
+				<heading>-0.01555487250242133</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.0045152984352,50.37191127176417,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Plochingen (P)</name>
+			<LookAt>
+				<longitude>9.415799360802399</longitude>
+				<latitude>48.70836696901105</latitude>
+				<altitude>0</altitude>
+				<range>348.0264692344873</range>
+				<tilt>0</tilt>
+				<heading>-0.0001267754640228483</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.415799360802399,48.70836696901105,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gundelsheim (P)</name>
+			<LookAt>
+				<longitude>9.153819014574712</longitude>
+				<latitude>49.28089735405042</latitude>
+				<altitude>0</altitude>
+				<range>350.544184141159</range>
+				<tilt>0</tilt>
+				<heading>-0.003724047720664017</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.153819014574712,49.28089735405043,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Heidelberg UW (HP)</name>
+			<LookAt>
+				<longitude>8.668261052145333</longitude>
+				<latitude>49.41155654014695</latitude>
+				<altitude>0</altitude>
+				<range>641.9150642540211</range>
+				<tilt>0</tilt>
+				<heading>-0.008141767076204677</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.668261052145333,49.41155654014696,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hanau Brücke DFH (PH)</name>
+			<LookAt>
+				<longitude>8.911396441749732</longitude>
+				<latitude>50.12358457977694</latitude>
+				<altitude>0</altitude>
+				<range>328.1114036874363</range>
+				<tilt>0</tilt>
+				<heading>-0.005657974280481624</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.911396441749732,50.12358457977693,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt Osthafen (PH)</name>
+			<LookAt>
+				<longitude>8.710466925963999</longitude>
+				<latitude>50.10710118370124</latitude>
+				<altitude>0</altitude>
+				<range>549.7179777720082</range>
+				<tilt>0</tilt>
+				<heading>-0.1374691711504047</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin2</styleUrl>
+			<Point>
+				<coordinates>8.710466925963999,50.10710118370124,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cochem (PH)</name>
+			<LookAt>
+				<longitude>7.168945484843394</longitude>
+				<latitude>50.14732266696891</latitude>
+				<altitude>0</altitude>
+				<range>1910.345526898502</range>
+				<tilt>0</tilt>
+				<heading>-8.0142106100044e-10</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.168945484843395,50.14732266696891,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Trier (PH)</name>
+			<LookAt>
+				<longitude>6.628535319703601</longitude>
+				<latitude>49.76006426771956</latitude>
+				<altitude>0</altitude>
+				<range>4569.959871714991</range>
+				<tilt>0</tilt>
+				<heading>1.028775061018156e-09</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin32</styleUrl>
+			<Point>
+				<coordinates>6.628535319703602,49.76006426771956,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wertheim (PH)</name>
+			<LookAt>
+				<longitude>9.514906977417368</longitude>
+				<latitude>49.76251274444255</latitude>
+				<altitude>0</altitude>
+				<range>439.9961136533927</range>
+				<tilt>0</tilt>
+				<heading>-0.1727569871270409</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.514906977417368,49.76251274444255,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Deggendorf (PH)</name>
+			<LookAt>
+				<longitude>12.95994402318878</longitude>
+				<latitude>48.82466101977364</latitude>
+				<altitude>0</altitude>
+				<range>680.8050838783373</range>
+				<tilt>0</tilt>
+				<heading>-0.001192788649912494</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>12.95994402318879,48.82466101977364,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hüttendorf (P)</name>
+			<LookAt>
+				<longitude>10.96965019368859</longitude>
+				<latitude>49.54150135601265</latitude>
+				<altitude>0</altitude>
+				<range>211.8316292480983</range>
+				<tilt>0</tilt>
+				<heading>0.005948457434542427</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.96962627286421,49.54150743172697,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bamberg (PH)</name>
+			<LookAt>
+				<longitude>10.86470074874674</longitude>
+				<latitude>49.9108480812282</latitude>
+				<altitude>0</altitude>
+				<range>1347.471399084036</range>
+				<tilt>0</tilt>
+				<heading>-0.01010298922663316</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.86470074874674,49.91084808122821,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Schweinfurt Neuer Hafen (PH)</name>
+			<LookAt>
+				<longitude>10.22023954657756</longitude>
+				<latitude>50.02822259741912</latitude>
+				<altitude>0</altitude>
+				<range>971.9012207999357</range>
+				<tilt>0</tilt>
+				<heading>-0.003056464753974239</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.22023954657756,50.02822259741912,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Würzburg (PH)</name>
+			<LookAt>
+				<longitude>9.916136893265998</longitude>
+				<latitude>49.80334508756759</latitude>
+				<altitude>0</altitude>
+				<range>162.5768247325435</range>
+				<tilt>0</tilt>
+				<heading>-0.007888397296519006</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.916136893265998,49.80334508756759,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stuttgart (H)</name>
+			<LookAt>
+				<longitude>9.21077486271064</longitude>
+				<latitude>48.80110162775385</latitude>
+				<altitude>0</altitude>
+				<range>328.8255015395921</range>
+				<tilt>0</tilt>
+				<heading>-3.804224665177978</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.21077486271064,48.80110162775385,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Straubing (PH)</name>
+			<LookAt>
+				<longitude>12.55659759747707</longitude>
+				<latitude>48.89968242247011</latitude>
+				<altitude>0</altitude>
+				<range>1334.637780547265</range>
+				<tilt>0</tilt>
+				<heading>-0.008266068737372649</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>12.55648760730188,48.89964412932228,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Passau Donau (PH)</name>
+			<LookAt>
+				<longitude>13.45552501302527</longitude>
+				<latitude>48.57625596368607</latitude>
+				<altitude>0</altitude>
+				<range>201.8861158046038</range>
+				<tilt>12.58886108331709</tilt>
+				<heading>-0.01119728146123276</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>13.45552501302527,48.57625596368607,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Straßburg (H)</name>
+			<LookAt>
+				<longitude>7.785732857600647</longitude>
+				<latitude>48.58101797892021</latitude>
+				<altitude>0</altitude>
+				<range>6802.335204577622</range>
+				<tilt>0</tilt>
+				<heading>0.03148818957479613</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.799872828927487,48.58029569658562,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Karlsruhe (H)</name>
+			<LookAt>
+				<longitude>8.295733915227457</longitude>
+				<latitude>49.02030828844488</latitude>
+				<altitude>0</altitude>
+				<range>9853.412662970206</range>
+				<tilt>0</tilt>
+				<heading>-0.08150316083629547</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.3005806547262,49.01657377321183,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Maxau (P)</name>
+			<LookAt>
+				<longitude>8.307647965019026</longitude>
+				<latitude>49.04194478070649</latitude>
+				<altitude>0</altitude>
+				<range>1832.062822797491</range>
+				<tilt>0</tilt>
+				<heading>-0.004304505912650814</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.309158246071863,49.03885822086756,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Speyer (PH)</name>
+			<LookAt>
+				<longitude>8.486772968695309</longitude>
+				<latitude>49.32570171147146</latitude>
+				<altitude>0</altitude>
+				<range>10793.46834101857</range>
+				<tilt>0</tilt>
+				<heading>0.0423077630371249</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.452834078225921,49.31969334279445,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bingen (PH)</name>
+			<LookAt>
+				<longitude>7.903799677921797</longitude>
+				<latitude>49.96903789643426</latitude>
+				<altitude>0</altitude>
+				<range>4173.541165498774</range>
+				<tilt>0</tilt>
+				<heading>0.004320415336039524</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.92051515258178,49.9723344652279,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Koblenz UP (HP)</name>
+			<LookAt>
+				<longitude>7.597334209632638</longitude>
+				<latitude>50.35717080529693</latitude>
+				<altitude>0</altitude>
+				<range>6004.875060275495</range>
+				<tilt>0</tilt>
+				<heading>-0.002249052809282707</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.604519421292393,50.35331527318775,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bonn (PH)</name>
+			<LookAt>
+				<longitude>7.099060373644847</longitude>
+				<latitude>50.73827187358458</latitude>
+				<altitude>0</altitude>
+				<range>6279.477686350248</range>
+				<tilt>0</tilt>
+				<heading>0.0009857916681797372</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.110308576077166,50.73817094724412,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Köln (PH)</name>
+			<LookAt>
+				<longitude>6.963879641469257</longitude>
+				<latitude>50.93515734722524</latitude>
+				<altitude>0</altitude>
+				<range>2333.051675528855</range>
+				<tilt>0</tilt>
+				<heading>0.002460394975888539</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.968272248281025,50.93082131418464,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Düsseldorf (PH)</name>
+			<LookAt>
+				<longitude>6.77565732572683</longitude>
+				<latitude>51.22493482920201</latitude>
+				<altitude>0</altitude>
+				<range>11400.55225468204</range>
+				<tilt>0</tilt>
+				<heading>9.110790803082538e-08</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.760850254939916,51.22380653883359,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ruhrort (PH)</name>
+			<LookAt>
+				<longitude>6.733092566945394</longitude>
+				<latitude>51.45604193205934</latitude>
+				<altitude>0</altitude>
+				<range>4726.31082338512</range>
+				<tilt>0</tilt>
+				<heading>2.10077147474139e-09</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.722359943911808,51.45650942226109,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Emmerich (PH)</name>
+			<LookAt>
+				<longitude>6.2454398765378</longitude>
+				<latitude>51.83507453013537</latitude>
+				<altitude>0</altitude>
+				<range>3388.709936976528</range>
+				<tilt>0</tilt>
+				<heading>-1.0804707941408e-06</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>6.245457387195224,51.82854916349503,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Nijmegen (H)</name>
+			<LookAt>
+				<longitude>5.858650999960188</longitude>
+				<latitude>51.84169200065442</latitude>
+				<altitude>0</altitude>
+				<range>12216.35496355218</range>
+				<tilt>0</tilt>
+				<heading>-3.141592886615587e-11</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>5.870583846284645,51.85038853816721,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linz (H)</name>
+			<LookAt>
+				<longitude>14.29405808269192</longitude>
+				<latitude>48.29634154271334</latitude>
+				<altitude>0</altitude>
+				<range>10221.20492725854</range>
+				<tilt>0</tilt>
+				<heading>2.531708307131905</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>14.29034963009698,48.31068550491368,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wien (H)</name>
+			<LookAt>
+				<longitude>16.414403983515</longitude>
+				<latitude>48.21405522675782</latitude>
+				<altitude>0</altitude>
+				<range>4422.222184357963</range>
+				<tilt>0</tilt>
+				<heading>4.114138615825003</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>16.41896226192324,48.21723532821174,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mecklar (H)</name>
+			<LookAt>
+				<longitude>9.766284357577987</longitude>
+				<latitude>50.91902332852897</latitude>
+				<altitude>0</altitude>
+				<range>1648.641676406573</range>
+				<tilt>0</tilt>
+				<heading>-0.8391000026335916</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.763254118251506,50.91930544233005,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rotenburg (PH)</name>
+			<LookAt>
+				<longitude>9.727150320508411</longitude>
+				<latitude>50.99562555177762</latitude>
+				<altitude>0</altitude>
+				<range>2324.09779735757</range>
+				<tilt>0</tilt>
+				<heading>-0.8695177178556336</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.727326727411768,50.99674772247055,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Guntershausen (P)</name>
+			<LookAt>
+				<longitude>9.475914878302145</longitude>
+				<latitude>51.23365223969443</latitude>
+				<altitude>0</altitude>
+				<range>1714.007329736804</range>
+				<tilt>0</tilt>
+				<heading>-1.064994237777522</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.470868888854854,51.23569313296015,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kassel (H)</name>
+			<LookAt>
+				<longitude>9.517358073081519</longitude>
+				<latitude>51.31894917830277</latitude>
+				<altitude>0</altitude>
+				<range>1978.575539249598</range>
+				<tilt>0</tilt>
+				<heading>-1.032652250089932</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.522636294707041,51.31963618220784,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bonaforth (P)</name>
+			<LookAt>
+				<longitude>9.629440029462788</longitude>
+				<latitude>51.40116218426238</latitude>
+				<altitude>0</altitude>
+				<range>1390.614447999545</range>
+				<tilt>0</tilt>
+				<heading>-0.9450980560685904</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.628189946826451,51.40325055495719,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Eschwege (H)</name>
+			<LookAt>
+				<longitude>10.05261485083079</longitude>
+				<latitude>51.18971387176335</latitude>
+				<altitude>0</altitude>
+				<range>826.357365593232</range>
+				<tilt>0</tilt>
+				<heading>0.04461791376111963</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.05297651994787,51.18924068497195,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Allendorf (PH)</name>
+			<LookAt>
+				<longitude>9.972587755316656</longitude>
+				<latitude>51.27262421783322</latitude>
+				<altitude>0</altitude>
+				<range>696.4878274559323</range>
+				<tilt>0</tilt>
+				<heading>-0.01777006246510524</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.968233456984974,51.27351512318227,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Treffurt (P)</name>
+			<LookAt>
+				<longitude>10.23629523415084</longitude>
+				<latitude>51.13786754628241</latitude>
+				<altitude>0</altitude>
+				<range>1997.89990643154</range>
+				<tilt>0</tilt>
+				<heading>0.1877147158496845</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.23855925606908,51.1343005895442,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bodenwerder (P)</name>
+			<LookAt>
+				<longitude>9.526835315653855</longitude>
+				<latitude>51.97519491577664</latitude>
+				<altitude>0</altitude>
+				<range>10569.40189815479</range>
+				<tilt>0</tilt>
+				<heading>-0.3663138688763581</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.516446165887084,51.97431590572475,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hameln Wehrbergen (P)</name>
+			<LookAt>
+				<longitude>9.33214682550263</longitude>
+				<latitude>52.11853323433257</latitude>
+				<altitude>0</altitude>
+				<range>4507.026645013651</range>
+				<tilt>0</tilt>
+				<heading>-0.5197779365967394</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.304404328448356,52.12376856840789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hameln (H)</name>
+			<LookAt>
+				<longitude>9.362563652495041</longitude>
+				<latitude>52.10042690762597</latitude>
+				<altitude>0</altitude>
+				<range>4500.622700711041</range>
+				<tilt>0</tilt>
+				<heading>-0.4957757132542197</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.354547628890233,52.09647906618493,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dörverden (P)</name>
+			<LookAt>
+				<longitude>9.246675022011011</longitude>
+				<latitude>52.82515215219987</latitude>
+				<altitude>0</altitude>
+				<range>17482.68638611339</range>
+				<tilt>0</tilt>
+				<heading>-0.5865087799999569</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.219777481576203,52.84448076165612,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Weserwehr UW (P)</name>
+			<LookAt>
+				<longitude>8.867290765756332</longitude>
+				<latitude>53.05652724885026</latitude>
+				<altitude>0</altitude>
+				<range>1708.999898796374</range>
+				<tilt>0</tilt>
+				<heading>-0.8892944193211499</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.858504970457535,53.05927540924834,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Weserwehr OW (P)</name>
+			<LookAt>
+				<longitude>8.867290765756332</longitude>
+				<latitude>53.05652724885026</latitude>
+				<altitude>0</altitude>
+				<range>1708.999898796374</range>
+				<tilt>0</tilt>
+				<heading>-0.8892944193211499</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.871183763430849,53.05721378560054,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Große Weserbrücke (P)</name>
+			<LookAt>
+				<longitude>8.788270067347643</longitude>
+				<latitude>53.07920963695894</latitude>
+				<altitude>0</altitude>
+				<range>2774.089275654545</range>
+				<tilt>0</tilt>
+				<heading>-0.9524565397927497</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.787939292906691,53.08041826476065,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Bremen (H)</name>
+			<LookAt>
+				<longitude>8.774253284650943</longitude>
+				<latitude>53.08557188697747</latitude>
+				<altitude>0</altitude>
+				<range>2778.066784413022</range>
+				<tilt>0</tilt>
+				<heading>-0.9636635354986566</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.772702065474926,53.08485475159907,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Elsfleth Ohrt (P)</name>
+			<LookAt>
+				<longitude>8.480208616403461</longitude>
+				<latitude>53.23963653816847</latitude>
+				<altitude>0</altitude>
+				<range>8112.928961805284</range>
+				<tilt>0</tilt>
+				<heading>-1.198564624685449</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.467889637204115,53.23981659647067,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Farge (P)</name>
+			<LookAt>
+				<longitude>8.527065934469487</longitude>
+				<latitude>53.19721243975425</latitude>
+				<altitude>0</altitude>
+				<range>5204.272829986856</range>
+				<tilt>0</tilt>
+				<heading>-1.161029724969243</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.524593621048059,53.19237263607229,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Oldenburg-Drielake (P)</name>
+			<LookAt>
+				<longitude>8.256695089804431</longitude>
+				<latitude>53.14490623494294</latitude>
+				<altitude>0</altitude>
+				<range>11279.8360837763</range>
+				<tilt>0</tilt>
+				<heading>-1.37743780920031</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.226202409122898,53.13933857651006,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hundsmühlen (P)</name>
+			<LookAt>
+				<longitude>8.177393131278118</longitude>
+				<latitude>53.10758170932147</latitude>
+				<altitude>0</altitude>
+				<range>1751.565905586223</range>
+				<tilt>0</tilt>
+				<heading>-1.440812506812407</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.171193275004612,53.10866854854553,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Leerort (P)</name>
+			<LookAt>
+				<longitude>7.45106989164282</longitude>
+				<latitude>53.20984157507164</latitude>
+				<altitude>0</altitude>
+				<range>5533.585178966612</range>
+				<tilt>0</tilt>
+				<heading>-2.021912316349091</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.435582859317477,53.2136013868438,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cuxhaven (PH)</name>
+			<LookAt>
+				<longitude>8.806427260725901</longitude>
+				<latitude>53.88458585695943</latitude>
+				<altitude>0</altitude>
+				<range>41543.21607901379</range>
+				<tilt>0</tilt>
+				<heading>-1.637898705678224</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>8.716200140341677,53.86530255845076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Blankenese UF (PH)</name>
+			<LookAt>
+				<longitude>10.05816107538175</longitude>
+				<latitude>53.51677585319742</latitude>
+				<altitude>0</altitude>
+				<range>34086.71060180527</range>
+				<tilt>0</tilt>
+				<heading>-0.6291939542471662</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.962447314994197,53.54097828235906,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hamburg St. Pauli (PH)</name>
+			<LookAt>
+				<longitude>10.05816107538175</longitude>
+				<latitude>53.51677585319742</latitude>
+				<altitude>0</altitude>
+				<range>34086.71060180527</range>
+				<tilt>0</tilt>
+				<heading>-0.6291939542471662</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.04328698695775,53.52465185724288,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Helgoland Südhafen (PH)</name>
+			<LookAt>
+				<longitude>7.996027808912777</longitude>
+				<latitude>54.1722639178878</latitude>
+				<altitude>0</altitude>
+				<range>16875.60550452507</range>
+				<tilt>0</tilt>
+				<heading>-2.293847648727704</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>7.894073402749905,54.17455062912376,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kiel-Holtenau (PH)</name>
+			<LookAt>
+				<longitude>10.23568152101151</longitude>
+				<latitude>54.20634880560024</latitude>
+				<altitude>0</altitude>
+				<range>143579.3623803579</range>
+				<tilt>0</tilt>
+				<heading>-0.4806225450798644</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.15269358419429,54.32250279120158,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rendsburg (H)</name>
+			<LookAt>
+				<longitude>9.742342420048688</longitude>
+				<latitude>54.31215118725522</latitude>
+				<altitude>0</altitude>
+				<range>16777.86668657241</range>
+				<tilt>0</tilt>
+				<heading>-0.8807749856780791</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.697874807359925,54.29641357885554,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NOK Breiholz (P)</name>
+			<LookAt>
+				<longitude>9.551801098827724</longitude>
+				<latitude>54.19765427623564</latitude>
+				<altitude>0</altitude>
+				<range>11434.00943816736</range>
+				<tilt>0</tilt>
+				<heading>-1.035518137606248</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>9.546300378004185,54.19576003289842,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Artlenburg (P)</name>
+			<LookAt>
+				<longitude>10.53068631014223</longitude>
+				<latitude>53.37846691953533</latitude>
+				<altitude>0</altitude>
+				<range>9637.901733951503</range>
+				<tilt>0</tilt>
+				<heading>-0.2458383448200684</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin54</styleUrl>
+			<Point>
+				<coordinates>10.50085677409974,53.37071346932504,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Tangermünde (P)</name>
+			<LookAt>
+				<longitude>11.97481675452002</longitude>
+				<latitude>52.53223436369525</latitude>
+				<altitude>0</altitude>
+				<range>3472.067112571197</range>
+				<tilt>0</tilt>
+				<heading>0.004561467771390266</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin17</styleUrl>
+			<Point>
+				<coordinates>11.97084564623041,52.53045875388649,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rathenhow UP (PH)</name>
+			<LookAt>
+				<longitude>12.32364099009449</longitude>
+				<latitude>52.60353027274137</latitude>
+				<altitude>0</altitude>
+				<range>3166.910780438386</range>
+				<tilt>0</tilt>
+				<heading>0.1985573976693449</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin37</styleUrl>
+			<Point>
+				<coordinates>12.31499301324624,52.59982632741485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Havelberg Stadt (PH)</name>
+			<LookAt>
+				<longitude>12.07421462038323</longitude>
+				<latitude>52.82889926851076</latitude>
+				<altitude>0</altitude>
+				<range>3680.022142203788</range>
+				<tilt>0</tilt>
+				<heading>0.000639728183124369</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin42</styleUrl>
+			<Point>
+				<coordinates>12.06911949055791,52.82782766367955,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dresden (PH)</name>
+			<LookAt>
+				<longitude>13.68094420548616</longitude>
+				<latitude>51.06282259824538</latitude>
+				<altitude>0</altitude>
+				<range>1652.992493810262</range>
+				<tilt>0</tilt>
+				<heading>0.151736076393261</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin40</styleUrl>
+			<Point>
+				<coordinates>13.68094420548616,51.06282259824538,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Brandenburg OP (PH)</name>
+			<LookAt>
+				<longitude>12.56514824380885</longitude>
+				<latitude>52.40982476062293</latitude>
+				<altitude>0</altitude>
+				<range>8276.841704560102</range>
+				<tilt>0</tilt>
+				<heading>0.3901511986118535</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin15</styleUrl>
+			<Point>
+				<coordinates>12.55407847642132,52.40937449132333,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Genthin (P)</name>
+			<LookAt>
+				<longitude>12.18049758226843</longitude>
+				<latitude>52.41191300149623</latitude>
+				<altitude>0</altitude>
+				<range>8876.486731197036</range>
+				<tilt>0</tilt>
+				<heading>0.08548060281043329</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin33</styleUrl>
+			<Point>
+				<coordinates>12.17278216794941,52.41016095259118,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ST.ARNUAL (P)</name>
+			<LookAt>
+				<longitude>7.020062388134768</longitude>
+				<latitude>49.21979833356463</latitude>
+				<altitude>0</altitude>
+				<range>1587.023134084635</range>
+				<tilt>0</tilt>
+				<heading>-0.009140684975726324</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin36</styleUrl>
+			<Point>
+				<coordinates>7.01964773478691,49.2198641664248,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rögatz (P)</name>
+			<LookAt>
+				<longitude>11.77979259557774</longitude>
+				<latitude>52.31051659691661</latitude>
+				<altitude>0</altitude>
+				<range>10927.17130639033</range>
+				<tilt>0</tilt>
+				<heading>-0.1496968638797184</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin22</styleUrl>
+			<Point>
+				<coordinates>11.76393633367798,52.30309050398608,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Magdeburg-Strombrücke (PH)</name>
+			<LookAt>
+				<longitude>11.65846035978326</longitude>
+				<latitude>52.12257029206992</latitude>
+				<altitude>0</altitude>
+				<range>4924.605677515336</range>
+				<tilt>0</tilt>
+				<heading>-0.2455966526403872</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin28</styleUrl>
+			<Point>
+				<coordinates>11.65122503569898,52.12579833483692,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt (H)</name>
+			<LookAt>
+				<longitude>8.66298301983525</longitude>
+				<latitude>50.10256355317431</latitude>
+				<altitude>0</altitude>
+				<range>3771.435162025208</range>
+				<tilt>0</tilt>
+				<heading>1.229054453715699</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin0</styleUrl>
+			<Point>
+				<coordinates>8.662915918402744,50.09812015242977,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Trzebiez (H)</name>
+			<LookAt>
+				<longitude>14.51965367057608</longitude>
+				<latitude>53.66192225061666</latitude>
+				<altitude>0</altitude>
+				<range>2969.338683393242</range>
+				<tilt>0</tilt>
+				<heading>0.1801024497263563</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin3</styleUrl>
+			<Point>
+				<coordinates>14.51717795690243,53.66092810714225,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Friedrichsthal (P)</name>
+			<LookAt>
+				<longitude>14.35976665296364</longitude>
+				<latitude>53.15613738286785</latitude>
+				<altitude>0</altitude>
+				<range>2823.890658719062</range>
+				<tilt>0</tilt>
+				<heading>0.05232790705575169</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin7</styleUrl>
+			<Point>
+				<coordinates>14.3582254217919,53.15490311232453,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Szczecin (H)</name>
+			<LookAt>
+				<longitude>14.56661415446622</longitude>
+				<latitude>53.4280298515088</latitude>
+				<altitude>0</altitude>
+				<range>5661.223544739093</range>
+				<tilt>0</tilt>
+				<heading>0.2180107240643304</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin8</styleUrl>
+			<Point>
+				<coordinates>14.5727227640909,53.43190125422337,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Gartz (P)</name>
+			<LookAt>
+				<longitude>14.40312912385008</longitude>
+				<latitude>53.2104152557476</latitude>
+				<altitude>0</altitude>
+				<range>3157.295995626001</range>
+				<tilt>0</tilt>
+				<heading>0.0870412590082978</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin10</styleUrl>
+			<Point>
+				<coordinates>14.40553218602871,53.20993308212748,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hohensaaten-Finow (P)</name>
+			<LookAt>
+				<longitude>14.14884012443556</longitude>
+				<latitude>52.86993983130866</latitude>
+				<altitude>0</altitude>
+				<range>1980.560960966125</range>
+				<tilt>0</tilt>
+				<heading>-0.1160506499627774</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin41</styleUrl>
+			<Point>
+				<coordinates>14.14482587589065,52.8706385048318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hitzacker (P)</name>
+			<LookAt>
+				<longitude>11.05271612016383</longitude>
+				<latitude>53.15501539836295</latitude>
+				<altitude>0</altitude>
+				<range>5578.859486602705</range>
+				<tilt>0</tilt>
+				<heading>0.01099257447278166</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin12</styleUrl>
+			<Point>
+				<coordinates>11.04958804440611,53.15483585110042,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wittenberge (PH)</name>
+			<LookAt>
+				<longitude>11.75230960723926</longitude>
+				<latitude>52.99181801522744</latitude>
+				<altitude>0</altitude>
+				<range>3448.725665403357</range>
+				<tilt>0</tilt>
+				<heading>0.0001416420609941046</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin27</styleUrl>
+			<Point>
+				<coordinates>11.74619960569835,52.98750281449325,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dessau (PH)</name>
+			<LookAt>
+				<longitude>12.31243180129138</longitude>
+				<latitude>51.87884381173251</latitude>
+				<altitude>0</altitude>
+				<range>12731.34044870274</range>
+				<tilt>0</tilt>
+				<heading>0.2692069238827054</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin19</styleUrl>
+			<Point>
+				<coordinates>12.31444123355097,51.88077295527279,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Frankfurt (Oder) (H)</name>
+			<LookAt>
+				<longitude>14.55904372779136</longitude>
+				<latitude>52.3468249518681</latitude>
+				<altitude>0</altitude>
+				<range>3348.249893758094</range>
+				<tilt>0</tilt>
+				<heading>0.09304422676118007</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin9</styleUrl>
+			<Point>
+				<coordinates>14.5548301095996,52.3492215971162,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Wittenberg (PH)</name>
+			<LookAt>
+				<longitude>12.64025263054314</longitude>
+				<latitude>51.85709229976122</latitude>
+				<altitude>0</altitude>
+				<range>9975.779478277442</range>
+				<tilt>0</tilt>
+				<heading>0.5270136098638616</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin25</styleUrl>
+			<Point>
+				<coordinates>12.64286938919344,51.85785896685918,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Meissen (PH)</name>
+			<LookAt>
+				<longitude>13.49892174581068</longitude>
+				<latitude>51.14010524485839</latitude>
+				<altitude>0</altitude>
+				<range>1969.782376066784</range>
+				<tilt>0</tilt>
+				<heading>3.18286418114416e-09</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin21</styleUrl>
+			<Point>
+				<coordinates>13.49892174581068,51.14010524485838,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Decin (H)</name>
+			<LookAt>
+				<longitude>14.23103305000866</longitude>
+				<latitude>50.78583461563608</latitude>
+				<altitude>0</altitude>
+				<range>6325.033810838815</range>
+				<tilt>0</tilt>
+				<heading>0.5790666593723297</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin6</styleUrl>
+			<Point>
+				<coordinates>14.22371694111589,50.78710011047951,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Schwerin Werderbrücke (PH)</name>
+			<LookAt>
+				<longitude>11.41896219852774</longitude>
+				<latitude>53.62545823215613</latitude>
+				<altitude>0</altitude>
+				<range>1601.597922606108</range>
+				<tilt>0</tilt>
+				<heading>-1.640979757597381</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin34</styleUrl>
+			<Point>
+				<coordinates>11.41880897453852,53.62555118698693,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Grabow OP (PH)</name>
+			<LookAt>
+				<longitude>11.56174676371861</longitude>
+				<latitude>53.27784433570071</latitude>
+				<altitude>0</altitude>
+				<range>1647.286162893594</range>
+				<tilt>0</tilt>
+				<heading>-0.001527099685304057</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin16</styleUrl>
+			<Point>
+				<coordinates>11.56066648704113,53.27937160947935,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Oranienburg (H)</name>
+			<LookAt>
+				<longitude>13.2578717814132</longitude>
+				<latitude>52.74297574154645</latitude>
+				<altitude>0</altitude>
+				<range>3590.682727131613</range>
+				<tilt>0</tilt>
+				<heading>0.01944992740597995</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin5</styleUrl>
+			<Point>
+				<coordinates>13.25625758887227,52.74024558222789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>NIEDERFINOW SHW UP (P)</name>
+			<LookAt>
+				<longitude>13.94819170690056</longitude>
+				<latitude>52.84367368882777</latitude>
+				<altitude>0</altitude>
+				<range>7921.957950329393</range>
+				<tilt>0</tilt>
+				<heading>0.01595967588893724</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin30</styleUrl>
+			<Point>
+				<coordinates>13.94439007071992,52.84852401865095,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Stützkow (P)</name>
+			<LookAt>
+				<longitude>14.17677992817692</longitude>
+				<latitude>52.9929476293328</latitude>
+				<altitude>0</altitude>
+				<range>1043.457888282921</range>
+				<tilt>0</tilt>
+				<heading>0.001553159757937988</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin23</styleUrl>
+			<Point>
+				<coordinates>14.17954507919653,52.99322253325439,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Kienitz (P)</name>
+			<LookAt>
+				<longitude>14.46559353677969</longitude>
+				<latitude>52.67298411543592</latitude>
+				<altitude>0</altitude>
+				<range>6111.507136626278</range>
+				<tilt>0</tilt>
+				<heading>0.01789326494009898</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin1</styleUrl>
+			<Point>
+				<coordinates>14.44937270179168,52.67803098829205,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Eisenhüttenstadt (HP)</name>
+			<LookAt>
+				<longitude>14.66368671203087</longitude>
+				<latitude>52.13626009566659</latitude>
+				<altitude>0</altitude>
+				<range>11270.02392420042</range>
+				<tilt>0</tilt>
+				<heading>-0.004588318150308844</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin29</styleUrl>
+			<Point>
+				<coordinates>14.66224883852034,52.13111749353332,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fürstenwalde (P)</name>
+			<LookAt>
+				<longitude>14.06190864330421</longitude>
+				<latitude>52.35455230492726</latitude>
+				<altitude>0</altitude>
+				<range>4335.53475586998</range>
+				<tilt>0</tilt>
+				<heading>-0.4804594520936519</heading>
+				<altitudeMode>relativeToGround</altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_ylw-pushpin18</styleUrl>
+			<Point>
+				<coordinates>14.06934676604462,52.35317280424076,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

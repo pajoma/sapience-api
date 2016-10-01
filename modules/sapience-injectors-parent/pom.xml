@@ -1,0 +1,121 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!--    <parent>-->
+<!--		<groupId>sapience</groupId>-->
+<!--		<artifactId>sapience-parent</artifactId>-->
+<!--		<version>1.0</version>-->
+<!--		-->
+<!--	</parent>-->
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <artifactId>sapience-injectors-parent</artifactId>
+  	<groupId>sapience</groupId>
+  <packaging>pom</packaging>
+  <version>0.2</version>
+  <name>Sapience Injector (Module Definition)</name>
+
+	<properties>
+		<sapience.version>0.2</sapience.version>
+		<sapience-lookup.version>0.1</sapience-lookup.version>
+		<spring.version>3.0.2.RELEASE</spring.version>
+		<project_charset>UTF-8</project_charset>
+		<downloadSources>true</downloadSources>
+	</properties>
+
+
+	<modules>
+		<module>../sapience-injectors-main</module>
+		<module>../sapience-injectors-wsdl</module>
+		<module>../sapience-injectors-sos</module>
+		<module>../sapience-injectors-wfs</module>
+		<module>../sapience-injectors-wps</module>
+		<module>../sapience-injectors-wcs</module>
+		<module>../sapience-injectors.wms</module>
+	</modules>
+	
+	<dependencies>
+			<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.6</version>
+			<scope>test</scope>
+		</dependency>
+		
+		
+		<!--  SPRING -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.annotation</groupId>
+			<artifactId>jsr250-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+			<scope>test</scope>
+		</dependency>
+		
+	
+	
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>main</id>
+			<url>http://repo2.maven.org/maven2/</url>
+		</repository>
+ 		<repository>
+	        <id>mvnsearch.org</id>
+	        <name>MVN Search</name>
+	        <url>
+	            http://www.mvnsearch.org/maven2
+	        </url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+	    </repository>
+        <repository>
+            <id>DataNucleus_Repos2</id>
+            <name>DataNucleus Repository</name>
+            <url>http://www.datanucleus.org/downloads/maven2</url>
+        </repository>
+
+	</repositories>
+</project>

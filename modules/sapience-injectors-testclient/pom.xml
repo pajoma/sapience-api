@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>sapience</groupId>
+		<artifactId>sapience-injectors-parent</artifactId>
+		<version>0.2</version>
+		<relativePath>../sapience-injectors-parent/pom.xml</relativePath>
+		
+	</parent>
+	
+	<artifactId>sapience-injectors-testclient</artifactId>
+
+	<name>Sapience Testclient</name>
+	<description>The Semantic Annotations API (sapience) comprises libraries giving application developers a simple and fast way to extend their applications with semantic functionality.</description>
+	<url>http://purl.org/net/sapience/docs</url>
+	<issueManagement>
+		<system>Trac</system>
+		<url>http://trac6.assembla.com/sapience/report</url>
+	</issueManagement>
+	<scm>
+		<connection>Subversion</connection>
+		<url>http://svn6.assembla.com/svn/sapience</url>
+	</scm>
+	<organization>
+		<name>Institute for Geoinformatics (ifgi)</name>
+		<url>http://ifgi.uni-muenster.de</url>
+	</organization>
+	
+	<dependencies>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-wps</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-sos</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-wcs</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-wfs</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-wsdl</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-lookup-hibernate</artifactId>
+			<version>${sapience-lookup.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-injectors-wms</artifactId>
+			<version>0.2</version>
+		</dependency>
+	</dependencies>
+
+
+	
+	
+	<repositories>
+		<repository>
+			<id>main</id>
+			<url>http://repo2.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>mvnsearch.org</id>
+			<name>MVN Search</name>
+			<url>
+	            http://www.mvnsearch.org/maven2
+	        </url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>DataNucleus_Repos2</id>
+			<name>DataNucleus Repository</name>
+			<url>http://www.datanucleus.org/downloads/maven2</url>
+		</repository>
+
+	</repositories>
+</project>

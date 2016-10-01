@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl11:definitions name="OrderService"
+  targetNamespace="http://www.w3.org/2002/ws/sawsdl/spec/wsdl/order#"
+  xmlns="http://www.w3.org/2002/ws/sawsdl/spec/wsdl/order#"
+  xmlns:wsdl11="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:sawsdl="http://www.w3.org/ns/sawsdl">
+
+  <wsdl11:types>
+    <xs:schema targetNamespace="http://www.w3.org/2002/ws/sawsdl/spec/wsdl/order#" elementFormDefault="qualified">
+      <xs:element name="OrderRequest" type="OrderRequestType"
+          sawsdl:loweringSchemaMapping=""/>
+      <xs:complexType name="OrderRequestType"
+          sawsdl:loweringSchemaMapping="http://www.w3.org/2002/ws/sawsdl/spec/examples/mapping/Ont2OrderRequest.lowering">
+        <xs:sequence>
+          <xs:element name="customerNo" type="xs:integer" />
+          <xs:element name="orderItem" type="item" minOccurs="1" maxOccurs="unbounded" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="item">
+        <xs:all>
+          <xs:element name="UPC" type="xs:string" />
+        </xs:all>
+        <xs:attribute name="quantity" type="xs:integer" />
+      </xs:complexType>
+
+      <xs:element name="OrderResponse" type="confirmation"
+          sawsdl:liftingSchemaMapping=""/>
+      <xs:simpleType name="confirmation"
+          sawsdl:liftingSchemaMapping="http://www.w3.org/2002/ws/sawsdl/spec/mapping/Response2Ont.xslt">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Confirmed"/>
+          <xs:enumeration value="Pending"/>
+          <xs:enumeration value="Rejected"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl11:types>
+
+  <wsdl11:message name="OrderRequestMessage">
+    <wsdl11:part name="OrderRequest" element="OrderRequest" />
+  </wsdl11:message>
+  <wsdl11:message name="OrderResponseMessage">
+    <wsdl11:part name="OrderResponse" element="OrderResponse"/>
+  </wsdl11:message>
+
+  <wsdl11:portType name="Order">
+    <wsdl11:operation name="order">
+      <wsdl11:input message="OrderRequestMessage" />
+      <wsdl11:output message="OrderResponseMessage" />
+    </wsdl11:operation>
+  </wsdl11:portType>
+</wsdl11:definitions>

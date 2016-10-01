@@ -1,0 +1,44 @@
+@prefix : <http://swing.brgm.fr/repository/ontologies/RdfTest/current#> .
+@prefix meas: <http://swing.brgm.fr/repository/ontologies/MeasurementOntology/current#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wsml: <http://www.wsmo.org/wsml/wsml-syntax#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+# http://purl.org/dc/elements/1.1/creator: patrick maue
+# http://purl.org/dc/elements/1.1/description: This ontology captures the domain knowledge for the Administration Domain
+# http://purl.org/dc/elements/1.1/hasVersion: 0.1 beta
+# http://purl.org/dc/elements/1.1/publisher: (a)IfGI, University of Muenster
+# http://purl.org/dc/elements/1.1/subject: Sailing, Sport, Water
+# http://purl.org/dc/elements/1.1/title: WSML RDF Test Ontology
+# http://purl.org/dc/elements/1.1/rights: http://creativecommons.org/licenses/by/3.0/
+:Boat a rdfs:Class .
+
+:SailingBoat a rdfs:Class ;
+	rdfs:subClassOf :Boat ;
+	dc:description "A boat using wind as driving force"^^xsd:string ;
+	rdfs:label "Segelboot@de"^^xsd:string , "voilier@fr"^^xsd:string .
+
+
+:hasSails a rdf:Property ;
+	rdfs:domain :SailingBoat ;
+	rdfs:range :Sail .
+
+:Sail a rdfs:Class .
+
+:Unit a rdfs:Class .
+
+# some comment on this concept
+:Feet a :Unit .
+
+:Meter a :Unit .
+
+:length a rdf:Property ;
+	rdfs:domain :Boat ;
+	rdfs:range xsd:double ;
+	dc:relation :Boat .
+
+:hasUnit a rdf:Property ;
+	rdfs:domain xsd:double ;
+	rdfs:range :Unit .

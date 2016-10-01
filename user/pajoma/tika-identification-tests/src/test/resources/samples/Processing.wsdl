@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Processing" 
+	targetNamespace="http://service.q14.net/Processing"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tns="http://service.q14.net/Processing" 
+    xmlns:ns="http://purl.net/ifgi/schemas/workflows/examples/simpleOne/ProcessingTypes" 
+    xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" 
+    xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types>
+        <xsd:schema targetNamespace="http://service.q14.net/Processing">
+            <xsd:import namespace="http://purl.net/ifgi/schemas/workflows/examples/simpleOne/ProcessingTypes" schemaLocation="../schema/ProcessingTypes.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="ProcessingOperationRequest">
+        <part name="processingRequest" element="ns:typeA"/>
+    </message>
+    <message name="ProcessingOperationResponse">
+        <part name="processingResponse" element="ns:typeA"/>
+    </message>
+    <portType name="ProcessingPortType">
+        <operation name="ProcessingOperation">
+            <input name="input1" message="tns:ProcessingOperationRequest"
+            	sawsdl:modelReference="http://services.ifgi.de/simple_workflow/typeA"/>
+            <output name="output1" message="tns:ProcessingOperationResponse"
+            	sawsdl:modelReference="http://services.ifgi.de/simple_workflow/typeA"/>
+        </operation>
+    </portType>
+    <binding name="ProcessingBinding" type="tns:ProcessingPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="ProcessingOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="ProcessingService">
+        <port name="ProcessingPort" binding="tns:ProcessingBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/ProcessingService/ProcessingPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="Processing">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="ProcessingPortTypeRole" portType="tns:ProcessingPortType"/>
+    </plnk:partnerLinkType>
+</definitions>

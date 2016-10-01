@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Capabilities xmlns="http://www.opengis.net/wcs/1.1"
+	xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	version="1.1.0">
+	<ows:ServiceIdentification>
+		<ows:Title>SRTM - Guadeloupe</ows:Title>
+		<ows:Abstract>Shuttle Radar Topography Mission - Guadeloupe</ows:Abstract>
+		<ows:Keywords>
+			<ows:Keyword>SRTM</ows:Keyword>
+			<ows:Keyword>Guadeloupe</ows:Keyword>
+
+			<ows:Keyword>MNT</ows:Keyword>
+			<ows:Keyword>DEM</ows:Keyword>
+		</ows:Keywords>
+		
+		<ows:ServiceType codeSpace="OGC">OGC WCS</ows:ServiceType>
+		<ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+		<ows:Fees>none</ows:Fees>
+				
+
+		<ows:AccessConstraints>none</ows:AccessConstraints>
+		
+<!-- 		<ows:Metadata xlink:arcrole="http://www.w3.org/ns/sawsdl#modelReference" -->
+<!-- 			xlink:href="http://giv-wfs.uni-muenster.de:8080/jcr/repository/y2review/WCS11_Mapsrefrecbrgmfr/SRTM3.rdf" /> -->
+
+	</ows:ServiceIdentification>
+	<ows:ServiceProvider>
+		<ows:ProviderName>BRGM</ows:ProviderName>
+		<ows:ProviderSite xlink:type="simple"
+			xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map" />
+		<ows:ServiceContact>
+			<ows:IndividualName />
+			<ows:PositionName />
+
+			<ows:ContactInfo>
+				<ows:Phone>
+					<ows:Voice />
+					<ows:Facsimile />
+				</ows:Phone>
+				<ows:Address>
+					<ows:DeliveryPoint />
+					<ows:City />
+					<ows:AdministrativeArea />
+
+					<ows:PostalCode />
+					<ows:Country />
+					<ows:ElectronicMailAddress />
+				</ows:Address>
+				<ows:OnlineResource xlink:type="simple"
+					xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map" />
+				<ows:HoursOfService />
+				<ows:ContactInstructions />
+			</ows:ContactInfo>
+			<ows:Role />
+
+		</ows:ServiceContact>
+	</ows:ServiceProvider>
+	<ows:OperationsMetadata>
+		<ows:Operation name="GetCapabilities">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+					<ows:Post xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+				</ows:HTTP>
+
+			</ows:DCP>
+			<ows:Parameter name="service">
+				<ows:AllowedValues>
+					<ows:Value>WCS</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="version">
+				<ows:AllowedValues>
+
+					<ows:Value>1.1.0</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+		</ows:Operation>
+		<ows:Operation name="DescribeCoverage">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+
+					<ows:Post xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+				</ows:HTTP>
+			</ows:DCP>
+			<ows:Parameter name="service">
+				<ows:AllowedValues>
+					<ows:Value>WCS</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+
+			<ows:Parameter name="version">
+				<ows:AllowedValues>
+					<ows:Value>1.1.0</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="identifiers">
+				<ows:AllowedValues>
+					<ows:Value>SRTM3</ows:Value>
+
+				</ows:AllowedValues>
+			</ows:Parameter>
+		</ows:Operation>
+		<ows:Operation name="GetCoverage">
+			<ows:DCP>
+				<ows:HTTP>
+					<ows:Get xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+					<ows:Post xlink:type="simple"
+						xlink:href="http://mapsrefrec.brgm.fr/WMS/mapserv6?map=/carto/Demo/grille/srtm_glp.map&amp;amp;" />
+				</ows:HTTP>
+
+			</ows:DCP>
+			<ows:Parameter name="service">
+				<ows:AllowedValues>
+					<ows:Value>WCS</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="version">
+				<ows:AllowedValues>
+
+					<ows:Value>1.1.0</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="Identifier">
+				<ows:AllowedValues>
+					<ows:Value>SRTM3</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+
+			<ows:Parameter name="InterpolationType">
+				<ows:AllowedValues>
+					<ows:Value>NEAREST_NEIGHBOUR</ows:Value>
+					<ows:Value>BILINEAR</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="format">
+				<ows:AllowedValues>
+
+					<ows:Value>image/tiff</ows:Value>
+					<ows:Value>image/png</ows:Value>
+					<ows:Value>image/jpeg</ows:Value>
+					<ows:Value>image/gif</ows:Value>
+					<ows:Value>image/png; mode=8bit</ows:Value>
+				</ows:AllowedValues>
+
+			</ows:Parameter>
+			<ows:Parameter name="store">
+				<ows:AllowedValues>
+					<ows:Value>false</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+			<ows:Parameter name="GridBaseCRS">
+				<ows:AllowedValues>
+
+					<ows:Value>urn:ogc:def:crs:epsg::4326</ows:Value>
+				</ows:AllowedValues>
+			</ows:Parameter>
+		</ows:Operation>
+	</ows:OperationsMetadata>
+	<Contents>
+		<CoverageSummary>
+			<ows:Title>SRTM3</ows:Title>
+
+			<ows:Abstract>NA</ows:Abstract>
+			<ows:WGS84BoundingBox dimensions="2">
+				<ows:LowerCorner>-62 15</ows:LowerCorner>
+				<ows:UpperCorner>-61 17</ows:UpperCorner>
+			</ows:WGS84BoundingBox>
+
+			<SupportedCRS>urn:ogc:def:crs:EPSG::4326</SupportedCRS>
+			<SupportedCRS>urn:ogc:def:crs:EPSG::32620</SupportedCRS>
+			<SupportedCRS>urn:ogc:def:crs:EPSG::2970</SupportedCRS>
+			<SupportedCRS>urn:ogc:def:crs:EPSG::2969</SupportedCRS>
+			<SupportedCRS>urn:ogc:def:crs:EPSG::4559</SupportedCRS>
+			<SupportedFormat>image/tiff</SupportedFormat>
+
+			<Identifier>SRTM3</Identifier>
+		</CoverageSummary>
+	</Contents>
+</Capabilities>

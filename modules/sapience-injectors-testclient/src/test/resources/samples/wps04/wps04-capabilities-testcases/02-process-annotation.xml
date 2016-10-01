@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:Capabilities version="0.4.0" 
+	xmlns:ns2="http://www.w3.org/1999/xlink" 
+	xmlns:ns1="http://www.opengeospatial.net/ows" 
+	xmlns:ns3="http://www.opengeospatial.net/wps"
+	>
+    <ns1:ServiceIdentification>
+        <ns1:ServiceType codeSpace="kalypso:wps">ISimulation</ns1:ServiceType>
+        <ns1:ServiceTypeVersion>0.4.0</ns1:ServiceTypeVersion>
+        <ns1:Keywords/>
+    </ns1:ServiceIdentification>
+    <ns1:ServiceProvider>
+        <ns1:ProviderName></ns1:ProviderName>
+        <ns1:ServiceContact/>
+    </ns1:ServiceProvider>
+    <ns1:OperationsMetadata>
+        <ns1:Operation name="GetCapabilities">
+            <ns1:DCP>
+                <ns1:HTTP>
+                    <ns1:Get ns2:href="http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?" ns2:type="simple"/>
+                </ns1:HTTP>
+            </ns1:DCP>
+            <ns1:Parameter name="Service">
+                <ns1:AllowedValues>
+                    <ns1:Value>WPS</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Request">
+                <ns1:AllowedValues>
+                    <ns1:Value>GetCapabilities</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="AcceptVersions">
+                <ns1:AllowedValues>
+                    <ns1:Value>0.4.0</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+        </ns1:Operation>
+        <ns1:Operation name="DescribeProcess">
+            <ns1:DCP>
+                <ns1:HTTP>
+                    <ns1:Get ns2:href="http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?" ns2:type="simple"/>
+                    <ns1:Post ns2:href="http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?" ns2:type="simple"/>
+                </ns1:HTTP>
+            </ns1:DCP>
+            <ns1:Parameter name="Service">
+                <ns1:AllowedValues>
+                    <ns1:Value>WPS</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Request">
+                <ns1:AllowedValues>
+                    <ns1:Value>DescribeProcess</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Version">
+                <ns1:AllowedValues>
+                    <ns1:Value>0.4.0</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Identifier">
+                <ns1:AllowedValues>
+                    <ns1:Value>SendMailV1.0</ns1:Value>
+                    <ns1:Value>KalypsoGmlProcesses.ConstraintDelaunayV1.0</ns1:Value>
+                    <ns1:Value>Gaja3d_detectBreaklines</ns1:Value>
+                    <ns1:Value>org.kalypso.service.wps.complexJob</ns1:Value>
+                    <ns1:Value>LiteralsV1.0</ns1:Value>
+                    <ns1:Value>Gaja3d_createTin</ns1:Value>
+                    <ns1:Value>Gaja3d_createGrid</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+        </ns1:Operation>
+        <ns1:Operation name="Execute">
+            <ns1:DCP>
+                <ns1:HTTP>
+                    <ns1:Post ns2:href="http://gdi-kalypso1.gridlab.uni-hannover.de:8080/ogc?" ns2:type="simple"/>
+                </ns1:HTTP>
+            </ns1:DCP>
+            <ns1:Parameter name="Service">
+                <ns1:AllowedValues>
+                    <ns1:Value>WPS</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Request">
+                <ns1:AllowedValues>
+                    <ns1:Value>Execute</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Version">
+                <ns1:AllowedValues>
+                    <ns1:Value>0.4.0</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+            <ns1:Parameter name="Identifier">
+                <ns1:AllowedValues>
+                    <ns1:Value>SendMailV1.0</ns1:Value>
+                    <ns1:Value>KalypsoGmlProcesses.ConstraintDelaunayV1.0</ns1:Value>
+                    <ns1:Value>Gaja3d_detectBreaklines</ns1:Value>
+                    <ns1:Value>org.kalypso.service.wps.complexJob</ns1:Value>
+                    <ns1:Value>LiteralsV1.0</ns1:Value>
+                    <ns1:Value>Gaja3d_createTin</ns1:Value>
+                    <ns1:Value>Gaja3d_createGrid</ns1:Value>
+                </ns1:AllowedValues>
+            </ns1:Parameter>
+        </ns1:Operation>
+    </ns1:OperationsMetadata>
+    <ns3:ProcessOfferings>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">SendMailV1.0</ns1:Identifier>
+            <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/sendMail" />
+            <ns1:Title>SendMailV1.0</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+            
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">KalypsoGmlProcesses.ConstraintDelaunayV1.0</ns1:Identifier>
+            <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/delaunay" />
+            <ns1:Title>KalypsoGmlProcesses.ConstraintDelaunayV1.0</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">Gaja3d_detectBreaklines</ns1:Identifier>
+            <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/breakline" />
+            <ns1:Title>Gaja3d_detectBreaklines</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">org.kalypso.service.wps.complexJob</ns1:Identifier>
+            <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/hah" />
+            <ns1:Title>org.kalypso.service.wps.complexJob</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">LiteralsV1.0</ns1:Identifier>
+            <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/literals" />
+            <ns1:Title>LiteralsV1.0</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">Gaja3d_createTin</ns1:Identifier>
+              <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/tin" />
+            <ns1:Title>Gaja3d_createTin</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+        <ns3:Process>
+            <ns1:Identifier codeSpace="">Gaja3d_createGrid</ns1:Identifier>
+              <ns1:Metadata ns2:href="http://www.processes.com" ns2:arcrole="http://annot/grid" />
+            <ns1:Title>Gaja3d_createGrid</ns1:Title>
+            <ns1:Abstract>No descriptions available.</ns1:Abstract>
+        </ns3:Process>
+    </ns3:ProcessOfferings>
+</ns3:Capabilities>

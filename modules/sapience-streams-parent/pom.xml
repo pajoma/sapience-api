@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>sapience-parent</artifactId>
+    <groupId>sapience</groupId>
+    <version>1.0</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sapience</groupId>
+  <artifactId>sapience-streams-parent</artifactId>
+    <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>Sapience Streams (Module Definition)</name>
+
+  <description>Parent Module for the Streams sub-module	</description>
+  
+  
+  
+  <modules>
+  <!-- TODO: rename these folders. remove the spatial part -->
+  	<module>../sapience-streams-main</module>
+  	<module>../sapience-streams-kml</module>
+  
+  </modules>
+</project>

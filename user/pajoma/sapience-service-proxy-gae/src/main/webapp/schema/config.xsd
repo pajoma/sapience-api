@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+
+<xs:schema id="InjectorConfig" targetNamespace="http://semantic-proxy.appspot.org/schema" xmlns:mstns="http://semantic-proxy.appspot.org/schema" xmlns="http://semantic-proxy.appspot.org/schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="InjectorConfig" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="configurations" maxOccurs="1" minOccurs="1">
+        	<xs:complexType>
+        		<xs:sequence>
+        			<xs:element name="configuration" minOccurs="1"
+        				maxOccurs="unbounded" type="mstns:configurationType">
+        			</xs:element>
+        		</xs:sequence>
+        	</xs:complexType>
+        </xs:element>
+        <xs:element name="namespaces" maxOccurs="1" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ns" minOccurs="1" maxOccurs="unbounded" type="mstns:namespaceType">
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="configurationType">
+  	<xs:attribute name="id" type="xs:string"></xs:attribute>
+  	<xs:attribute name="class" type="xs:string"></xs:attribute>
+  </xs:complexType>
+
+
+  <xs:complexType name="namespaceType">
+  	<xs:attribute name="prefix" type="xs:string"></xs:attribute>
+  	<xs:attribute name="uri" type="xs:anyURI"></xs:attribute>
+  </xs:complexType>
+
+
+  
+</xs:schema>

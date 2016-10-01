@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sapience</groupId>
+	<artifactId>sapience-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>Sapience (Module Definition)</name>
+	<version>1.0</version>
+	<description>Parent Module, defining properties across all sapience modules</description>
+
+
+	<properties>
+		<sapience.version>0.1-SNAPSHOT</sapience.version>
+	</properties>
+
+
+	<modules>
+		<module>../sapience-spatial-parent</module>
+		<module>../sapience-streams-parent</module>
+		<module>../sapience-annotations-parent</module>
+		<module>../sapience-integration-geodesy</module>
+		<module>../sapience-injectors-parent</module>
+		<module>../sapience-lookup-parent</module>
+		<module>../sapience-service-parent</module>
+	</modules>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.6</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<scm>
+		<developerConnection>
+			scm:http://my-svn.assembla.com/svn/sapience
+		</developerConnection>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>ifgi-ftp</id>
+			<name>IFGI Maven Repository</name>
+			<url>ftp://ifgi-redundance.uni-muenster.de:179/mvn-repository/releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>ifgi-ftp</id>
+			<name>IFGI Maven Snapshot Repository</name>
+			<url>ftp://ifgi-redundance.uni-muenster.de:179/mvn-repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>1.0-beta-6</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<configuration>
+					<header>src/etc/header.txt</header>
+					<properties>
+						<year>2010</year>
+					</properties>
+				</configuration>
+
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

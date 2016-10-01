@@ -1,0 +1,2 @@
+http://gdi-arc1.gridlab.uni-hannover.de/ArcGIS01/services/Dortmund/mapserver/WFSServer?service=WFS&request=GetCapabilities
+http://gdi-arc1.gridlab.uni-hannover.de/ArcGIS01/services/Dortmund/mapserver/WFSServer?service=WFS&request=describeFeatureType&typename=Dortmund:QSDO_GRID_02_GBO&srsName=EPSG:31466

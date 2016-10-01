@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+  
+
+
+  
+
+  <head>
+    <title>
+      Attachment – sapience
+    </title>
+        <link rel="search" href="/sapience/search" />
+        <link rel="help" href="/sapience/wiki/TracGuide" />
+        <link rel="alternate" href="/sapience/raw-attachment/wiki/ResourceImagesInjection/WSDL%202.0%20model.png" type="image/png; charset=utf-8" title="Original Format" />
+        <link rel="up" href="/sapience/wiki/ResourceImagesInjection" title="ResourceImagesInjection" />
+        <link rel="start" href="/sapience/wiki" />
+        <link rel="stylesheet" href="/sapience/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/sapience/chrome/common/css/code.css" type="text/css" />
+        <link rel="shortcut icon" href="/sapience/chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="/sapience/chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="/sapience/search/opensearch" title="Search sapience" />
+    <script type="text/javascript" src="/sapience/chrome/common/js/jquery.js"></script><script type="text/javascript" src="/sapience/chrome/common/js/trac.js"></script><script type="text/javascript" src="/sapience/chrome/common/js/search.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/sapience/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/sapience/chrome/site/style.css" />
+    <style type="text/css">
+/* ---------------------------------------------------
+=col
+------------------------------------------------------ */
+/* span one col */
+.col {
+        /* avoid rounding errors */
+        width: 40%;
+        float: left;
+        padding: .375em  .375em .5em .375em;
+}
+.user-col {
+        float: right;
+        text-align: right;
+}
+.col a:link,
+.col a:visited {
+        color: #E3EFFC;
+        border-bottom: 1px solid #E3EFFC;
+}
+.col a:hover {
+        border-bottom: none;
+        background: transparent;
+}
+/* ---------------------------------------------------
+=header
+------------------------------------------------------ */
+#top-bar-w {
+        margin-left:-10px;
+        margin-right:-10px;
+        padding-left:10px;
+        padding-right:10px;
+        background: #2E4B73;
+        color: #5375A6;
+        font-family: Verdana, sans-serif;
+        font-size: 9px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: normal;
+        font-variant: normal;
+        width:100%;
+}
+/* ---------------------------------------------------
+=utilities
+----------------------------------------------------- */
+.cut {clear: both; height: 1px; overflow: hidden;}
+.hidden { display: none;}
+.inline { display: inline; }
+.clear-float  {
+        /* clear floated children */
+        overflow: hidden;
+        /* IE fix see:
+        http://www.positioniseverything.net/easyclearing.html
+        */
+        _height: 1%;
+}
+    </style>
+  </head>
+  <body>
+    <div id="siteheader">
+      <div id="top-bar-w">
+	<div class="col">
+	  <a href="http://www.assembla.com"><b>Assembla home</b></a> | <a href="http://www.assembla.com/spaces/show/sapience">Assembla project page</a>
+	</div>
+	<div class="col user-col">
+	  <div id="user-box">
+            <a href="http://www.assembla.com/user/start" rel="nofollow">My Start Page</a>
+            <!-- /user-box -->
+	  </div>
+	</div>
+	<!-- clear float, the old skool way -->
+	<div class="cut"> </div>
+	<!-- /top-bar-w -->
+      </div>
+    </div>
+    <div id="banner">
+      <div id="header">
+        <h1><a href="http://www.assembla.com/spaces/show/sapience">sapience</a></h1>
+      </div>
+      <form id="search" action="/sapience/search" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/sapience/login">Login</a></li><li><a href="/sapience/prefs">Preferences</a></li><li><a href="/sapience/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/sapience/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="/sapience/wiki">Wiki</a></li><li><a href="/sapience/timeline">Timeline</a></li><li><a href="/sapience/roadmap">Roadmap</a></li><li><a href="/sapience/browser">Browse Source</a></li><li><a href="/sapience/report">View Tickets</a></li><li class="last"><a href="/sapience/search">Search</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="last first"><a href="/sapience/wiki/ResourceImagesInjection">Back to ResourceImagesInjection</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="attachment">
+        <h1><a href="/sapience/wiki/ResourceImagesInjection">ResourceImagesInjection</a>: WSDL 2.0 model.png</h1>
+        <table id="info" summary="Description">
+          <tbody>
+            <tr>
+              <th scope="col">
+                File WSDL 2.0 model.png, <span title="84039 bytes">82.1 KB</span>
+                (added by Puky,  <a class="timeline" href="/sapience/timeline?from=2010-05-26T11%3A07%3A23Z&amp;precision=second" title="2010-05-26T11:07:23Z in Timeline">7 weeks</a> ago)
+              </th>
+            </tr>
+            <tr>
+              <td class="message searchable">
+                
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="preview" class="searchable">
+    <div class="image-file"><img src="/sapience/raw-attachment/wiki/ResourceImagesInjection/WSDL%202.0%20model.png" alt="WSDL 2.0 model.png" /></div>
+        </div>
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/sapience/raw-attachment/wiki/ResourceImagesInjection/WSDL%202.0%20model.png">Original Format</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en">
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/sapience/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">
+        Powered by <a href="/sapience/about"><strong>Trac 0.11.5</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a><br />
+	Hosted by <a href="http://www.assembla.com">Assembla</a>
+      </p>
+      <p class="right">Breakout - Social Software to Get Things Done<br /><a title="Free SVN and Trac hosting" href="http://www.assembla.com/">http://www.assembla.com</a></p>
+    </div>
+    <div id="sitefooter">
+    </div>
+  </body>
+</html>

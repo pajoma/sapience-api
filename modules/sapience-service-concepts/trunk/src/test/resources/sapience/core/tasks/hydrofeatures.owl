@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1186494883 "http://www.owl-ontologies.com/Ontology1186494883.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1186494883.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1186494883.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:Ontology1186494883="http://www.owl-ontologies.com/Ontology1186494883.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#connectedTo -->
+
+    <owl:ObjectProperty rdf:about="#connectedTo"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#constructedFor -->
+
+    <owl:ObjectProperty rdf:about="#constructedFor"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#coveredBy -->
+
+    <owl:ObjectProperty rdf:about="#coveredBy"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#hasDestination -->
+
+    <owl:ObjectProperty rdf:about="#hasDestination">
+        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="#hasOrigin">
+        <rdfs:subPropertyOf rdf:resource="#connectedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#inside -->
+
+    <owl:ObjectProperty rdf:about="#inside"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#meets -->
+
+    <owl:ObjectProperty rdf:about="#meets"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#AgriculturalArea -->
+
+    <owl:Class rdf:about="#AgriculturalArea">
+        <rdfs:subClassOf rdf:resource="#Landmass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Aqueduct -->
+
+    <owl:Class rdf:about="#Aqueduct">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Watercourse"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Navigable"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#WaterSupply"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDestination"/>
+                        <owl:onClass rdf:resource="#Reservoir"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasOrigin"/>
+                        <owl:onClass rdf:resource="#Waterbody"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Artificial -->
+
+    <owl:Class rdf:about="#Artificial">
+        <dc:title>Artificial</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Canal -->
+
+    <owl:Class rdf:about="#Canal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Watercourse"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#Transportation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Channel -->
+
+    <owl:Class rdf:about="#Channel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Watercourse"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Artificial"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#meets"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Dam -->
+
+    <owl:Class rdf:about="#Dam">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Hydrographic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#WaterSupply"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#meets"/>
+                        <owl:someValuesFrom rdf:resource="#Waterbody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Device -->
+
+    <owl:Class rdf:about="#Device">
+        <rdfs:subClassOf rdf:resource="#Artificial"/>
+        <dc:title>Device</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Hydrographic -->
+
+    <owl:Class rdf:about="#Hydrographic"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Infrastructure -->
+
+    <owl:Class rdf:about="#Infrastructure"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#IrrigationCanal -->
+
+    <owl:Class rdf:about="#IrrigationCanal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Watercourse"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Navigable"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#WaterSupply"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDestination"/>
+                        <owl:onClass rdf:resource="#AgriculturalArea"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasOrigin"/>
+                        <owl:onClass rdf:resource="#Waterbody"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Lake -->
+
+    <owl:Class rdf:about="#Lake">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Waterbody"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Artificial"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Watercourse"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Landmass -->
+
+    <owl:Class rdf:about="#Landmass"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Navigable -->
+
+    <owl:Class rdf:about="#Navigable"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Ocean -->
+
+    <owl:Class rdf:about="#Ocean">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Waterbody"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Artificial"/>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Watercourse"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#meets"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#OffshorePlatform -->
+
+    <owl:Class rdf:about="#OffshorePlatform">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Device"/>
+                    <rdf:Description rdf:about="#Hydrographic"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#OilGasSupply"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Waterbody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:title
+            >Offshore Platform</dc:title>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#OilGasSupply -->
+
+    <owl:Class rdf:about="#OilGasSupply">
+        <rdfs:subClassOf rdf:resource="#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Reservoir -->
+
+    <owl:Class rdf:about="#Reservoir">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Waterbody"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Watercourse"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#constructedFor"/>
+                        <owl:someValuesFrom rdf:resource="#WaterSupply"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#River -->
+
+    <owl:Class rdf:about="#River">
+        <rdfs:subClassOf rdf:resource="#Stream"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Spring -->
+
+    <owl:Class rdf:about="#Spring">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Waterbody"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Artificial"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDestination"/>
+                        <owl:someValuesFrom rdf:resource="#Waterbody"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Stream -->
+
+    <owl:Class rdf:about="#Stream">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Navigable"/>
+                    <rdf:Description rdf:about="#Watercourse"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="#Artificial"/>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#inside"/>
+                        <owl:someValuesFrom rdf:resource="#Landmass"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasDestination"/>
+                        <owl:onClass rdf:resource="#Waterbody"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasOrigin"/>
+                        <owl:onClass rdf:resource="#Spring"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Supply -->
+
+    <owl:Class rdf:about="#Supply">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Transportation -->
+
+    <owl:Class rdf:about="#Transportation">
+        <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#WaterSupply -->
+
+    <owl:Class rdf:about="#WaterSupply">
+        <rdfs:subClassOf rdf:resource="#Supply"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Waterbody -->
+
+    <owl:Class rdf:about="#Waterbody">
+        <rdfs:subClassOf rdf:resource="#Hydrographic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1186494883.owl#Watercourse -->
+
+    <owl:Class rdf:about="#Watercourse">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Waterbody"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#connectedTo"/>
+                        <owl:onClass rdf:resource="#Waterbody"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

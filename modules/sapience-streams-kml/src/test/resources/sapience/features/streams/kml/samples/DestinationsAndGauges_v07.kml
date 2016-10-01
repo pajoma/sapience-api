@@ -1,0 +1,762 @@
+<?xml version="1.0" ?>
+<!--
+
+    Copyright 2010 Institute for Geoinformatics (ifgi)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied. See the License for the specific language governing
+    permissions and limitations under the License.
+
+-->
+
+<kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+		<name>DestinationsAndGauges_v07.kml</name>
+		<Folder>
+			<name>Destinations and Gauges</name>
+			<description>A map showing potential destinations (harbors) and
+				locations names of gauges (marked with a P behind its name). Each
+				gauge may be a destination.</description>
+			<Placemark>
+				<name>Rögatz (P)</name>
+				<Point>
+					<coordinates>11.76393633367798,52.30309050398608,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Straubing (PH)</name>
+				<Point>
+					<coordinates>12.55648760730188,48.89964412932228,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Banzkow (P)</name>
+				<Point>
+					<coordinates>11.51938637080261,53.52442901455009,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Garz UP (P)</name>
+				<Point>
+					<coordinates>12.20581087079649,52.75970510752678,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Havelberg Stadt (PH)</name>
+				<Point>
+					<coordinates>12.06911949055791,52.82782766367955,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ketzin (P)</name>
+				<Point>
+					<coordinates>12.84069812417919,52.47139793639515,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dresden (PH)</name>
+				<Point>
+					<coordinates>13.68094420548616,51.06282259824538,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Eisenhüttenstadt (HP)</name>
+				<Point>
+					<coordinates>14.66224883852034,52.13111749353332,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>NOK Breiholz (P)</name>
+				<Point>
+					<coordinates>9.546300378004185,54.19576003289842,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Höxter (P)</name>
+				<Point>
+					<coordinates>9.385526117551478,51.77303847358096,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bodenwerder (P)</name>
+				<Point>
+					<coordinates>9.516446165887084,51.97431590572475,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Decin (H)</name>
+				<Point>
+					<coordinates>14.22371694111589,50.78710011047951,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stolzenau (P)</name>
+				<Point>
+					<coordinates>9.079059423955755,52.51615370855916,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kassel (H)</name>
+				<Point>
+					<coordinates>9.522636294707041,51.31963618220784,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lübeck-Bauhof (PH)</name>
+				<Point>
+					<coordinates>10.68883219971143,53.87668488730348,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Helgoland Südhafen (PH)</name>
+				<Point>
+					<coordinates>7.894073402749905,54.17455062912376,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hann. Münden (PH)</name>
+				<Point>
+					<coordinates>9.647832158605983,51.42145267293288,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bingen (PH)</name>
+				<Point>
+					<coordinates>7.92051515258178,49.9723344652279,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Friedrichsthal (P)</name>
+				<Point>
+					<coordinates>14.3582254217919,53.15490311232453,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Albertsheim (P)</name>
+				<Point>
+					<coordinates>12.33252658737881,52.65514439376348,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stuttgart (H)</name>
+				<Point>
+					<coordinates>9.21077486271064,48.80110162775385,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Würzburg (PH)</name>
+				<Point>
+					<coordinates>9.916136893265998,49.80334508756759,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nijmegen (H)</name>
+				<Point>
+					<coordinates>5.870583846284645,51.85038853816721,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kienitz (P)</name>
+				<Point>
+					<coordinates>14.44937270179168,52.67803098829205,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Torgau (P)</name>
+				<Point>
+					<coordinates>13.04263513982331,51.54560372775735,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ST.ARNUAL (P)</name>
+				<Point>
+					<coordinates>7.01964773478691,49.2198641664248,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hamburg St. Pauli (PH)</name>
+				<Point>
+					<coordinates>10.04328698695775,53.52465185724288,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Perl (HP)</name>
+				<Point>
+					<coordinates>6.368804557552632,49.47250584888617,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hameln (H)</name>
+				<Point>
+					<coordinates>9.354547628890233,52.09647906618493,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wertheim (PH)</name>
+				<Point>
+					<coordinates>9.514906977417368,49.76251274444255,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>BERLIN-CHARLOTTENBURG UP (PH)</name>
+				<Point>
+					<coordinates>13.31570996344196,52.51997280389334,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Heldra (P)</name>
+				<Point>
+					<coordinates>10.19492396731634,51.12605855118156,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Karlsruhe (H)</name>
+				<Point>
+					<coordinates>8.3005806547262,49.01657377321183,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Treffurt (P)</name>
+				<Point>
+					<coordinates>10.23855925606908,51.1343005895442,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>BERLIN-KÖPENICK (PH)</name>
+				<Point>
+					<coordinates>13.5770642079894,52.43768655820574,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Passau Donau (PH)</name>
+				<Point>
+					<coordinates>13.45552501302527,48.57625596368607,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Schweinfurt Neuer Hafen (PH)</name>
+				<Point>
+					<coordinates>10.22023954657756,50.02822259741912,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Düsseldorf (PH)</name>
+				<Point>
+					<coordinates>6.760850254939916,51.22380653883359,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Linz (H)</name>
+				<Point>
+					<coordinates>14.29034963009698,48.31068550491368,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Szczecin (H)</name>
+				<Point>
+					<coordinates>14.5727227640909,53.43190125422337,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Emden Neue Seeschleuse (P)</name>
+				<Point>
+					<coordinates>7.213768914479825,53.35077146276607,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rotenburg (PH)</name>
+				<Point>
+					<coordinates>9.727326727411768,50.99674772247055,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hundsmühlen (P)</name>
+				<Point>
+					<coordinates>8.171193275004612,53.10866854854553,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rathenhow UP (PH)</name>
+				<Point>
+					<coordinates>12.31499301324624,52.59982632741485,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wittenberge (PH)</name>
+				<Point>
+					<coordinates>11.74619960569835,52.98750281449325,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>BERLIN-SPANDAU SCHLEUSE UP (P)</name>
+				<Point>
+					<coordinates>13.20042208402032,52.53082237004629,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rheinweiler (H)</name>
+				<Point>
+					<coordinates>7.530039228106813,47.71837985664351,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Meissen (PH)</name>
+				<Point>
+					<coordinates>13.49892174581068,51.14010524485838,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Karlshafen (P)</name>
+				<Point>
+					<coordinates>9.451892703511534,51.64447844260991,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Guntershausen (P)</name>
+				<Point>
+					<coordinates>9.470868888854854,51.23569313296015,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Speyer (PH)</name>
+				<Point>
+					<coordinates>8.452834078225921,49.31969334279445,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bad Oeynhausen (H)</name>
+				<Point>
+					<coordinates>8.828317499665419,52.2206193766229,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hohensaaten-Finow (P)</name>
+				<Point>
+					<coordinates>14.14482587589065,52.8706385048318,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Koblenz UP (HP)</name>
+				<Point>
+					<coordinates>7.604519421292393,50.35331527318775,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Minden (H)</name>
+				<Point>
+					<coordinates>8.922092297639281,52.28729651710943,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Diez Hafen (HP)</name>
+				<Point>
+					<coordinates>8.0045152984352,50.37191127176417,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hitzacker (P)</name>
+				<Point>
+					<coordinates>11.04958804440611,53.15483585110042,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Potsdam (PH)</name>
+				<Point>
+					<coordinates>13.07158895952111,52.39629292307932,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Elsfleth Ohrt (P)</name>
+				<Point>
+					<coordinates>8.467889637204115,53.23981659647067,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Deggendorf (PH)</name>
+				<Point>
+					<coordinates>12.95994402318879,48.82466101977364,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Letzter Heller (P)</name>
+				<Point>
+					<coordinates>9.679557704394128,51.41471661602008,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Allendorf (PH)</name>
+				<Point>
+					<coordinates>9.968233456984974,51.27351512318227,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frankfurt (Oder) (H)</name>
+				<Point>
+					<coordinates>14.5548301095996,52.3492215971162,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Tangermünde (P)</name>
+				<Point>
+					<coordinates>11.97084564623041,52.53045875388649,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Genthin (PH)</name>
+				<Point>
+					<coordinates>12.17267586040962,52.41063655353334,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Nienburg (P)</name>
+				<Point>
+					<coordinates>9.199415982397852,52.62858844690436,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Eschwege (H)</name>
+				<Point>
+					<coordinates>10.05297651994787,51.18924068497195,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frankfurt (H)</name>
+				<Point>
+					<coordinates>8.662915918402744,50.09812015242977,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Frankfurt Osthafen (PH)</name>
+				<Point>
+					<coordinates>8.710466925963999,50.10710118370124,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wittenberg (PH)</name>
+				<Point>
+					<coordinates>12.64286938919344,51.85785896685918,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Völklingen (H)</name>
+				<Point>
+					<coordinates>6.860877112857722,49.24564854924076,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Blankenese UF (PH)</name>
+				<Point>
+					<coordinates>9.962447314994197,53.54097828235906,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Leerort (P)</name>
+				<Point>
+					<coordinates>7.435582859317477,53.2136013868438,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Maxau (P)</name>
+				<Point>
+					<coordinates>8.309158246071863,49.03885822086756,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Weserwehr UW (P)</name>
+				<Point>
+					<coordinates>8.858504970457535,53.05927540924834,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Große Weserbrücke (P)</name>
+				<Point>
+					<coordinates>8.78793929290669,53.08041826476065,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rathenow OP (HP)</name>
+				<Point>
+					<coordinates>12.31490811653,52.59947533158309,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gundelsheim (P)</name>
+				<Point>
+					<coordinates>9.153819014574712,49.28089735405043,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rendsburg (H)</name>
+				<Point>
+					<coordinates>9.697874807359925,54.29641357885554,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Porta (P)</name>
+				<Point>
+					<coordinates>8.918725942787567,52.24246396385853,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Mecklar (H)</name>
+				<Point>
+					<coordinates>9.763254118251506,50.91930544233005,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Stützkow (P)</name>
+				<Point>
+					<coordinates>14.17954507919653,52.99322253325439,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Trzebiez (H)</name>
+				<Point>
+					<coordinates>14.51717795690243,53.66092810714225,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Heidelberg UW (HP)</name>
+				<Point>
+					<coordinates>8.668261052145333,49.41155654014696,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bonaforth (P)</name>
+				<Point>
+					<coordinates>9.628189946826451,51.40325055495719,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>NIEDERFINOW SHW UP (P)</name>
+				<Point>
+					<coordinates>13.94439007071992,52.84852401865095,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Gartz (P)</name>
+				<Point>
+					<coordinates>14.40553218602871,53.20993308212748,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Saarbrücken (H)</name>
+				<Point>
+					<coordinates>6.993968033946752,49.23122567695329,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bonn (PH)</name>
+				<Point>
+					<coordinates>7.110308576077166,50.73817094724412,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Trier (PH)</name>
+				<Point>
+					<coordinates>6.628535319703602,49.76006426771956,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Oldenburg-Drielake (P)</name>
+				<Point>
+					<coordinates>8.226202409122898,53.13933857651006,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Schwerin Werderbrücke (PH)</name>
+				<Point>
+					<coordinates>11.41880897453852,53.62555118698693,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Basel (H)</name>
+				<Point>
+					<coordinates>7.588671590920546,47.56005196712154,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Vlotho (H)</name>
+				<Point>
+					<coordinates>8.874453039959391,52.16460977321835,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dörverden (P)</name>
+				<Point>
+					<coordinates>9.219777481576203,52.84448076165612,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wahmbeck (P)</name>
+				<Point>
+					<coordinates>9.517768661384094,51.62548808770914,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Brandenburg OP (PH)</name>
+				<Point>
+					<coordinates>12.55407847642132,52.40937449132333,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Farge (P)</name>
+				<Point>
+					<coordinates>8.524593621048059,53.19237263607229,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Weserwehr OW (P)</name>
+				<Point>
+					<coordinates>8.87118376343085,53.05721378560054,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hanau Brücke DFH (PH)</name>
+				<Point>
+					<coordinates>8.911396441749732,50.12358457977693,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cuxhaven (PH)</name>
+				<Point>
+					<coordinates>8.716200140341677,53.86530255845076,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Grabow OP (PH)</name>
+				<Point>
+					<coordinates>11.56066648704113,53.27937160947935,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ruhrort (PH)</name>
+				<Point>
+					<coordinates>6.722359943911808,51.45650942226109,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bremen (H)</name>
+				<Point>
+					<coordinates>8.772702065474926,53.08485475159907,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hüttendorf (P)</name>
+				<Point>
+					<coordinates>10.96962627286421,49.54150743172697,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Kiel-Holtenau (PH)</name>
+				<Point>
+					<coordinates>10.15269358419429,54.32250279120158,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Rathenow UP (PH) </name>
+				<Point>
+					<coordinates>12.314507936287,52.61244047542696,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Emmerich (PH)</name>
+				<Point>
+					<coordinates>6.245457387195224,51.82854916349503,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hameln Wehrbergen (P)</name>
+				<Point>
+					<coordinates>9.304404328448356,52.12376856840789,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Straßburg (H)</name>
+				<Point>
+					<coordinates>7.799872828927487,48.58029569658562,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Plochingen (P)</name>
+				<Point>
+					<coordinates>9.4157993608024,48.70836696901105,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Wien (H)</name>
+				<Point>
+					<coordinates>16.41896226192324,48.21723532821174,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Magdeburg-Strombrücke (PH)</name>
+				<Point>
+					<coordinates>11.65122503569898,52.12579833483692,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dessau (PH)</name>
+				<Point>
+					<coordinates>12.31444123355097,51.88077295527279,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Cochem (PH)</name>
+				<Point>
+					<coordinates>7.168945484843395,50.14732266696891,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Oranienburg (H)</name>
+				<Point>
+					<coordinates>13.25625758887227,52.74024558222789,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Genthin (P)</name>
+				<Point>
+					<coordinates>12.17278216794941,52.41016095259118,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Artlenburg (P)</name>
+				<Point>
+					<coordinates>10.50085677409974,53.37071346932504,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bamberg (PH)</name>
+				<Point>
+					<coordinates>10.86470074874674,49.91084808122821,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Köln (PH)</name>
+				<Point>
+					<coordinates>6.968272248281025,50.93082131418464,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Fürstenwalde (P)</name>
+				<Point>
+					<coordinates>14.06934676604462,52.35317280424076,0.0 </coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Emden (H)</name>
+				<Point>
+					<coordinates>7.204743969069238,53.36191371756293,0.0 </coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Document>
+</kml>

@@ -1,0 +1,65 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Semantic Proxy: Introduction</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+<div id="frame">
+<div id="menu">
+<li><a class="active"  href="help.html">Introduction</a></li> 
+<li><a href="examples.html">Examples</a></li> 
+<li><a href="upload.html">Upload</a></li> 
+<li><a  href="api.html">API</a></li> 
+<li><a href="feature.html">Bugs/Features</a></li>  
+</div>
+
+<div id="content">
+<p>
+Data semantics refers to the real-world meaning of (mostly geospatial) data. One Web service might deliver real-time precipitation data, 
+another offers a street network data, a third may produce pollution maps based on a computer model. Shared 
+vocabularies help to specify and communicate the meaning of certain characteristics of the data.  
+Semantic Annotations establish the link between the content's metadata (e.g. a description of the Web service functionality) and the shared vocabulary. 
+These references in the data models point to the concepts, which could refer the real-world entity represented by the data (maybe a <a href="http://www.eionet.europa.eu/gemet/concept?cp=7272&langcode=en&ns=1">Road</a>), a common
+place name in a Gazetteer (maybe <a href="http://www.geonames.org/maps/google_51.508_-0.126.html">London</a>), or any other entity from a controlled
+vocabulary. 
+</p>
+<p>
+What kind of external knowledge is required for describing the data semantics depends on the application. Your street data may be used in various contexts such as 
+car navigation, noise mapping, wildlife migration, and more. It depends on the context which particular vocabulary you want
+to use for your semantic annotations. XML-based metadata describes the structure of the data and the capabilities of Web services 
+offering this data.  The semantic annotations proxy dynamically injects references into these XML documents, without the need for the service provider
+to create the annotations for himself.
+
+</p>
+<p>Accessing the proxy is at simple as it gets. Just add the new parameter "sid" (service identifier) to the URL. If a service with the given ID has
+been registered to the proxy, the underlying Web service will be invoked. If there are references to add, we go through the streaming data and inject the reference
+by pausing the data stream and writing it into it. Quick processing without a noticeable delay of the response was one or our goals. The injection 
+procedure is based on a <a href="http://woodstox.codehaus.org/">high-performance XML-processor</a>. The reference locations are stored as namespace-aware 
+XPath expressions, which means that even a change of the original source shouldn't affect the injection procedure. </p>
+<p>
+
+A more in-depth discussion of the injection process can be found <a href="http://my-trac.assembla.com/sapience">in our project wiki</a>. 
+</p>
+
+
+</div>
+
+
+<div id="footer" align="center">
+	Contact <a href="mailto:pajoma@uni-muenster.de">us</a> or visit the <a href="http://my-trac.assembla.com/sapience/">project</a> page for more information.<br>
+	 &copy; 2010 (ifgi) <a href="http://ifgi.uni-muenster.de/"> Institute for Geoinformatics</a>
+</div>
+
+</body>
+</html>

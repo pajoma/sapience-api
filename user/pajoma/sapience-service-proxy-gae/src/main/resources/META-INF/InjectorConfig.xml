@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<injectorConfig 
+	xmlns="http://semantic-proxy.appspot.org/schema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://semantic-proxy.appspot.org/schema/config.xsd ">
+	
+	<configurations>
+		<configuration id="wps-040-capabilities" class="sapience.injectors.wps.v040.WPS040_GetCapabilities" />
+		<configuration id="wps-040-process" class="sapience.injectors.wps.v040.WPS040_DescribeProcess" />
+		<configuration id="wps-100-capabilities" class="sapience.injectors.wps.v10.WPS10_DescribeProcessConfig" />
+		<configuration id="wps-100-process" class="sapience.injectors.wps.v10.WPS10_GetCapabilitiesConfig" />
+		<configuration id="wsdl11" class="sapience.injectors.wsdl.configuration.WSDL11Configuration" />
+		<configuration id="wsdl20" class="sapience.injectors.wsdl.configuration.WSDL20Configuration" />
+		<configuration id="wfs-110-capabilities" class="sapience.injectors.wfs.v110.WFS110_GetCapabilitiesConfig" />
+		<configuration id="wfs-110-feature" class="sapience.injectors.wfs.v110.WFS110_DescribeFeatureConfig" />
+		<configuration id="wfs-100-capabilities" class="sapience.injectors.wfs.v100.WFS100_GetCapabilitiesConfig" />
+		<configuration id="wfs-100-feature" class="sapience.injectors.wfs.v100.WFS100_DescribeFeatureConfig" />
+		<configuration id="sos-100-capabilities" class="sapience.injectors.sos.v100.SOS100_GetCapabilitiesConfig" />
+		<configuration id="wcs-110-capabilities" class="sapience.injectors.wcs.v110.WCS110_GetCapabilitiesConfig" />
+		<configuration id="wms-130-capabilities" class="sapience.injectors.wms.v130.WMS130_GetCapabilitiesConfig" />
+	</configurations>
+	<namespaces>
+		<ns prefix="xlink" uri="http://www.w3.org/1999/xlink"/>
+		<ns prefix="ows" uri="http://www.opengeospatial.net/ows"/>
+		<ns prefix="ows11" uri="http://www.opengis.net/ows/1.1"/>
+		<ns prefix="wps04" uri="http://www.opengeospatial.net/wps"/>
+		<ns prefix="wps10" uri="http://www.opengis.net/wps/1.0.0"/>
+		<ns prefix="xsi" uri="http://www.w3.org/2001/XMLSchema-instance"/>
+		<ns prefix="wsdl" uri="http://schemas.xmlsoap.org/wsdl/"/>
+		<ns prefix="xsd" uri="http://www.w3.org/2001/XMLSchema"/>
+		<ns prefix="plnk" uri="http://docs.oasis-open.org/wsbpel/2.0/plnktype"/>
+		<ns prefix="sawsdl" uri="http://www.w3.org/ns/sawsdl"/>
+		<ns prefix="soap" uri="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		<ns prefix="wfs" uri="http://www.opengis.net/wfs"/>
+		<ns prefix="sos" uri="http://www.opengis.net/sos/1.0"/>
+		<ns prefix="wcs" uri="http://www.opengis.net/wcs/1.1"/>
+		<ns prefix="wms" uri="http://www.opengis.net/wms"/>
+	</namespaces>
+
+</injectorConfig>

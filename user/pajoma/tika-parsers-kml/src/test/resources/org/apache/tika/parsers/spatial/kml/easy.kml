@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"
+	xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>Easy</name>
+		<address> some address </address>
+		<description> some description </description> 
+		<atom:author>John Doe</atom:author>
+		<Folder>
+			<name>Folder A</name>
+		
+			<Placemark>
+				<name>Point A.A</name>
+				<Point>
+					<coordinates>8,52,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point A.B</name>
+				<Point>
+					<coordinates>10,49,0</coordinates>
+				</Point>
+			</Placemark>
+
+		</Folder>
+
+
+		<Folder>
+			<name>Folder B</name>
+			<Placemark>
+				<name>Point B.A</name>
+				<Point>
+					<coordinates>7,51,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point B.B</name>
+				<Point>
+					<coordinates>9,54,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point A.C</name>
+				<Point>
+					<coordinates>11,52,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Point A.D</name>
+				<Point>
+					<coordinates>11,55,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+
+	</Document>
+</kml>

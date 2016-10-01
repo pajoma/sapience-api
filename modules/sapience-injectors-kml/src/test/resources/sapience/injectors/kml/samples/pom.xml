@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sapience.features</groupId>
+	<artifactId>parent</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+
+	<properties>
+		<features.version>0.1</features.version>
+	</properties>
+
+	<parent>
+		<groupId>de.ifgi</groupId>
+		<artifactId>ifgi-master</artifactId>
+		<version>1.0</version>
+	</parent>
+	<scm>
+		<developerConnection>
+			scm:http://my-svn.assembla.com/svn/sapient
+		</developerConnection>
+	</scm>
+
+
+	<modules>
+		<module>../features.model</module>
+		<module>../features.streams</module>
+		<module>../features.streams.kml</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<inherited>false</inherited>
+				<groupId>com.google.code.maven-license-plugin
+				</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<version>1.4.0</version>
+				<configuration>
+					<header>${basedir}/src/etc/header.txt</header>
+					<quiet>true</quiet>
+					<failIfMissing>true</failIfMissing>
+					<aggregate>true</aggregate>
+					<excludes>
+						<exclude>**/target/**</exclude>
+						<exclude>*.png</exclude>
+					</excludes>
+					<useDefaultExcludes>true</useDefaultExcludes>
+					<useDefaultMapping>true</useDefaultMapping>
+					<properties>
+						<year>2009</year>
+					</properties>
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>ifgi.releases</id>
+			<name>Ifgi - Maven releases</name>
+			<url>http://ifgi-redundance.uni-muenster.de/mvn-repository/releases/</url>
+		</repository>
+		<repository>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>ifgi.snapshots</id>
+			<name>Ifgi - Maven snapshots</name>
+			<url>http://ifgi-redundance.uni-muenster.de/mvn-repository/snapshots/</url>
+		</repository>
+
+
+	</repositories>
+
+</project>

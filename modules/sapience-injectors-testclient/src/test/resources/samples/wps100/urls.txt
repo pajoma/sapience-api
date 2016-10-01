@@ -1,0 +1,2 @@
+http://gis-obama.uni-muenster.de:8180/intamap/WebProcessingService?Request=GetCapabilities&Service=WPS
+http://gis-obama.uni-muenster.de:8180/intamap/WebProcessingService?Request=DescribeProcess&Service=WPS&identifier=org.intamap.wps.Interpolate

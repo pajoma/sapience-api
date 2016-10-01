@@ -1,0 +1,55 @@
+====
+    Copyright 2010 Institute for Geoinformatics (ifgi)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied. See the License for the specific language governing
+    permissions and limitations under the License.
+====
+
+How to preserve the link between the Feature Source (e.g. the KML object) and 
+the extracted Feature Collection? Use Case: Transforming a kml file into a 
+feature collection, buffering the feature geometries according to the semantic
+annotations and changing the style according to the geometry. All style 
+information resides in the KML since this is standard-specific information, 
+whereas the features have to remain as abstract as possible (see ISO GFM)
+
+The result of a parsing process is an object which implements the "FeatureSource" (better 
+name required) interface, which means we can call the method asFeature() to get a 
+feature representation of the object. The feature is constructed on runtime (but cached
+
+
+interface FeatureSource
+ // returns Feature representation of current object
+ public Feature asFeature(FeatureFactory fac);
+ // generated feature representation is cached, update triggers a reconstruction
+ public void update();  
+ 
+Feature extends FeatureCollection
+ // returns a list of features contained by this feature (if it is a container, NoFeatureContainerException otherwise)
+ public FeatureCollection listFeatures(boolean recursive)
+ 
+// a feature with a geometry 
+SpatialFeature extends Feature
+ public Geometry getGeometry
+ public Geometry getEnvelope throws NoFeatureContainerException 
+
+// a feature (e.g. an instant) with temporal information
+TemporalFeature extends Feature
+ // Date is the wrong data type hhere
+ public Date getTime
+ public TimeSpan getEnvelope throws NoFeature..
+ 
+// a feature in the geographic space (has a temporal dimension)
+GeoSpatialFeature extends SpatioTemporalFeature
+ 
+ 
+FeatureCollection 
+

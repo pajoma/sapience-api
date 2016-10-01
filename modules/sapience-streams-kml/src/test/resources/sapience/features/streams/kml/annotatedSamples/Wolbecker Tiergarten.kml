@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010 Institute for Geoinformatics (ifgi)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    ITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+    implied. See the License for the specific language governing
+    permissions and limitations under the License.
+
+-->
+
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>Wolbecker Tiergarten.kml</name>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>Wolbecker Tiergarten</name>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+7.730851460427274,51.9134296295496,0 7.731515459091298,51.9086140058833,0 7.733991650158487,51.90461683589288,0 7.736897931400448,51.90150561615171,0 7.744279014849711,51.89973083143441,0 7.750689877459124,51.89787003646882,0 7.753506925470859,51.89778865024179,0 7.75358155056054,51.89722368497073,0 7.755997974195381,51.89642826849008,0 7.756410678144761,51.8975798487301,0 7.757468845842241,51.89754279142734,0 7.75792349150079,51.89782540201661,0 7.758901193537568,51.8983942274732,0 7.759706416823988,51.8992955465519,0 7.760146773304825,51.9002693229729,0 7.760586663049637,51.9007213679374,0 7.760115576849785,51.90152915993763,0 7.759366478536876,51.90296719840504,0 7.75695059547742,51.90834465971152,0 7.756776623436522,51.90976451003713,0 7.756594172842441,51.91183467448629,0 7.746748601739014,51.91370312439027,0 7.745589740969919,51.91286572236366,0 7.746008277996907,51.91513644771617,0 7.745380721590053,51.91565688958102,0 7.743182465177924,51.91699111098944,0 7.738359211166894,51.91794419435495,0 7.736946019693875,51.91744600519868,0 7.739174603420182,51.91481500772225,0 7.73878210941625,51.91458133319895,0 7.737888616148908,51.91444940969969,0 7.737088760976604,51.91519732005093,0 7.734153294772511,51.91457697796193,0 7.730851460427274,51.9134296295496,0 </coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+		<ExtendedData>
+			<Data name="urn:ogc:domainReference">
+				<value>http://www.example.com/Ontology#Protected_Site</value></Data></ExtendedData></Placemark>
+</Document>
+</kml>

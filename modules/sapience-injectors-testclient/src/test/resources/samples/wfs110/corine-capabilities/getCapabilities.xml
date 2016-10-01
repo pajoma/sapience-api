@@ -1,0 +1,91 @@
+<wfs:WFS_Capabilities updateSequence="196" version="1.1.0"
+xmlns="http://www.opengis.net/wfs" xmlns:corine="de.ifgi.corine"
+xmlns:gml="http://www.opengis.net/gml"
+xmlns:ogc="http://www.opengis.net/ogc"
+xmlns:ows="http://www.opengis.net/ows"
+xmlns:wfs="http://www.opengis.net/wfs"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.opengis.net/wfs http://giv-wfs.uni-muenster.de:80/gs/schemas/wfs/1.1.0/wfs.xsd">
+
+  <ows:ServiceIdentification>
+    <ows:Title>GeoServer Web Feature Service</ows:Title>
+    <ows:Abstract>This is the reference implementation of WFS 1.0.0
+    and WFS 1.1.0, supports all WFS operations including
+    Transaction.</ows:Abstract>
+    <ows:Keywords>
+      <ows:Keyword>WFS</ows:Keyword>
+      <ows:Keyword>WMS</ows:Keyword>
+      <ows:Keyword>GEOSERVER</ows:Keyword>
+	  <ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/service.rdf"/>
+	  <ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/service.wsdl"/>
+    </ows:Keywords>
+    <ows:ServiceType>WFS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+    <ows:Fees>NONE</ows:Fees>
+    <ows:AccessConstraints>NONE</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+ 
+  <FeatureTypeList>
+    <Operations>
+      <Operation>Query</Operation>
+      <Operation>Insert</Operation>
+      <Operation>Update</Operation>
+      <Operation>Delete</Operation>
+      <Operation>Lock</Operation>
+    </Operations>
+    <FeatureType xmlns:corine="de.ifgi.corine">
+      <Name>corine:clc00_c111</Name>
+      <Title>clc00_c111</Title>
+      <Abstract>Continuous urban fabric</Abstract>
+      <ows:Keywords>
+        <ows:Keyword>urbanized area</ows:Keyword>
+		<ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/clc00_c111.rdf">POSM</ows:Type>	
+		<ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/clc00_c111.wsdl">WSDL</ows:Type>	
+      </ows:Keywords>
+      <DefaultSRS>urn:x-ogc:def:crs:EPSG:4326</DefaultSRS>
+      <ows:WGS84BoundingBox>
+        <ows:LowerCorner>-33.49 26.998</ows:LowerCorner>
+        <ows:UpperCorner>46.597 60.145</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+    </FeatureType>
+    <FeatureType xmlns:corine="de.ifgi.corine">
+      <Name>corine:CLEUER100kV2_2</Name>
+	  <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">
+			http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS11_Giv-wfs.uni-muenster/Cleuer100kv2_2.rdf#Cleuer100kv2_2
+	  </MetadataURL>
+
+		<MetadataURL format="application/wsdl+xml" type="WSDL">
+		http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS11_Giv-wfs.uni-muenster/Cleuer100kv2_2.wsdl
+		</MetadataURL>
+      <Title>CLEUER100kV2_2</Title>
+      <Abstract>Shoreline</Abstract>
+	  
+      <ows:Keywords>
+        <ows:Keyword>shoreline</ows:Keyword>
+		
+      </ows:Keywords>
+      <DefaultSRS>urn:x-ogc:def:crs:EPSG:4258</DefaultSRS>
+      <ows:WGS84BoundingBox>
+        <ows:LowerCorner>-61.806 4.214</ows:LowerCorner>
+        <ows:UpperCorner>34.606 65.908</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+    </FeatureType>
+    <FeatureType xmlns:corine="de.ifgi.corine">
+      <Name>corine:clc00_v2_code_223</Name>
+      <Title>clc00_v2_code_223</Title>
+      <Abstract>Olive groves</Abstract>
+      <ows:Keywords>
+        <ows:Keyword>olives</ows:Keyword>
+		<ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/Clc00_v2_code_223.rdf">POSM</ows:Type>	
+		<ows:Type ows:codeSpace="http://www.example.com/WFS11_Giv-wfs.uni-muenster/Clc00_v2_code_223.wsdl">WSDL</ows:Type>		
+      </ows:Keywords>
+      <DefaultSRS>urn:x-ogc:def:crs:EPSG:3035</DefaultSRS>
+      <ows:WGS84BoundingBox>
+        <ows:LowerCorner>-10.754 33.112</ows:LowerCorner>
+        <ows:UpperCorner>36.978 45.736</ows:UpperCorner>
+      </ows:WGS84BoundingBox>
+    </FeatureType>
+  </FeatureTypeList>
+
+</wfs:WFS_Capabilities>

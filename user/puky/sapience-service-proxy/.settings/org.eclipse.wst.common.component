@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="sapience-service-proxy">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-testclient/sapience-injectors-testclient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-wps/sapience-injectors-wps">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-main/sapience-injectors-main">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-sos/sapience-injectors-sos">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-wfs/sapience-injectors-wfs">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-injectors-wsdl/sapience-injectors-wsdl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/sapience-lookup-hibernate/sapience-lookup-hibernate">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="sapience-service-proxy"/>
+        <property name="java-output-path"/>
+    </wb-module>
+</project-modules>

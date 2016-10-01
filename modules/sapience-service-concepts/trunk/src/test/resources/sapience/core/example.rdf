@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY concepts "http://purl.org/net/concepts/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DOLCE-Lite "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#" >
+]>
+
+<rdf:RDF xmlns="http://purl.org/net/concepts/"
+     xml:base="http://purl.org/net/concepts/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DOLCE-Lite="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	>
+
+	<rdfs:Class rdf:ID="_qwer">
+		<dc:title>River</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdfs:Class rdf:ID="_mnbv">
+		<dc:title>River Name</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdfs:Class rdf:ID="_olhg">
+		<dc:title>River Starting Point</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdfs:Class rdf:ID="_jsgd">
+		<dc:title>Waterway Code</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdfs:Class rdf:ID="_xsaz">
+		<dc:title>Depth Profile</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdfs:Class rdf:ID="_lkuy">
+		<dc:title>Average Depth of Waterway</dc:title>
+	</rdfs:Class>
+	
+	
+	<rdf:Property rdf:ID="_ghjk">
+		<dc:title>hasName</dc:title>
+	   	<rdfs:domain rdf:resource="_qwer"/>
+	   	<rdfs:range rdf:resource="_mnbv"/>
+	</rdf:Property>
+	
+	
+	<rdf:Property rdf:ID="_yuhj">
+		<dc:title>hasName</dc:title>
+		<dc:subject>	Transportation</dc:subject>
+	   	<rdfs:domain rdf:resource="_qwer"/>
+	   	<rdfs:range rdf:resource="_jsgd"/>
+	</rdf:Property>
+	
+	
+	<rdf:Property rdf:ID="_cmks">
+		<dc:title>hasLocation</dc:title>
+	   	<rdfs:domain rdf:resource="_qwer"/>
+	   	<rdfs:range rdf:resource="_olhg"/>
+	</rdf:Property>
+	
+	
+	<rdf:Property rdf:ID="_lpyh">
+		<dc:title>hasDepth</dc:title>
+		<dc:subject>Hydrodynamics</dc:subject>
+	   	<rdfs:domain rdf:resource="_qwer"/>
+	   	<rdfs:range rdf:resource="_xsaz"/>
+	</rdf:Property>
+	
+	
+	<rdf:Property rdf:ID="_mnvf">
+		<dc:title>hasDepth</dc:title>
+		<dc:subject>Transportation</dc:subject>
+	   	<rdfs:domain rdf:resource="_qwer"/>
+	   	<rdfs:range rdf:resource="_lkuy"/>
+	</rdf:Property>
+	
+
+</rdf:RDF>

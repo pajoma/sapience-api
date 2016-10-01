@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<injectorConfig 
+	xmlns="http://www.example.org/InjectorConfig" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	>
+	
+
+	<handler id="wsdl11" class="sapience.injectors.wsdl.v11.WSDLSelector1_1" />
+	<handler id="wsdl20" class="sapience.injectors.wsdl.v20.WSDLSelector2_0" />
+<!--	<handler id="ogc-wps" class="sapience.injectors.wps.WPSInjector" />-->
+
+
+
+</injectorConfig>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WFS_Capabilities version="1.0.0" xmlns="http://www.opengis.net/wfs"
+    xmlns:ionic="http://www.ionicsoft.com/versions/5"
+    xmlns:ogc="http://www.opengis.net/ogc"
+    xmlns:ogcwfs="http://www.opengis.net/wfs"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://webservices.ionicsoft.com/worldData/wfs/WORLD/REQUEST/get/DATA/LPR/wfs/1.0.0/WFS-capabilities.xsd">
+    <Service>
+        <Name>WFS Feature Server</Name>
+        <Title>World Airport</Title>
+        <Abstract>Airports over the world</Abstract>
+        <OnlineResource>http://webservices.ionicsoft.com/worldData/wfs/WORLD?</OnlineResource>
+    </Service>
+    <Capability>
+        <Request>
+            <GetCapabilities>
+                <DCPType>
+                    <HTTP>
+                        <Get onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD?"/>
+                        <Post onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD"/>
+                    </HTTP>
+                </DCPType>
+            </GetCapabilities>
+            <DescribeFeatureType>
+                <SchemaDescriptionLanguage>
+                    <XMLSCHEMA/>
+                </SchemaDescriptionLanguage>
+                <DCPType>
+                    <HTTP>
+                        <Get onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD?"/>
+                        <Post onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD"/>
+                    </HTTP>
+                </DCPType>
+            </DescribeFeatureType>
+            <GetFeature>
+                <ResultFormat>
+                    <GML2/>
+                </ResultFormat>
+                <DCPType>
+                    <HTTP>
+                        <Get onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD?"/>
+                        <Post onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD"/>
+                    </HTTP>
+                </DCPType>
+            </GetFeature>
+            <LockFeature>
+                <DCPType>
+                    <HTTP>
+                        <Get onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD?"/>
+                        <Post onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD"/>
+                    </HTTP>
+                </DCPType>
+            </LockFeature>
+            <Transaction>
+                <DCPType>
+                    <HTTP>
+                        <Get onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD?"/>
+                        <Post onlineResource="http://webservices.ionicsoft.com/worldData/wfs/WORLD"/>
+                    </HTTP>
+                </DCPType>
+            </Transaction>
+        </Request>
+    </Capability>
+    <FeatureTypeList>
+        <FeatureType xmlns:wfs="http://www.ionicsoft.com/wfs">
+            <Name attr="22">wfs:Airport</Name>
+            <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Airport.rdf#Airport</MetadataURL>
+            <MetadataURL format="application/wsdl+xml" type="WSDL">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Airport.wsdl</MetadataURL>
+            <Title>Airport of World</Title>
+            <Abstract>Airport of world</Abstract>
+            <SRS>EPSG:4326</SRS>
+            <Operations>
+                <Query/>
+            </Operations>
+            <LatLongBoundingBox maxx="180.0" maxy="90.0" minx="-180.0" miny="-90.0"/>
+            <MetadataURL format="XML" type="TC211">http://webservices.ionicsoft.com/worldData/wfs/WORLD/REQUEST/getdir/DIR/metadata/DATA/LPR/WORLD__AirportType.xml</MetadataURL>
+        </FeatureType>
+        <FeatureType xmlns:wfs="http://www.ionicsoft.com/wfs">
+            <Name>wfs:LEVEL1</Name>
+            <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level1.rdf#Level1</MetadataURL>
+            <MetadataURL format="application/wsdl+xml" type="WSDL">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level1.wsdl</MetadataURL>
+            <Title>Level 1</Title>
+            <Abstract>Level 1 boundaries</Abstract>
+            <SRS>EPSG:4326</SRS>
+            <Operations>
+                <Query/>
+            </Operations>
+            <LatLongBoundingBox maxx="180.0" maxy="90.0" minx="-180.0" miny="-90.0"/>
+        </FeatureType>
+        <FeatureType xmlns:wfs="http://www.ionicsoft.com/wfs">
+            <Name>wfs:LEVEL2</Name>
+            <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level2.rdf#Level2</MetadataURL>
+            <MetadataURL format="application/wsdl+xml" type="WSDL">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level2.wsdl</MetadataURL>
+            <Title>LEVEL2</Title>
+            <Abstract>Level2 boundaries</Abstract>
+            <SRS>EPSG:4326</SRS>
+            <Operations>
+                <Query/>
+            </Operations>
+            <LatLongBoundingBox maxx="180.0" maxy="90.0" minx="-180.0" miny="-90.0"/>
+        </FeatureType>
+        <FeatureType xmlns:wfs="http://www.ionicsoft.com/wfs">
+            <Name>wfs:LEVEL3</Name>
+            <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level3.rdf#Level3</MetadataURL>
+            <MetadataURL format="application/wsdl+xml" type="WSDL">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level3.wsdl</MetadataURL>
+            <Title>LEVEL3</Title>
+            <Abstract>Level 3 boundaries</Abstract>
+            <SRS>EPSG:4326</SRS>
+            <Operations>
+                <Query/>
+            </Operations>
+            <LatLongBoundingBox maxx="180.0" maxy="90.0" minx="-180.0" miny="-90.0"/>
+        </FeatureType>
+        <FeatureType xmlns:wfs="http://www.ionicsoft.com/wfs">
+            <Name>wfs:LEVEL4</Name>
+            <MetadataURL format="application/rdf+xml" type="http://www.w3.org/ns/sawsdl#modelReference">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level4.rdf#Level4</MetadataURL>
+            <MetadataURL format="application/wsdl+xml" type="WSDL">http://giv-wfs.uni-muenster.de/jcr/repository/default/WFS10_WorldAirport/Level4.wsdl</MetadataURL>
+            <Title>LEVEL4</Title>
+            <Abstract>Level 4 boundaries</Abstract>
+            <SRS>EPSG:4326</SRS>
+            <Operations>
+                <Query/>
+            </Operations>
+            <LatLongBoundingBox maxx="180.0" maxy="90.0" minx="-180.0" miny="-90.0"/>
+        </FeatureType>
+    </FeatureTypeList>
+    <Filter_Capabilities xmlns="http://www.opengis.net/ogc">
+        <Spatial_Capabilities>
+            <Spatial_Operators>
+                <BBOX/>
+                <Equals/>
+                <Disjoint/>
+                <Intersect/>
+                <Touches/>
+                <Crosses/>
+                <Within/>
+                <Contains/>
+                <Overlaps/>
+                <Beyond/>
+                <DWithin/>
+            </Spatial_Operators>
+        </Spatial_Capabilities>
+        <Scalar_Capabilities>
+            <Logical_Operators/>
+            <Comparison_Operators>
+                <Simple_Comparisons/>
+                <Like/>
+                <Between/>
+                <NullCheck/>
+            </Comparison_Operators>
+            <Arithmetic_Operators>
+                <Simple_Arithmetic/>
+                <Functions>
+                    <Function_Names>
+                        <Function_Name nArgs="1">Upper</Function_Name>
+                        <Function_Name nArgs="1">Lower</Function_Name>
+                        <Function_Name nArgs="3">Distance</Function_Name>
+                        <Function_Name nArgs="1">Score</Function_Name>
+                        <Function_Name nArgs="1">ToChar</Function_Name>
+                    </Function_Names>
+                </Functions>
+            </Arithmetic_Operators>
+        </Scalar_Capabilities>
+    </Filter_Capabilities>
+</WFS_Capabilities>

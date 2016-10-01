@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_0" name="dataType">
+  <eAnnotations xmi:id="_com.abstratt2Fmdd2F" source="com.abstratt/mdd/"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="String" name="String"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="Integer" name="Integer"/>
+</uml:Package>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<description xmlns="http://www.w3.org/ns/wsdl"
+    targetNamespace="http://greath.example.com/2004/wsdl/resSvc"
+    xmlns:tns="http://greath.example.com/2004/wsdl/resSvc"
+    xmlns:ghns="http://greath.example.com/2004/schemas/resSvc"
+    xmlns:wsoap="http://www.w3.org/ns/wsdl/soap"
+    xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+    xmlns:sawsdl="http://www.w3.org/ns/sawsdl"
+    sawsdl:modelReference="http://desc.example/ http://2.example">
+
+    <types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://greath.example.com/2004/schemas/resSvc"
+            xmlns="http://greath.example.com/2004/schemas/resSvc">
+
+            <xs:element name="checkAvailability"
+                type="tCheckAvailability" />
+            <xs:complexType name="tCheckAvailability">
+                <xs:sequence>
+                    <xs:element name="checkInDate" type="xs:date" />
+                    <xs:element name="checkOutDate" type="xs:date" />
+                    <xs:element name="roomType" type="xs:string" />
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:element name="checkAvailabilityResponse"
+                type="xs:double" />
+
+            <xs:element name="invalidDataError" type="xs:string" />
+
+        </xs:schema>
+    </types>
+
+    <interface name="reservationInterface"
+               sawsdl:modelReference="http://iface.example/ http://2.example">
+
+        <fault name="invalidDataFault"
+                    element="ghns:invalidDataError"
+                    sawsdl:modelReference="http://fault.example/ http://2.example"/>
+
+        <operation name="opCheckAvailability"
+            pattern="http://www.w3.org/ns/wsdl/in-out"
+            sawsdl:modelReference="http://op.example/ http://2.example">
+            <input messageLabel="In" element="ghns:checkAvailability" 
+                sawsdl:modelReference="http://inp.example/ http://2.example"/>
+            <output messageLabel="Out"
+                element="ghns:checkAvailabilityResponse"
+                sawsdl:modelReference="http://outp.example/ http://2.example" />
+            <outfault ref="tns:invalidDataFault" messageLabel="Out" 
+                sawsdl:modelReference="http://outfault.example/ http://2.example"/>
+        </operation>
+
+    </interface>
+
+    <binding name="reservationSOAPBinding"
+        interface="tns:reservationInterface"
+        type="http://www.w3.org/ns/wsdl/soap"
+        wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/"
+        sawsdl:modelReference="http://bind.example/ http://2.example">
+
+        <operation ref="tns:opCheckAvailability"
+            wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response" 
+            sawsdl:modelReference="http://bop.example/ http://2.example"/>
+
+        <fault ref="tns:invalidDataFault" wsoap:code="soap:Sender" 
+            sawsdl:modelReference="http://bfa.example/ http://2.example"/>
+
+    </binding>
+
+    <service name="reservationService"
+        interface="tns:reservationInterface"
+        sawsdl:modelReference="http://svc.example/ http://2.example">
+
+        <endpoint name="reservationEndpoint"
+            binding="tns:reservationSOAPBinding"
+            address="http://greath.example.com/2004/reservation" 
+            sawsdl:modelReference="http://end.example/ http://2.example"/>
+
+    </service>
+
+</description>

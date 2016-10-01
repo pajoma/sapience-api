@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_0" class="java.beans.XMLDecoder">
+ <object class="com.horstmann.violet.ClassDiagramGraph">
+  <void method="addNode">
+   <object class="com.horstmann.violet.PackageNode">
+    <void method="addChild">
+     <object id="PackageNode0" class="com.horstmann.violet.PackageNode">
+      <void method="addChild">
+       <object id="ClassNode0" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>CorePage</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode1" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>RdfRequestSwitchPage</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode2" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>CoreTemplate</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode3" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>HtmlPage</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode4" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>RootPage</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode5" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>RdfPage</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void property="name">
+       <string>pages</string>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="PackageNode1" class="com.horstmann.violet.PackageNode">
+      <void method="addChild">
+       <object id="ClassNode6" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>DatabaseConnection</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode7" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>DatabaseException</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void method="addChild">
+       <object id="ClassNode8" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>SesameDatabaseConnection</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void property="name">
+       <string>database</string>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="PackageNode2" class="com.horstmann.violet.PackageNode">
+      <void method="addChild">
+       <object id="ClassNode9" class="com.horstmann.violet.ClassNode">
+        <void property="name">
+         <void property="text">
+          <string>RdfStreamTargetWriter</string>
+         </void>
+        </void>
+       </object>
+      </void>
+      <void property="name">
+       <string>stream</string>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="ClassNode10" class="com.horstmann.violet.ClassNode">
+      <void property="name">
+       <void property="text">
+        <string>ApplicationCore</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="ClassNode11" class="com.horstmann.violet.ClassNode">
+      <void property="name">
+       <void property="text">
+        <string>HTTPConstants</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="ClassNode12" class="com.horstmann.violet.ClassNode">
+      <void property="name">
+       <void property="text">
+        <string>RDFPathDecoder</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void method="addChild">
+     <object id="ClassNode13" class="com.horstmann.violet.ClassNode">
+      <void property="name">
+       <void property="text">
+        <string>SapienceServletWebRequest</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="name">
+     <string>sapient.service.concepts</string>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>40.0</double>
+     <double>50.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="PackageNode1"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>50.0</double>
+     <double>80.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="PackageNode0"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>50.0</double>
+     <double>290.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="PackageNode2"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>520.0</double>
+     <double>80.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode10"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>459.0</double>
+     <double>546.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode11"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>601.0</double>
+     <double>545.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode12"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>296.0</double>
+     <double>551.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode13"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>47.0</double>
+     <double>552.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode6"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>59.0</double>
+     <double>111.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode7"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>63.0</double>
+     <double>185.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode8"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>239.0</double>
+     <double>113.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode9"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>526.0</double>
+     <double>112.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode0"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>55.0</double>
+     <double>315.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode1"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>294.0</double>
+     <double>395.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode2"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>184.0</double>
+     <double>323.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode3"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>316.0</double>
+     <double>319.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode4"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>182.0</double>
+     <double>404.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object idref="ClassNode5"/>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>64.0</double>
+     <double>396.0</double>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

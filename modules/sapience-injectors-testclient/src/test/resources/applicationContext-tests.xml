@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	                       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+
+	<context:annotation-config />
+	<context:component-scan base-package="sapience" />
+	 
+<!--	<bean id="referenceFactory" class="sapience.injectors.impl.DefaultReferenceFactory"/>-->
+<!--	<bean id="lookup" class="sapience.injectors.testclient.wps.LookupMockup"/>-->
+<!--	-->
+<!--	<bean id="persistenceManagerFactory"-->
+<!--		class="org.springframework.orm.jdo.LocalPersistenceManagerFactoryBean">-->
+<!--		 The name of the PMF is in META-INF/jdoconfig.xml -->
+<!--		<property name="persistenceManagerFactoryName" value="transactions-optional" />-->
+<!--	</bean>-->
+
+
+
+</beans>

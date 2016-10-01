@@ -1,0 +1,5 @@
+package dataType;
+ primitive String;
+ primitive Integer;
+
+end.

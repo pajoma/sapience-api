@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+   <Style id="Icon1">
+      <IconStyle>
+         <scale>0.5</scale>
+         <Icon>
+            <href>http://www.orc.ub.bw/projects/blank.png</href>
+         </Icon>
+      </IconStyle>
+   </Style>
+
+<Folder id="c1">
+<name>March 2008 Field Campaign</name>
+<Folder id="sampl1">
+<name>Methane sampling points</name>
+<Placemark><name>M2</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.1659127388889,-19.5397020555556,0</coordinates></Point></Placemark>
+<Placemark><name>M3</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.1654315361111,-19.541072475,0</coordinates></Point></Placemark>
+<Placemark><name>M4</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.1658901861111,-19.5433715611111,0</coordinates></Point></Placemark>
+<Placemark><name>M6</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.1627265388889,-19.5421115055556,0</coordinates></Point></Placemark>
+<Placemark><name>M10</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16476944, -19.54475278, 0</coordinates></Point></Placemark>
+<Placemark><name>M12</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16374167, -19.54448056,0</coordinates></Point></Placemark>
+<Placemark><name>M11</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.164175,-19.5446,0</coordinates></Point></Placemark>
+
+</Folder>
+
+<Folder id="sampl2">
+<name>Biomass sampling points</name>
+<Placemark><name>BM4</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16595, -19.54228333,0</coordinates></Point></Placemark>
+<Placemark><name>BM1</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16825, -19.54131667,0</coordinates></Point></Placemark>
+<Placemark><name>BM2</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16603333, -19.5383,0</coordinates></Point></Placemark>
+<Placemark><name>BM3</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16546667, -19.54108333,0</coordinates></Point></Placemark>
+<Placemark><name>BM11</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.164175,-19.5446,0</coordinates></Point></Placemark>
+<Placemark><name>BM10</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16476944, -19.54475278, 0</coordinates></Point></Placemark>
+<Placemark><name>BM3a</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16521667, -19.54116667,0</coordinates></Point></Placemark>
+
+</Folder>
+
+<Folder id="sampl2">
+<name>Soil sampling points</name>
+<Placemark><name>S4</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16595, -19.54228333,0</coordinates></Point></Placemark>
+<Placemark><name>S3</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16546667, -19.54108333,0</coordinates></Point></Placemark>
+<Placemark><name>S11</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.164175,-19.5446,0</coordinates></Point></Placemark>
+
+</Folder>
+
+<Folder id="sampl2">
+<name>Eddy covariance tower</name>
+<Placemark><name>Eddy covariance tower</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><Point><coordinates>23.16662222,-19.54206667,0</coordinates></Point></Placemark>
+</Folder>
+
+</Folder>
+
+<Folder>
+<name>Hydrological monitoring</name>
+<Placemark><name>staff gauge</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=1'>view data</a></description><Point><coordinates>23.1788794056295,-19.5486675687723,0</coordinates></Point></Placemark>
+<Placemark><name>W1</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=2'>view data</a></description><Point><coordinates>23.1679483527778,-19.5413531333333,0</coordinates></Point></Placemark>
+<Placemark><name>W2</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=3'>view data</a></description><Point><coordinates>23.1659127388889,-19.5397020555556,0</coordinates></Point></Placemark>
+<Placemark><name>W3</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=4'>view data</a></description><Point><coordinates>23.1654315361111,-19.541072475,0</coordinates></Point></Placemark>
+<Placemark><name>W4</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=5'>view data</a></description><Point><coordinates>23.1658901861111,-19.5433715611111,0</coordinates></Point></Placemark>
+<Placemark><name>W5</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=6'>view data</a></description><Point><coordinates>23.1630294805556,-19.5408090833333,0</coordinates></Point></Placemark>
+<Placemark><name>W6</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=7'>view data</a></description><Point><coordinates>23.1627265388889,-19.5421115055556,0</coordinates></Point></Placemark>
+<Placemark><name>W7</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=8'>view data</a></description><Point><coordinates>23.1798501833333,-19.5477267694444,0</coordinates></Point></Placemark>
+<Placemark><name>W8</name><Snippet maxLines='0'></Snippet><styleUrl>#Icon1</styleUrl><description><a href='http://www.orc.ub.bw/datacat/sfbgc.php?site=9'>view data</a></description><Point><coordinates>23.1803035055556,-19.5485598916667,0</coordinates></Point></Placemark>
+</Folder>
+
+<Folder>
+<name>Topographic transects</name>
+
+<Placemark><name>topo transect 1</name>
+<Snippet maxLines='0'></Snippet>
+<LineString>
+  <!-- specific to LineString -->
+  <extrude>0</extrude>                   <!-- boolean -->
+  <tessellate>0</tessellate>             <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode> 
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+<coordinates>
+23.1621969027778,-19.5430720777778
+23.1622770083333,-19.5429647166667
+23.1623871666667,-19.5428510777778
+23.1624107222222,-19.5427128666667
+23.1625030555556,-19.5425888972222
+23.1625685861111,-19.5424556666667
+23.162641825,-19.5423415305556
+23.1627167305556,-19.5422349166667
+23.1627302111111,-19.5421100194444
+23.1627604777778,-19.5419672416667
+23.1628000388889,-19.5418217805556
+23.1628254888889,-19.5416681277778
+23.1628495194444,-19.5415168888889
+23.1628883916667,-19.5413671222222
+23.1629173472222,-19.5412273138889
+23.1629473472222,-19.5410789527778
+23.1629857833333,-19.5409496472222
+23.1630277805556,-19.5408124805556
+23.1630770166667,-19.5407652166667
+23.1631935277778,-19.5406485027778
+23.1633157722222,-19.5405333305556
+23.1634051083333,-19.5404447083333
+23.1635483666667,-19.5403151361111
+23.1636945111111,-19.5402110194444
+23.1638084861111,-19.5401196444444
+23.1639346194444,-19.5400299361111
+23.1640569833333,-19.539956
+23.1641972777778,-19.5398348166667
+23.1642574444444,-19.5396941416667
+23.1643431305556,-19.5395415638889
+23.1644076611111,-19.5393818333333
+23.1644738555556,-19.5392355222222
+23.1645682777778,-19.5391075472222
+23.16464585,-19.5389589944444
+23.1647161333333,-19.5388142194444</coordinates>
+</LineString>
+<description><img SRC='http://www.orc.ub.bw/datacat/transect1.png'></img></description>
+</Placemark>
+
+<Placemark><name>topo transect 2</name>
+<Snippet maxLines='0'></Snippet>
+<LineString>
+  <extrude>0</extrude>                   <!-- boolean -->
+  <tessellate>0</tessellate>             <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode> 
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+<coordinates>
+23.1640334722222,-19.5438465083333
+23.1641110111111,-19.543727425
+23.1642093416667,-19.5436007305556
+23.1642864083333,-19.5434563916667
+23.1643738972222,-19.5433371527778
+23.1644471277778,-19.5432136333333
+23.1645262222222,-19.5430675944444
+23.1646104083333,-19.5429307833333
+23.1647021222222,-19.5427356333333
+23.1647631666667,-19.54258665
+23.164846075,-19.5424620333333
+23.1649246944444,-19.542319325
+23.1649881583333,-19.5421821111111
+23.1650921638889,-19.5420394944444
+23.1651701694444,-19.5418895444444
+23.1650969194444,-19.5420175888889
+23.1652467388889,-19.5417443333333
+23.1653152777778,-19.5415683305556
+23.1653589055556,-19.5414410944444
+23.1654036277778,-19.5412756555556
+23.1654338555556,-19.5410737138889
+23.1654496166667,-19.5410437388889
+23.16523385,-19.54096235
+23.1655194861111,-19.54089965
+23.1655719083333,-19.5407350222222
+23.1656224916667,-19.5405913805556
+23.1656603611111,-19.5404677083333
+23.1657122416667,-19.5403163972222
+23.165764,-19.5401638638889
+23.1658127916667,-19.5400126222222
+23.1658541833333,-19.5398641027778
+23.1659135972222,-19.5397051083333
+23.1659663361111,-19.5396038555556
+23.1661152222222,-19.5393267333333
+23.1661965888889,-19.5391923638889
+23.1662757361111,-19.5390572611111
+23.1664431444444,-19.5387924833333
+23.1665168416667,-19.5386564166667
+23.166604625,-19.5385193583333
+23.166663175,-19.5383730333333
+23.1667483194444,-19.5382383027778
+23.1668474805556,-19.5381327527778
+23.1669006972222,-19.5380189583333
+</coordinates>
+</LineString>
+<description><img SRC='http://www.orc.ub.bw/datacat/transect2.png'></img></description>
+</Placemark>
+
+<Placemark><name>topo transect 3</name>
+<Snippet maxLines='0'></Snippet>
+<LineString>
+  <extrude>0</extrude>                   <!-- boolean -->
+  <tessellate>0</tessellate>             <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode> 
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+<coordinates>
+23.1646720138889,-19.5446170416667
+23.1646959111111,-19.5446108611111
+23.1648429833333,-19.5445361611111
+23.1649416194444,-19.5444172611111
+23.1650549,-19.5442740611111
+23.1651609944444,-19.544166525
+23.165270925,-19.5440412888889
+23.1653751583333,-19.5439229472222
+23.1654603555556,-19.5438175916667
+23.16553825,-19.5437112583333
+23.1656778444444,-19.5436708027778
+23.165757875,-19.5435781694444
+23.1658326722222,-19.5434636027778
+23.1658893527778,-19.5433712138889
+23.1659410305556,-19.5433124083333
+23.1660561138889,-19.5432046166667
+23.1661777527778,-19.5431014638889
+23.1662953944444,-19.5429963972222
+23.1665230944444,-19.5427651222222
+23.1666361861111,-19.5426504305556
+23.1667417138889,-19.5425314305556
+23.1668619833333,-19.5423865583333
+23.1669808111111,-19.5422672583333
+23.1671016527778,-19.5421605194444
+23.1672213333333,-19.5420491416667
+23.1673222361111,-19.5419371805556
+23.1674352666667,-19.541823725
+23.1676759638889,-19.5416436
+23.1675580472222,-19.5417148777778
+23.1676934611111,-19.5416382861111
+23.1679273138889,-19.541429175
+23.167948375,-19.5413531361111
+23.1680381777778,-19.5412466638889
+23.1681430527778,-19.5411422222222
+23.1682841222222,-19.5410347444444
+23.1684038861111,-19.5409309222222
+</coordinates>
+</LineString>
+<description><img SRC='http://www.orc.ub.bw/datacat/transect3.png'></img></description>
+</Placemark>
+
+<Placemark><name>topo transect 4</name>
+<Snippet maxLines='0'></Snippet>
+<LineString>
+  <extrude>0</extrude>                   <!-- boolean -->
+  <tessellate>0</tessellate>             <!-- boolean -->
+  <altitudeMode>clampToGround</altitudeMode> 
+    <!-- kml:altitudeModeEnum: clampToGround, relativeToGround, or absolute -->
+<coordinates>
+23.1799658111111,-19.5493689972222
+23.1800025888889,-19.5493678027778
+23.1800182166667,-19.5493362972222
+23.1800907583333,-19.5492785222222
+23.1801830138889,-19.5492072916667
+23.1802633388889,-19.5491252527778
+23.1803248194444,-19.5490282277778
+23.1803715,-19.5489245611111
+23.1804058416667,-19.5488147527778
+23.1803516694444,-19.5487039305556
+23.1803323194444,-19.5486403722222
+23.1803043583333,-19.5485539083333
+23.1802862444444,-19.5485057916667
+23.1801992527778,-19.5483872222222
+23.1801327555556,-19.5483189944444
+23.1800594194444,-19.5481738694444
+23.1799838444444,-19.548043
+23.1799009166667,-19.5479155222222
+23.1798635305556,-19.5477798083333
+23.1798492777778,-19.5477243194444
+23.1797570527778,-19.5476036333333
+23.1796467888889,-19.5474974444444
+23.1795475972222,-19.5473892722222
+23.1794565916667,-19.54726995
+23.1793658388889,-19.5471430805556
+23.1792728083333,-19.5470191611111
+23.179196525,-19.546897525
+</coordinates>
+</LineString>
+<description><img SRC='http://www.orc.ub.bw/datacat/transect4.png'></img></description>
+</Placemark>
+</Folder>
+
+</Document>
+</kml>

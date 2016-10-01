@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+		<groupId>sapience</groupId>
+		<artifactId>sapience-annotations-parent</artifactId>
+		<version>1.0</version>
+	</parent>
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sapience</groupId>
+  <artifactId>sapience-annotations-model</artifactId>
+  <name>Sapience Annotations Model</name>
+  <version>${sapience.version}</version>
+  <description>The model for the annotations used by the other components</description>
+
+  <dependencies>
+		<dependency>
+			<groupId>sapience</groupId>
+			<artifactId>sapience-service-model</artifactId>
+			<version>${sapience.version}</version>
+		</dependency>
+  </dependencies>
+
+</project>
